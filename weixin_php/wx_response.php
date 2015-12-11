@@ -50,7 +50,7 @@ class wechatCallbackapiTest
                 {
                     if($msgType == "text")
                     {
-                        $contentStr = "Welcome to wechat world!";
+                        $contentStr = "今天天气哈哈哈";
                         $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                         echo $resultStr, $fromUsername;
                     }else if ($msgType == "image") {
