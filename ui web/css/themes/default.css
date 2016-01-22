@@ -2,7 +2,7 @@
 /* Primary colors */
 #page {
   background: none repeat scroll 0 0 #ffffff;
-  min-width: 2000px;
+  padding-top: 130px;
 }
 /* Start Navbar */
 .navbar {
@@ -133,27 +133,38 @@ input::-webkit-input-placeholder {
 .navbar .nav .power .power-icon:hover {
   color: #cccccc;
 }
-
-
 /* End Navbar */
+
 /* Start Sidebar */
 #sidebar {
-  background: none repeat scroll 0 0 #f4f4f4;
+  background: none repeat scroll 0 0 #f5f5f5;
   padding: 0 !important;
-  width: 200px;
-  height: auto;
-  position: absolute;
+  margin: 0;
+  width: 100px;
+  position: fixed;
+  top: 130px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
   border-bottom: 1px solid #e7e7e7;
+  overflow-x: hidden;
+  overflow-y: auto; 
 }
 
 .side-hidden-bar {
-  background-color: none repeat scroll 0 0 #f4f4f4;
+  background-color: none repeat scroll 0 0 #f5f5f5;
   padding: 0 !important;
   display: none;
-  margin-left: 70px;
-  width: 250px;
-  height: auto;
-  position: absolute;
+  margin-left: 100px;
+  width: 280px;
+  position: fixed;
+  top: 130px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
   border: 1px solid #e7e7e7;
   border-bottom: none;
   border-top: none;
@@ -218,7 +229,6 @@ input::-webkit-input-placeholder {
 
 /*SEARCH ON HIDDEN BAR*/
 
-
 .side-hidden-bar-toggle {
   background: none repeat scroll 0 0 #f4f4f4;
   padding: 0 !important;
@@ -273,6 +283,10 @@ input::-webkit-input-placeholder {
   padding: 0;
   border: 0px;
 }
+.sidebar .sidebar-menu > ul > li {
+  min-height: 92px;
+  height: auto;
+}
 .sidebar-menu > ul > li > a {
   display: block;
   position: relative;
@@ -284,11 +298,22 @@ input::-webkit-input-placeholder {
   font-weight: 600;
   text-transform: uppercase;
 }
+.sidebar .sidebar-menu > ul > li > a {
+  text-align: center;
+   padding: 18px 0;
+  font-size: 18px;
+}
+
 .sidebar-menu > ul > li a i {
   color: #555555;
   font-size: 16px;
   margin-right: 5px;
 }
+.sidebar .sidebar-menu > ul > li a i {
+  font-size: 28px;
+  margin-right: 0;
+}
+
 .sidebar-menu > ul > li.has-sub {
   position: relative;
 }
@@ -309,10 +334,6 @@ input::-webkit-input-placeholder {
   background: #f4f4f4;
   /*border-top: 1px solid #e7e7e7;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;*/
-}
-.sidebar-menu > ul > li.active > a {
-  border: none;
-  text-shadow: none;
 }
 .sidebar-menu ul > li > a .arrow:before,
 .sidebar-menu ul > li > ul > li > a .arrow:before,
@@ -536,16 +557,14 @@ input::-webkit-input-placeholder {
   border-top: 1px solid #e7e7e7 !important;
   color: #555555 !important;
 }
+
 .sidebar-menu > ul > li:last-child > a {
   border-bottom: 1px solid transparent !important;
 }
 .sidebar-menu > ul > li:first-child > a {
   /* border-top-color: transparent !important; */
+}
 
-}
-.sidebar-menu > ul > li a i {
-  color: #555555;
-}
 .sidebar-menu > ul > li.has-sub.open > a,
 .sidebar-menu > ul > li > a:hover,
 .sidebar-menu > ul > li:hover > a {
@@ -566,9 +585,13 @@ input::-webkit-input-placeholder {
 .sidebar-menu > ul > li.active > a {
   background: #dbdbdb !important;
   border-top-color: transparent !important;
-  color: #fff;
-  border-left: 5px solid #3090c7;
+  color: #0d8ed0 !important;
+  border-left: 5px solid #0d8ed0;
 }
+.sidebar-menu > ul > li.active > a i{
+  color: #0d8ed0 !important;
+}
+
 .sidebar-menu > ul > li > a.open {
   background: #313131;
 }
@@ -652,27 +675,7 @@ input::-webkit-input-placeholder {
   text-shadow: none;
   background-color: #dd5a43 !important;
 }
-/* Min Menu */
-.mini-menu#sidebar {
-  width: 70px;
-}
-.mini-menu#sidebar:before {
-  width: 70px;
-}
 
-.mini-menu#sidebar .sidebar-menu > ul > li {
-  text-align: center;
-  font-size: 18px;
-}
-
-.mini-menu#sidebar .sidebar-menu > ul > li > a {
-  padding: 8px 0;
-}
-
-.mini-menu#sidebar .sidebar-menu > ul > li > a .menu-icon {
-  margin-left: 10px;
-  font-size: 16px;
-}
 
 
 /* End Sidebar */

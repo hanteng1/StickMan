@@ -21,7 +21,8 @@
 </head>
 <body>
 	<!-- HEADER -->
-	<header class="navbar clearfix" id="header">
+	<div class="navbar-fixed-top">
+		<header class="navbar clearfix" id="header">
 		<div class="container">
 			<div class="col-md-4">
 				<div class="navbar-brand">
@@ -72,39 +73,41 @@
 				<!-- END TOP NAVIGATION MENU -->
 			</div>			
 		</div>
+		</header>
+		<!--/HEADER -->
 
-	</header>
-	<!--/HEADER -->
+	</div>
+	
+
+		
+
+	
 	<!-- PAGE -->
 	<section id="page">
-				<!-- SIDEBAR -->
-				<div id="sidebar" class="sidebar mini-menu">
-					<div class="sidebar-menu nav-collapse">				
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<!--数据-->
-							<li class="active">
-								<a href="index.html">
-								<span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span>
-								</a>				
-							</li>
-							<!--设备-->
-							<li><a class="" href="" target="_blank"><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
-							<!--用户-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
-							<!--方案-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
-							<!--日志-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>
-						</ul>
-						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
-				<!-- /SIDEBAR -->
+		<!-- SIDEBAR -->
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-menu nav-collapse">				
+				<!-- SIDEBAR MENU -->
+				<ul>
+					<!--数据-->
+					<li class="active"><a href="index.html"><span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span></a></li>
+					<!--设备-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
+					<!--用户-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
+					<!--方案-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
+					<!--日志-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>   
+				</ul>
+				<!-- /SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
 
-				<!--隐藏菜单-->
-				<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
-				<div class="side-hidden-bar" id="side-hidden-bar">
+		<!--隐藏菜单-->
+		<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
+		<div class="side-hidden-bar" id="side-hidden-bar">
 					<div class="sidebar-menu nav-collapse">			
 						<!--ANOTHER SEARCH BAR-->
 						<div class="divide-20"></div>
@@ -263,7 +266,9 @@
 						<li><span class="name">设备列表</span></li>
 						<li><i class = "fa fa-angle-right"></i></li>
 					</ul>
-				</div>
+				</div>				
+
+
 
 
 		<div class="main-content" id="main-content">
