@@ -223,11 +223,16 @@ input::-webkit-input-placeholder {
 .side-hidden-bar-toggle {
   background: none repeat scroll 0 0 #f4f4f4;
   padding: 0 !important;
-  position: absolute;
-  margin-left: 70px;
-  margin-top: 100px;
+  position: fixed;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left: 100px;
   width: 45px;
-  min-height: 100px;
+  height: 100px;
   border: 1px solid #e7e7e7;
   border-left: none;
   border-radius: 10px;
