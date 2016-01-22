@@ -162,7 +162,9 @@ var App = function () {
           var $eq_id = '' + eq.attr("id");
           //problem  current_selected_chart_name
           var chart_zone_ul = jQuery('.' + current_selected_chart_name).children('.box-body').children('.panel').children('.panel-body').children(".first-column").children(".big").children(".label-eps");  //ul
-          $('<li><a class="label-ep le' + $eq_id +'" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
+          //$('<li><a class="label-ep le' + $eq_id +'" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
+          //$('<li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
+          $('<li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep2"></span><span class="title">设备 1</span></a></li>').appendTo(chart_zone_ul);
         }
 
       }
