@@ -427,11 +427,270 @@ var App = function () {
     /*-----------------------------------------------------------------------------------*/
     var handleHiddenSideBar = function ()
     {
+
+    	//grab equipment list data and generate the data on the web
+    	//fake data
+    	//var equipment = {name:"1", status: "online"};
+    	//var productline = {name:"1", "equipments":[{name:"1", status: "online"}, {name:"2", status: "offline"}, {name:"3", status: "offline"}]};
+    	//var area = {name:"1", "products":[{name:"1", "equipments":[{name:"1", status: "online"}, {name:"2", status: "offline"}, {name:"3", status: "offline"}]}, {name:"1", "equipments":[{name:"1", status: "online"}, {name:"2", status: "offline"}, {name:"3", status: "offline"}]}]};
+
+    	//alert(area.name + area["products"].length);
+    	
+
+    	var list_data = {name:"list_data_fake", "areas":[
+
+    	//area 1
+    	{name:"1", "products":[
+    						//productline
+    						{name:"1", "equipments":[
+    												//equipment
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "offline"}, 
+    												{name:"7", status: "online"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "online"}, 
+    												{name:"10", status: "online"}, 
+    												{name:"11", status: "offline"}, 
+    												{name:"12", status: "offline"}
+    						]},
+    						{name:"2", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"3", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "online"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"4", "equipments":[
+    												{name:"1", status: "online"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"5", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "online"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "online"}
+    						]},
+    						{name:"6", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "online"}, 
+    												{name:"6", status: "offline"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"7", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "online"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "online"}, 
+    												{name:"6", status: "offline"}, 
+    												{name:"7", status: "online"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "online"}, 
+    												{name:"10", status: "offline"}
+    						]}
+    	]},
+
+    	//area 2
+    	{name:"2", "products":[
+    						//productline
+    						{name:"1", "equipments":[
+    												//equipment
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "offline"}, 
+    												{name:"7", status: "online"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "online"}, 
+    												{name:"10", status: "online"}, 
+    												{name:"11", status: "offline"}, 
+    												{name:"12", status: "offline"}
+    						]},
+    						{name:"2", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"3", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "online"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"4", "equipments":[
+    												{name:"1", status: "online"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"5", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "online"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "online"}
+    						]},
+    						{name:"6", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "online"}, 
+    												{name:"6", status: "offline"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]}
+    	]},
+
+    	//area 3
+    	{name:"3", "products":[
+    						//productline
+    						{name:"1", "equipments":[
+    												//equipment
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "offline"}, 
+    												{name:"7", status: "online"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "online"}, 
+    												{name:"10", status: "online"}, 
+    												{name:"11", status: "offline"}, 
+    												{name:"12", status: "offline"}
+    						]},
+    						{name:"2", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"3", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "offline"}, 
+    												{name:"3", status: "online"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"4", "equipments":[
+    												{name:"1", status: "online"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "offline"}, 
+    												{name:"4", status: "online"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "online"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "offline"}
+    						]},
+    						{name:"5", "equipments":[
+    												{name:"1", status: "offline"}, 
+    												{name:"2", status: "online"}, 
+    												{name:"3", status: "online"}, 
+    												{name:"4", status: "offline"}, 
+    												{name:"5", status: "offline"}, 
+    												{name:"6", status: "online"}, 
+    												{name:"7", status: "offline"}, 
+    												{name:"8", status: "offline"}, 
+    												{name:"9", status: "offline"}, 
+    												{name:"10", status: "online"}
+    						]}
+    	]}
+
+
+    	]};
+
+
+    	
+
+
         //cc();  //needed if changing height of the bar dynamically
         jQuery(".side-hidden-bar-toggle").click(function () {
             if(side_bar_hidden) {  //the bar is hidden
-                jQuery('#main-content').animate({marginLeft:"370px"});
-                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"320px"});
+                jQuery('#main-content').animate({marginLeft:"450px"});
+                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
                 $(".side-hidden-bar").fadeToggle(100, function (){
                   //$(this).toggleClass("open")
                 });
@@ -441,8 +700,8 @@ var App = function () {
                 side_bar_hidden = false;
             }
             else {  //the bar is open
-               jQuery('#main-content').animate({marginLeft:"120px"});
-               jQuery('#side-hidden-bar-toggle').animate({marginLeft:"70px"});
+               jQuery('#main-content').animate({marginLeft:"160px"});
+               jQuery('#side-hidden-bar-toggle').animate({marginLeft:"100px"});
 
                if($(".side-hidden-bar").hasClass("chart-draw")){
                   $(".side-hidden-bar").removeClass("chart-draw");
