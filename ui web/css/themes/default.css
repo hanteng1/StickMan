@@ -361,9 +361,8 @@ input::-webkit-input-placeholder {
 }
 
 .sidebar-menu > ul > li > ul > li > ul > li > ul > li a .equip-marker:before {
-  float: right;
+  margin-left: 10px;
   margin-top: 1px;
-  margin-right: 5px;
   display: inline;
   font-size: 16px;
   font-family: FontAwesome;
@@ -374,20 +373,40 @@ input::-webkit-input-placeholder {
   color: #b6b6b4;
 }
 
+.side-hidden-bar .sidebar-menu > ul > li > ul > li > ul > li > ul > li a .equip-check-marker:before{
+  float: right;
+  margin-right: 10px;
+  margin-top: 0;
+  display: inline;
+  font-size: 18px;
+  font-family: FontAwesome;
+  height: auto;
+  content: "\f096";
+  font-weight: 300;
+  text-shadow: none;
+  color: #b6b6b4;
+  display: none;
+}
+
+.side-hidden-bar.chart-draw .sidebar-menu > ul > li > ul > li > ul > li > ul > li a  .equip-check-marker:before{
+  display: block;
+}
+
 .sidebar-menu > ul > li > ul > li > ul > li > ul > li a .sub-sub-sub-menu-text {
   color: #b6b6b4;
 }
 
-.sidebar-menu > ul > li > ul > li > ul > li > ul > li a.open .equip-marker:before {
-  color: #4cc417;
+.sidebar-menu > ul > li > ul > li > ul > li > ul > li a.open .equip-check-marker:before {
+  content: "\f046";
 }
 
 .sidebar-menu > ul > li > ul > li > ul > li > ul > li a.running .equip-marker:before {
   content: "\f058";
+  color: #4cc417;
 }
 
 
-.sidebar-menu > ul > li > ul > li > ul > li > ul > li a.open .sub-sub-sub-menu-text {
+.sidebar-menu > ul > li > ul > li > ul > li > ul > li a.running .sub-sub-sub-menu-text {
   color: #4cc417;
 }
 

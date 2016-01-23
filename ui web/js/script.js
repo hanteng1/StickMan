@@ -684,15 +684,9 @@ var App = function () {
 
 
     	//show data
-      //alert(list_data["areas"].length);
 
       //target object
       var sub_area = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub');
-      //var sub_product =
-      //var sub_equipment =
-
-      //$('').appendTo(sub_areas);
-        
 
       for (var itra = 0; itra < list_data["areas"].length; itra++) {
         
@@ -701,9 +695,26 @@ var App = function () {
 
         var sub_product = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub');
         for (var itrp = 0; itrp < list_data["areas"][itra]["products"].length; itrp++) {
-            $('<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
+            //product
+            //list_data["areas"][itra]["products"][itrp].name
+            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="#"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
         
-            
+            var sub_equipment = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub').children('.product' + list_data["areas"][itra]["products"][itrp].name).children('.sub-sub-sub');
+
+            for (var itre = 0; itre < list_data["areas"][itra]["products"][itrp]["equipments"].length; itre++) {
+              
+              //list_data["areas"][itra]["products"][itrp]["equipments"][itre].name
+              //list_data["areas"][itra]["products"][itrp]["equipments"][itre].status
+
+              if(list_data["areas"][itra]["products"][itrp]["equipments"][itre].status == "online")
+              {
+
+                $('<li><a class="hidden-bar-equipment ep'+list_data["areas"][itra]["products"][itrp]["equipments"][itre].name+' running" href="javascript:;" id="'+list_data["areas"][itra]["products"][itrp]["equipments"][itre].name+'"><span class="sub-sub-sub-menu-text">设备 '+list_data["areas"][itra]["products"][itrp]["equipments"][itre].name+' : 10</span><span class="equip-marker"></span><span class="equip-check-marker"></span></a></li>').appendTo(sub_equipment);
+              }else if(list_data["areas"][itra]["products"][itrp]["equipments"][itre].status =="offline")
+              {
+                $('<li><a class="hidden-bar-equipment ep'+list_data["areas"][itra]["products"][itrp]["equipments"][itre].name+'" href="javascript:;" id="'+list_data["areas"][itra]["products"][itrp]["equipments"][itre].name+'"><span class="sub-sub-sub-menu-text">设备 '+list_data["areas"][itra]["products"][itrp]["equipments"][itre].name+' : 10</span><span class="equip-marker"></span><span class="equip-check-marker"></span></a></li>').appendTo(sub_equipment);
+              }
+            };
         };
 
       };
