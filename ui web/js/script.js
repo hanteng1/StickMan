@@ -907,8 +907,8 @@ var App = function () {
     /* Add Compare */
     jQuery('.box .tools .btn-group .box-add-compare').click(function(){
       if(side_bar_hidden) {  //the bar is hidden
-                jQuery('#main-content').animate({marginLeft:"370px"});
-                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"320px"});
+                jQuery('#main-content').animate({marginLeft:"450px"});
+                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
 
                 jQuery('#side-hidden-bar').addClass("chart-draw");
 
