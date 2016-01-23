@@ -167,119 +167,103 @@
 		<div class="main-content" id="main-content">
 			<div class="container">
 				<div class="row">
-					<div id="content" class="col-lg-12">
+					<div id="content" class="col-md-12">
+
 						<!-- PAGE HEADER-->
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="page-header">
-									<!-- STYLER -->
-									
-									<!-- /STYLER -->
-									<!-- BREADCRUMBS -->
-									<ul class="mbreadcrumb">
-										<li>
-											<a href="index.html"><i class="fa fa-chevron-left fa-1x"></i></a>
-										</li>
-										<li>
-											<!-- DATE RANGE PICKER -->
-											<span class="date-range pull-right">
-											<div class="btn-group">
-												<a class="js_update btn btn-default active" href="#">实时数据</a>
-												<a class="js_update btn btn-default" href="#">历史数据</a>
-												<a class="js_update btn btn-default" href="#">事件警告</a>
-												<a class="js_update btn btn-default" href="#"> 报表 </a>
-												
-												<!--
-												<a class="js_update btn btn-default hidden-xs" href="#">Last month</a>
-												
-												<a id="reportrange" class="btn reportrange">
-													<i class="fa fa-calendar"></i>
-													<span></span>
-													<i class="fa fa-angle-down"></i>
-												</a>-->
-											</div>
-											</span>
+							<div class="page-header">
+								<!-- BREADCRUMBS -->
+								<ul class="mbreadcrumb">
+									<li class="back-button">
+										<a href="index.html"><i class="fa fa-chevron-left"></i></a>
+									</li>
+									<li class="event-buttons">
+										<div class="btn-group">
+											<a class="js_update btn active" href="#">实时数据</a>
+											<a class="js_update btn" href="#">历史数据</a>
+											<a class="js_update btn" href="#">事件警告</a>
+											<a class="js_update btn" href="#"> 报表 </a>
+										</div>
+										
 											<!-- /DATE RANGE PICKER -->
-										</li>
-									</ul>
-									<!-- /BREADCRUMBS -->
-									
-								</div>
-							</div>
-						</div>
-						<!-- /PAGE HEADER -->
-						<!-- DASHBOARD CONTENT -->
-						<div class="row production-line-row">
-							<div class="clearfix">
-								<ul>
-									<li><span class="content-title pull-left">区域</span><i class="fa fa-angle-right"></i></li>
-									<li><span class="content-title pull-left">生产线</span><i class="fa fa-angle-right"></i></li>
-									<li><span class="content-title pull-left active">设备名</span><i class="fa fa-clock-o active"></i></li>
-								</ul>	
-							</div>
+									</li>
+								</ul>
+								<!-- /BREADCRUMBS -->
 
-							<!-- COLUMN 1 -->
-							<div class="col-md-4">
-								<div class="row">
-								  <div class="col-md-2"></div>	
-								  <div class="col-md-8">
-									 <div class="dashbox panel panel-default ">
-										<div class="panel-body red">
-										   <div class="panel-left">
-										   		<div class="title">今日耗电量 (W)</div>
-												<div class="number">5600</div>
-										   </div>
-										   <div class="panel-right white">
-												<i class="fa fa-align-right fa-2x"></i>
-										   </div>
-										   
-										</div>
-									 </div>
-								  </div>
-								  <div class="col-md-2"></div>	
+								<div class="clearfix">
+									<ul>
+										<li><span class="content-title pull-left">区域</span><i class="fa fa-angle-right"></i></li>
+										<li><span class="content-title pull-left">生产线</span><i class="fa fa-angle-right"></i></li>
+										<li><span class="content-title pull-left active">设备名</span><i class="fa fa-clock-o active"></i></li>
+									</ul>	
 								</div>
-								<div class="divide-20"></div>
-								<div class="row">
-									<div class="col-md-2"></div>
-									<div class="col-md-8">
-									 <div class="dashbox panel panel-default">
-										<div class="panel-body blue">
-										   <div class="panel-left">
-										   		<div class="title">报警数值 (次)</div>
-												<div class="number">8</div>
-										   </div>
-										   <div class="panel-right white">
-												<i class="fa fa-align-right fa-2x"></i>
-										   </div>
+
+								<!-- COLUMN 1 -->
+								<div class="col-md-4">
+									<div class="row">
+								  		<div class="col-md-2"></div>	
+								  		<div class="col-md-10">
+									 		<div class="dashbox panel panel-default ">
+												<div class="panel-body blue">
+										   			<div class="panel-left">
+										   				<div class="title">今日耗电量 (W)</div>
+														<div class="number">5600</div>
+										   			</div>
+										   			<div class="panel-right white">
+														<i class="fa fa-align-right fa-2x"></i>
+										   			</div>
 										   
-										</div>
-									 </div>
-								  </div>
-								  <div class="col-md-2"></div>
-							   </div>
-							</div>
-							<!-- /COLUMN 1 -->
-							
-							<!-- COLUMN 2 -->
-							<div class="col-md-8">
-								<!-- BOX -->
-								<div class="box">
-									<div class="box-body">
-										<figure class="chart" id="chart1" style="min-width:250px"></figure>
+												</div>
+									 		</div>
+								  		</div>
+								  		
 									</div>
+									<div class="divide-20"></div>
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-10">
+									 		<div class="dashbox panel panel-default">
+												<div class="panel-body red">
+										   			<div class="panel-left">
+										   				<div class="title">报警数值 (次)</div>
+														<div class="number">8</div>
+										  			 </div>
+										   			<div class="panel-right white">
+														<i class="fa fa-align-right fa-2x"></i>
+										   			</div>
+										   
+												</div>
+									 		</div>
+								  		</div>
+								  		
+							   		</div>
 								</div>
-								<!-- /BOX -->
-							</div>
-							<!-- /COLUMN 2 -->
-					</div>
-					   <!-- /DASHBOARD CONTENT -->
+								<!-- /COLUMN 1 -->
+							
+								<!-- COLUMN 2 -->
+								<div class="col-md-8">
+									<!-- BOX -->
+									<div class="box">
+										<div class="box-body">
+											<figure class="chart" id="chart1" style="min-width:250px"></figure>
+										</div>
+									</div>
+									<!-- /BOX -->
+								</div>
+								<!-- /COLUMN 2 -->
+									
+							</div><!-- /PAGE HEADER -->
+						
+						</div><!--/ROW-->
+						
+						
 
 					   <!--基础数据和向量图-->
 					   <div class="row">
 					   	<div class="col-md-8">
 					   		<div class="box border grey">
 					   			<div class="box-title">
-										<h4><span class="hidden-inline-mobile">基础数据_E8000_200 线路1</span></h4>
+										<h4>基础数据_E8000_200 线路1</h4>
 										<div class="tools">
 											<div class="btn-group">
 												<a class="box-collapse btn btn-default" href="javascript:;"><span class="collect-text" id="collect-text">收起</span><span class="collect-arrow"></span></a>
