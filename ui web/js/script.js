@@ -683,7 +683,30 @@ var App = function () {
     	]};
 
 
-    	
+    	//show data
+      //alert(list_data["areas"].length);
+
+      //target object
+      var sub_area = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub');
+      //var sub_product =
+      //var sub_equipment =
+
+      //$('').appendTo(sub_areas);
+        
+
+      for (var itra = 0; itra < list_data["areas"].length; itra++) {
+        
+        //area
+        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
+
+        var sub_product = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub');
+        for (var itrp = 0; itrp < list_data["areas"][itra]["products"].length; itrp++) {
+            $('<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
+        
+            
+        };
+
+      };
 
 
         //cc();  //needed if changing height of the bar dynamically
@@ -3908,12 +3931,13 @@ var App = function () {
       }
 
 			checkLayout();	//Function to check if mini menu/fixed header is activated
-			handleSidebar(); //Function to display the sidebar
+			
 			handleSidebarCollapse(); //Function to hide or show sidebar
 			handleSidebarAndContentHeight();  //Function to hide sidebar and main content height
 			responsiveSidebar();		//Function to handle sidebar responsively
 			handleTeamView(); //Function to toggle team view
       handleHiddenSideBar();
+      handleSidebar(); //Function to display the sidebar
 			handleHomePageTooltips(); //Function to handle tooltips
 			handleBoxTools(); //Function to handle box tools
 			handleSlimScrolls(); //Function to handle slim scrolls
