@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
-	<title>Cloud Admin | Login</title>
+	<title>登陆</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -17,8 +17,8 @@
 	<link rel="stylesheet" type="text/css" href="js/uniform/css/uniform.default.min.css" />
 	<!-- ANIMATE -->
 	<link rel="stylesheet" type="text/css" href="css/animatecss/animate.min.css" />
-	<!-- FONTS -->
-	<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+	<!-- FONTS 
+	<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>-->
 </head>
 <body class="login">	
 	<!-- PAGE -->
@@ -34,40 +34,49 @@
 							<div class="login-box-plain">
 
 								<div class="login-title">
-									<img src="img/logo/logo.png" alt="PICOHOOD" height="30" width="120">
-									<span class="name">| 电能质量监测系统</span>
+									<ul>
+										<li><img src="img/logo/logo.png" alt="PICOHOOD"></li>
+										<li><span class="name">| 电能质量监测系统</span></li>
+									</ul>
+									
 								</div>
 							
 								<div class="login-body">
 									<h2 class="bigintro">望京科技园</h2>
+									
 									<div class="divide-40"></div>
 
 									<form role="form">
-								  <div class="form-group">
-									<i class="fa fa-envelope"></i>
-									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的用户名">
-								  </div>
-								  <div class="form-group"> 
-									<i class="fa fa-lock"></i>
-									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入您的密码">
-								  </div>
+								  		<div class="form-group">
+											<i class="fa fa-user"></i>
+											<input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的用户名">
+								  		</div>
+								  		<div class="form-group"> 
+											<i class="fa fa-lock"></i>
+											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入您的密码">
+								  		</div>
 
 								  
-								  <div class="form-group"> 
-										<input type="text" class="form-control small left" id="exampleInputVerify">
+								  		<div class="form-group verification"> 
+											<ul>
+												<li><input type="text" class="form-control verification-form" id="exampleInputVerify" placeholder="请输入验证码"></li>
+												<li>
+													<a href="" class="btn btn-default">A B C D</a>
+												</li>
+											</ul>	
+								  		</div>
 
-										<span class="verify-code">验证码</span>
-								  </div>
 
+								  		<div class="form-group">
+											<button type="submit" class="btn btn-danger">登 录</button>
+								  		</div>
+									</form>
 
-								  <div class="form-group">
-									<button type="submit" class="btn btn-danger">登录</button>
-								  </div>
-								</form>
-								<div class="login-helpers">
-									<a href="#" onclick="swapScreen('forgot');return false;">忘记密码?</a> <br>
-									没有账号? <a href="#" onclick="swapScreen('register');return false;">现在注册!</a>
-								</div>
+									<!--
+									<div class="login-helpers">
+										<a href="#" onclick="swapScreen('forgot');return false;">忘记密码?</a> <br>
+											没有账号? <a href="#" onclick="swapScreen('register');return false;">现在注册!</a>
+									</div>-->
 								</div>
 
 								

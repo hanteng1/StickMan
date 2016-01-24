@@ -26,17 +26,17 @@
 	<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>-->
 </head>
 <body>
-	<!-- HEADER -->
-	<header class="navbar clearfix" id="header">
+
+	<div class="navbar-fixed-top">
+		<header class="navbar clearfix" id="header">
 		<div class="container">
 			<div class="col-md-4">
 				<div class="navbar-brand">
 					<!-- COMPANY LOGO -->
 					<a href="index.html">
-						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive" height="30" width="120">
+						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive">
 						<span class="navbar-name">| 电能质量监测系统</span>
 					</a>
-
 					<!-- /COMPANY LOGO -->
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 				<!-- BEGIN TOP NAVIGATION MENU -->					
 				<ul class="nav navbar-nav pull-right">
 					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<li class="dropdown user" id="header-user">
+					<li class="user">
 						<img alt="" src="img/avatars/avatar2.jpg" />
 						<span class="username">Hugh, 欢迎你 !</span>
 					</li>
@@ -79,360 +79,182 @@
 				<!-- END TOP NAVIGATION MENU -->
 			</div>			
 		</div>
+		</header>
+		<!--/HEADER -->
 
-	</header>
-	<!--/HEADER -->
+	</div>
+
 	<!-- PAGE -->
 	<section id="page">
-				<!-- SIDEBAR -->
-				<div id="sidebar" class="sidebar mini-menu">
-					<div class="sidebar-menu nav-collapse">				
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<!--数据-->
-							<li class="active">
-								<a href="index.html">
-								<span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span>
-								</a>				
-							</li>
-							<!--设备-->
-							<li><a class="" href="" target="_blank"><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
-							<!--用户-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
-							<!--方案-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
-							<!--日志-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>
+		<!-- SIDEBAR -->
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-menu nav-collapse">				
+				<!-- SIDEBAR MENU -->
+				<ul>
+					<!--数据-->
+					<li class="active"><a href="index.html"><span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span></a></li>
+					<!--设备-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
+					<!--用户-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
+					<!--方案-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
+					<!--日志-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>   
+				</ul>
+				<!-- /SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
+
+		<!--隐藏菜单-->
+		<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
+		<div class="side-hidden-bar" id="side-hidden-bar">
+			<div class="sidebar-menu">			
+				<!--ANOTHER SEARCH BAR-->
+				<div class="divide-20"></div>
+
+				<div class="hidden-search-bar">
+					<input class="search" type="text" placeholder="搜索设备"><i class="fa fa-search search-icon"></i>
+				</div>
+
+				<!-- SIDEBAR MENU -->
+				<ul class="zero-sub">
+					<li class="has-sub">
+						<a href="javascript:;" class=""><i class="fa fa-tachometer"></i><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
+						<ul class="sub">  
+
 						</ul>
+					</li>
+				</ul>
 						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
-				<!-- /SIDEBAR -->
+			</div>
+		</div>
 
-				<!--隐藏菜单-->
-				<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
-				<div class="side-hidden-bar" id="side-hidden-bar">
-					<div class="sidebar-menu nav-collapse">			
-						<!--ANOTHER SEARCH BAR-->
-						<div class="divide-20"></div>
+		<!--/隐藏菜单-->
 
-						<div class="hidden-search-bar">
-							<input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
-							<a href="javascript:;" class=""><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
-						</div>
-
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<li class="has-sub">
-								<a href="javascript:;" class="">
-								<i class="fa fa-tachometer fa-3x"></i>
-								</a>
-								<ul class="sub">
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 1</span>
-										<span class="arrow"></span>
-										</a>
-										<ul class="sub-sub">
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="hidden-bar-equipment ep1" href="javascript:;" id="1"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment ep2 open running" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment ep3" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment ep4 running" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment ep5 running" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 5 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment ep6 running" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 6 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment ep7 running" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 7 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment  ep8" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 8 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="hidden-bar-equipment  ep9" href="javascript:;"><span class="sub-sub-sub-menu-text">设备 9 : 10</span><span class="equip-marker"></span></a></li>
-											</ul>
-											</li>
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 2</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-
-											</ul>
-											</li>
-
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 3</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-												
-											</ul>
-											</li>
-
-										</ul>
-									</li>
-
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 2</span>
-										<span class="arrow"></span>
-										</a>
-										<ul class="sub-sub">
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-											</ul>
-											</li>
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 2</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-
-											</ul>
-											</li>
-
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 3</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-												
-											</ul>
-											</li>
-
-										</ul>
-									</li>
-
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 3</span>
-										<span class="arrow"></span>
-										</a>
-										<ul class="sub-sub">
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-											</ul>
-											</li>
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 2</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-
-											</ul>
-											</li>
-
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 3</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-												
-											</ul>
-											</li>
-
-										</ul>
-									</li>
-
-								</ul>
-							</li>
-						</ul>
-						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
-
-				<!--/隐藏菜单-->
-
-				<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
-					<ul>
-						<li><span class="name">设备列表</span></li>
-						<li><i class = "fa fa-angle-right"></i></li>
-					</ul>
-				</div>
+		<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
+			<ul>
+				<li><span class="name">设备列表</span></li>
+				<li><i class = "fa fa-angle-right"></i></li>
+			</ul>
+		</div>	
 
 
 		<div class="main-content" id="main-content">
 			<div class="container">
 				<div class="row">
 					<div id="content" class="col-lg-12">
+
 						<!-- PAGE HEADER-->
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="page-header">
-									<!-- STYLER -->
-									
-									<!-- /STYLER -->
-									<!-- BREADCRUMBS -->
-									<ul class="mbreadcrumb">
-										<li>
-											<a href="index.html"><i class="fa fa-chevron-left fa-1x"></i></a>
-										</li>
-										<li>
-											<!-- DATE RANGE PICKER -->
-											<span class="date-range pull-right">
-											<div class="btn-group">
-												<a class="js_update btn btn-default" href="#">实时数据</a>
-												<a class="js_update btn btn-default" href="#">历史数据</a>
-												<a class="js_update btn btn-default" href="#">事件警告</a>
-												<a class="js_update btn btn-default active" href="#"> 报表 </a>
-												
-												<!--
-												<a class="js_update btn btn-default hidden-xs" href="#">Last month</a>
-												
-												<a id="reportrange" class="btn reportrange">
-													<i class="fa fa-calendar"></i>
-													<span></span>
-													<i class="fa fa-angle-down"></i>
-												</a>-->
-											</div>
-											</span>
+							<div class="page-header">
+								<!-- BREADCRUMBS -->
+								<ul class="mbreadcrumb">
+									<li class="back-button">
+										<a href="index.html"><i class="fa fa-chevron-left"></i></a>
+									</li>
+									<li class="event-buttons">
+										<div class="btn-group">
+											<a class="js_update btn" href="#">实时数据</a>
+											<a class="js_update btn" href="#">历史数据</a>
+											<a class="js_update btn" href="#">事件警告</a>
+											<a class="js_update btn active" href="#"> 报表 </a>
+										</div>
+										
 											<!-- /DATE RANGE PICKER -->
-										</li>
-									</ul>
-									<!-- /BREADCRUMBS -->
-									
-								</div>
-							</div>
-						</div>
-						<!-- /PAGE HEADER -->
-						<!-- DASHBOARD CONTENT -->
-						<div class="row production-line-row">
-							<div class="clearfix">
-								<ul>
-									<li><span class="content-title pull-left">区域</span><i class="fa fa-angle-right"></i></li>
-									<li><span class="content-title pull-left">生产线</span><i class="fa fa-angle-right"></i></li>
-									<li><span class="content-title pull-left active">设备名</span><i class="fa fa-clock-o active"></i></li>
-								</ul>	
-							</div>
+									</li>
+								</ul>
+								<!-- /BREADCRUMBS -->
 
-							<!-- COLUMN 1 -->
-							<div class="col-md-4">
-								<div class="row">
-								  <div class="col-md-2"></div>	
-								  <div class="col-md-8">
-									 <div class="dashbox panel panel-default ">
-										<div class="panel-body red">
-										   <div class="panel-left">
-										   		<div class="title">今日耗电量 (W)</div>
-												<div class="number">5600</div>
-										   </div>
-										   <div class="panel-right white">
-												<i class="fa fa-align-right fa-2x"></i>
-										   </div>
-										   
-										</div>
-									 </div>
-								  </div>
-								  <div class="col-md-2"></div>	
+								<div class="clearfix">
+									<ul>
+										<li><span class="content-title pull-left">区域</span><i class="fa fa-angle-right"></i></li>
+										<li><span class="content-title pull-left">生产线</span><i class="fa fa-angle-right"></i></li>
+										<li><span class="content-title pull-left active">设备名</span><i class="fa fa-clock-o active"></i></li>
+									</ul>	
 								</div>
-								<div class="divide-20"></div>
-								<div class="row">
-									<div class="col-md-2"></div>
-									<div class="col-md-8">
-									 <div class="dashbox panel panel-default">
-										<div class="panel-body blue">
-										   <div class="panel-left">
-										   		<div class="title">报警数值 (次)</div>
-												<div class="number">8</div>
-										   </div>
-										   <div class="panel-right white">
-												<i class="fa fa-align-right fa-2x"></i>
-										   </div>
+
+								<!-- COLUMN 1 -->
+								<div class="col-md-4">
+									<div class="row">
+								  		<div class="col-md-2"></div>	
+								  		<div class="col-md-10">
+									 		<div class="dashbox panel panel-default ">
+												<div class="panel-body blue">
+										   			<div class="panel-left">
+										   				<div class="title">今日耗电量 (W)</div>
+														<div class="number">5600</div>
+										   			</div>
+										   			<div class="panel-right white">
+														<i class="fa fa-align-right fa-2x"></i>
+										   			</div>
 										   
-										</div>
-									 </div>
-								  </div>
-								  <div class="col-md-2"></div>
-							   </div>
-							</div>
-							<!-- /COLUMN 1 -->
-							
-							<!-- COLUMN 2 -->
-							<div class="col-md-8">
-								<!-- BOX -->
-								<div class="box">
-									<div class="box-body">
-										<figure class="chart" id="chart1" style="min-width:250px"></figure>
+												</div>
+									 		</div>
+								  		</div>
+								  		
 									</div>
+									<div class="divide-20"></div>
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-10">
+									 		<div class="dashbox panel panel-default">
+												<div class="panel-body red">
+										   			<div class="panel-left">
+										   				<div class="title">报警数值 (次)</div>
+														<div class="number">8</div>
+										  			 </div>
+										   			<div class="panel-right white">
+														<i class="fa fa-align-right fa-2x"></i>
+										   			</div>
+										   
+												</div>
+									 		</div>
+								  		</div>
+								  		
+							   		</div>
 								</div>
-								<!-- /BOX -->
-							</div>
-							<!-- /COLUMN 2 -->
-						</div>
-					   	<!-- /DASHBOARD CONTENT -->
+								<!-- /COLUMN 1 -->
+							
+								<!-- COLUMN 2 -->
+								<div class="col-md-8">
+									<!-- BOX -->
+									<div class="box">
+										<div class="box-body">
+											<figure class="chart" id="chart1" style="min-width:250px"></figure>
+										</div>
+									</div>
+									<!-- /BOX -->
+								</div>
+								<!-- /COLUMN 2 -->
+									
+							</div><!-- /PAGE HEADER -->
+						
+						</div><!--/ROW-->
+						
 
-					   	<div class="row">
-							<div class="col-sm-12">
-								<div class="page-header">
-									<ul class="mbreadcrumb">
-										<li>
-											<input type="checkbox">
-										</li>
-										<li>
-											<span class="bread-title">日报表</span>
-										</li>
+						<div class="row">
+					    	<div class="col-md-12">
+					    		<div class="box border grey query-box">
+					    			<div class="box-title">
+										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="a"> 日报表 </label> </h4>
+										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="a"> 月报表 </label> </h4>
+										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="a"> 年报表 </label></h4>
 
-										<li>
-											<input type="checkbox">
-										</li>
-										<li>
-											<span class="bread-title">月报表</span>
-										</li>
-
-										<li>
-											<input type="checkbox">
-										</li>
-										<li>
-											<span class="bread-title">年报表</span>
-										</li>
-
-										<li class="bread-form">
-											<input  class="data-form-control datepicker-1" type="text" name="regular" size="10" placeholder="输入起始日期">
-										</li>
-										<li><span>至</span></li>
-										<li>
-											<input  class="data-form-control datepicker-2" type="text" name="regular" size="10" placeholder="输入截止日期">
-										</li>
-										<li class="tools">
-											
+										<div class="tools">
+											<h4 class="small"><input class="data-form-control datepicker-1" type="text" name="regular" size="10" placeholder="输入起始日期"></h4>
+											<h4 class="small">至</h4>
+											<h4 class="small"><input class="data-form-control datepicker-2" type="text" name="regular" size="10" placeholder="输入截止日期"></h4>
 											<div class="btn-group">
-												<a class="btn btn-danger" href="#">查询</a>
+												<a class="btn btn-default big" href="javascript:;"><span class="collect-text" id="collect-text">查询</span></a>
+
 											</div>
-											
-										</li>
-									</ul>
+										</div>
 								</div>
-							</div>
-						</div>
-
-						<div class="divide-20"></div>
-						<div class="divide-20"></div>
-
+					    		</div>
+					    	</div>
+					    </div>
 
 					  	<div class="row">
 					  		<div class="col-sm-12">

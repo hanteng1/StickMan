@@ -34,6 +34,9 @@
   color: #e7e7e7;
 }
 
+.navbar .navbar-brand a:hover{
+  text-decoration: none;
+}
 
 /* Search */
 .navbar .search-bar {
