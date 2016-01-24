@@ -16,12 +16,11 @@
 	<link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
 	<!-- XCHARTS -->
 	<link rel="stylesheet" type="text/css" href="js/xcharts/xcharts.min.css" />
-	<!-- FONTS -->
-	<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<!-- HEADER -->
-	<header class="navbar clearfix" id="header">
+	<div class="navbar-fixed-top">
+		<header class="navbar clearfix" id="header">
 		<div class="container">
 			<div class="col-md-4">
 				<div class="navbar-brand">
@@ -30,7 +29,6 @@
 						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive">
 						<span class="navbar-name">| 电能质量监测系统</span>
 					</a>
-
 					<!-- /COMPANY LOGO -->
 				</div>
 			</div>
@@ -47,7 +45,7 @@
 				<!-- BEGIN TOP NAVIGATION MENU -->					
 				<ul class="nav navbar-nav pull-right">
 					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<li class="dropdown user" id="header-user">
+					<li class="user">
 						<img alt="" src="img/avatars/avatar2.jpg" />
 						<span class="username">Hugh, 欢迎你 !</span>
 					</li>
@@ -73,54 +71,59 @@
 				<!-- END TOP NAVIGATION MENU -->
 			</div>			
 		</div>
+		</header>
+		<!--/HEADER -->
 
-	</header>
-	<!--/HEADER -->
+	</div>
+	
+
+		
+
+	
 	<!-- PAGE -->
 	<section id="page">
-				<!-- SIDEBAR -->
-				<div id="sidebar" class="sidebar mini-menu">
-					<div class="sidebar-menu nav-collapse">				
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<!--数据-->
-							<li class="active">
-								<a href="index.html">
-								<span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span>
-								</a>				
-							</li>
-							<!--设备-->
-							<li><a class="" href="" target="_blank"><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
-							<!--用户-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
-							<!--方案-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
-							<!--日志-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>
-						</ul>
-						<!-- /SIDEBAR MENU -->
-					</div>
+		<!-- SIDEBAR -->
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-menu nav-collapse">				
+				<!-- SIDEBAR MENU -->
+				<ul>
+					<!--数据-->
+					<li class="active"><a href="index.html"><span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span></a></li>
+					<!--设备-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
+					<!--用户-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
+					<!--方案-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
+					<!--日志-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>   
+				</ul>
+				<!-- /SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
+
+		<!--隐藏菜单-->
+		<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
+		<div class="side-hidden-bar" id="side-hidden-bar">
+			<div class="sidebar-menu">			
+				<!--ANOTHER SEARCH BAR-->
+				<div class="divide-20"></div>
+
+				<div class="hidden-search-bar">
+					<input class="search" type="text" placeholder="搜索设备"><i class="fa fa-search search-icon"></i>
 				</div>
-				<!-- /SIDEBAR -->
 
-				<!--隐藏菜单-->
-				<div class="side-hidden-bar" id="side-hidden-bar">
-					<div class="sidebar-menu nav-collapse">			
-						<!--ANOTHER SEARCH BAR-->
-						<div class="divide-20"></div>
+				<!-- SIDEBAR MENU -->
+				<ul class="zero-sub">
+					<li class="has-sub">
+						<a href="javascript:;" class=""><i class="fa fa-tachometer"></i><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
+						<ul class="sub">  
 
-						<div class="hidden-search-bar">
-							<input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
-							<a href="javascript:;" class=""><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
-						</div>
+									<!--content needed to be added-->
 
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<li class="has-sub">
-								<a href="javascript:;" class="">
-								<i class="fa fa-tachometer fa-3x"></i>
-								</a>
-								<ul class="sub">
+									<!--here is an exmaple of list format
+
 									<li class="has-sub-sub">
 										<a href="javascript:;" class=""><span class="sub-menu-text">区域 1</span>
 										<span class="arrow"></span>
@@ -130,42 +133,31 @@
 											<span class="arrow"></span>
 											</a>
 											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="open" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
+												<li><a class="hidden-bar-equipment ep1 running" href="javascript:;" id="1"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span><span class="equip-check-marker"></span></a></li>
+
 											</ul>
 											</li>
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 2</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span></a></li>
-											</ul>
-											</li>
+
 										</ul>
 									</li>
 
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 2</span>
-										<span class="arrow"></span>
-										</a>
-									</li>
-								</ul>
-							</li>
+									-->
+
 						</ul>
+					</li>
+				</ul>
 						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
+			</div>
+		</div>
 
 				<!--/隐藏菜单-->
 
-				<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
-					<ul>
-						<li><span class="name">设备列表</span></li>
-						<li><i class = "fa fa-angle-right"></i></li>
-					</ul>
-				</div>
+		<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
+			<ul>
+				<li><span class="name">设备列表</span></li>
+				<li><i class = "fa fa-angle-right"></i></li>
+			</ul>
+		</div>		
 
 
 		<div class="main-content" id="main-content">
@@ -173,6 +165,7 @@
 				<div class="row">
 					<div id="content" class="col-lg-12">
 						
+						<div class="divide-20"></div>
 						<div class="divide-20"></div>
 
 						<!-- DASHBOARD CONTENT -->
@@ -210,7 +203,7 @@
 									<div class="dashbox panel">
 										<div class="panel-body green">
 										   <div class="panel-left">
-										   		<div class="title">设备数值 (台)</div>
+										   		<div class="title">报警设备 (台)</div>
 												<div class="number">15</div>
 										   </div>
 										   <div class="panel-right white">
@@ -240,15 +233,14 @@
 								</div>
 							</div>
 
-							<div class="clearfix">
-								<ul>
-									
-									<li><span class="content-title pull-left">设备:<span class="red">66</span></span></li>
-								</ul>	
-							</div>
 
 							<div class="row">
 								<div class="col-md-12">
+									<div class="clearfix">
+										<ul>	
+											<li><span class="content-title pull-left">设备:<span class="red">66</span></span></li>
+										</ul>	
+									</div>
 								<!-- BOX -->
 								<div class="box">
 									<div class="box-body">
@@ -293,29 +285,37 @@
 
 					   			<div class="row">
 					   				<div class="col-md-6">
-					   					<div class="equip-row-dash-div blue">
+					   					<div class="col-md-2"></div>
+					   					<div class="col-md-8">
+					   						<div class="equip-row-dash-div blue">
 											<span>2100</span>
+											</div>
+											<div class="equip-row-dash-div-title">今日耗电量(W)</div>
 										</div>
-										<div class="equip-row-dash-div-title">今日耗电量</div>
+										<div class="col-md-2"></div>
 					   				</div>
 
 					   				<div class="col-md-6">
-					   					<div class="equip-row-dash-div red">
-											<span>8</span>
+					   					<div class="col-md-2"></div>
+					   					<div class="col-md-8">
+					   						<div class="equip-row-dash-div green">
+												<span>0</span>
+											</div>
+											<div class="equip-row-dash-div-title">报警设备(台)</div>
 										</div>
-										<div class="equip-row-dash-div-title">报警次数</div>
+										<div class="col-md-2"></div>
 					   				</div>
 
 					   			</div>
 
-					   			<br/>
+					   			<br/><br/>
 
 					   			<div class="row">
 					   				<div class="col-md-12">
 									<!-- BOX -->
 									<div class="box">
 										<div class="box-body">
-											<figure class="chart" id="chart2-1" style="max-height:150px"></figure>
+											<figure class="chart" id="chart2-1" style="max-height:200px; max-width:95%"></figure>
 										</div>
 									</div>
 									<!-- /BOX -->
@@ -324,6 +324,10 @@
 
 					   			<div class="row chart-title">
 									<span>2015年10月数据表</span>
+								</div>
+
+								<div class="form-group">
+									<button type="submit" class="btn btn-danger">数据监测</button>
 								</div>
 
 					   		</div>
@@ -338,29 +342,37 @@
 
 					   			<div class="row">
 					   				<div class="col-md-6">
-					   					<div class="equip-row-dash-div blue">
+					   					<div class="col-md-2"></div>
+					   					<div class="col-md-8">
+					   						<div class="equip-row-dash-div blue">
 											<span>2100</span>
+											</div>
+											<div class="equip-row-dash-div-title">今日耗电量(W)</div>
 										</div>
-										<div class="equip-row-dash-div-title">今日耗电量</div>
+										<div class="col-md-2"></div>
 					   				</div>
 
 					   				<div class="col-md-6">
-					   					<div class="equip-row-dash-div red">
-											<span>8</span>
+					   					<div class="col-md-2"></div>
+					   					<div class="col-md-8">
+					   						<div class="equip-row-dash-div green">
+												<span>0</span>
+											</div>
+											<div class="equip-row-dash-div-title">报警设备(台)</div>
 										</div>
-										<div class="equip-row-dash-div-title">报警次数</div>
+										<div class="col-md-2"></div>
 					   				</div>
 
 					   			</div>
 
-					   			<br/>
+					   			<br/><br/>
 
 					   			<div class="row">
 					   				<div class="col-md-12">
 									<!-- BOX -->
 									<div class="box">
 										<div class="box-body">
-											<figure class="chart" id="chart2-2" style="max-height:150px"></figure>
+											<figure class="chart" id="chart2-2" style="max-height:200px; max-width:95%"></figure>
 										</div>
 									</div>
 									<!-- /BOX -->
@@ -369,6 +381,10 @@
 
 					   			<div class="row chart-title">
 									<span>2015年11月数据表</span>
+								</div>
+
+								<div class="form-group">
+									<button type="submit" class="btn btn-danger">数据监测</button>
 								</div>
 
 					   		</div>
@@ -383,29 +399,37 @@
 
 					   			<div class="row">
 					   				<div class="col-md-6">
-					   					<div class="equip-row-dash-div blue">
+					   					<div class="col-md-2"></div>
+					   					<div class="col-md-8">
+					   						<div class="equip-row-dash-div blue">
 											<span>2100</span>
+											</div>
+											<div class="equip-row-dash-div-title">今日耗电量(W)</div>
 										</div>
-										<div class="equip-row-dash-div-title">今日耗电量</div>
+										<div class="col-md-2"></div>
 					   				</div>
 
 					   				<div class="col-md-6">
-					   					<div class="equip-row-dash-div red">
-											<span>8</span>
+					   					<div class="col-md-2"></div>
+					   					<div class="col-md-8">
+					   						<div class="equip-row-dash-div green">
+												<span>0</span>
+											</div>
+											<div class="equip-row-dash-div-title">报警设备(台)</div>
 										</div>
-										<div class="equip-row-dash-div-title">报警次数</div>
+										<div class="col-md-2"></div>
 					   				</div>
 
 					   			</div>
 
-					   			<br/>
+					   			<br/><br/>
 
 					   			<div class="row">
 					   				<div class="col-md-12">
 									<!-- BOX -->
 									<div class="box">
 										<div class="box-body">
-											<figure class="chart" id="chart2-3" style="max-height:150px"></figure>
+											<figure class="chart" id="chart2-3" style="max-height:200px; max-width:95%"></figure>
 										</div>
 									</div>
 									<!-- /BOX -->
@@ -414,6 +438,10 @@
 
 					   			<div class="row chart-title">
 									<span>2015年12月数据表</span>
+								</div>
+
+								<div class="form-group">
+									<button type="submit" class="btn btn-danger">数据监测</button>
 								</div>
 
 					   		</div>
