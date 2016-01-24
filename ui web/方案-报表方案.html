@@ -20,16 +20,16 @@
 </head>
 <body>
 	<!-- HEADER -->
-	<header class="navbar clearfix" id="header">
+	<div class="navbar-fixed-top">
+		<header class="navbar clearfix" id="header">
 		<div class="container">
 			<div class="col-md-4">
 				<div class="navbar-brand">
 					<!-- COMPANY LOGO -->
 					<a href="index.html">
-						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive" height="30" width="120">
+						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive">
 						<span class="navbar-name">| 电能质量监测系统</span>
 					</a>
-
 					<!-- /COMPANY LOGO -->
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 				<!-- BEGIN TOP NAVIGATION MENU -->					
 				<ul class="nav navbar-nav pull-right">
 					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<li class="dropdown user" id="header-user">
+					<li class="user">
 						<img alt="" src="img/avatars/avatar2.jpg" />
 						<span class="username">Hugh, 欢迎你 !</span>
 					</li>
@@ -72,99 +72,71 @@
 				<!-- END TOP NAVIGATION MENU -->
 			</div>			
 		</div>
+		</header>
+		<!--/HEADER -->
 
-	</header>
-	<!--/HEADER -->
+	</div>
+	
+
+		
+
+	
 	<!-- PAGE -->
 	<section id="page">
-				<!-- SIDEBAR -->
-				<div id="sidebar" class="sidebar mini-menu">
-					<div class="sidebar-menu nav-collapse">				
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<!--数据-->
-							<li>
-								<a href="index.html">
-								<span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span>
-								</a>				
-							</li>
-							<!--设备-->
-							<li><a class="" href="" target="_blank"><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
-							<!--用户-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
-							<!--方案-->
-							<li class="active"><a class="" href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
-							<!--日志-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>
-						</ul>
-						<!-- /SIDEBAR MENU -->
-					</div>
+		<!-- SIDEBAR -->
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-menu nav-collapse">				
+				<!-- SIDEBAR MENU -->
+				<ul>
+					<!--数据-->
+					<li><a href="index.html"><span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span></a></li>
+					<!--设备-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
+					<!--用户-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
+					<!--方案-->
+					<li class="active"><a href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
+					<!--日志-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>   
+				</ul>
+				<!-- /SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
+
+		<!--隐藏菜单-->
+		<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
+		<div class="side-hidden-bar" id="side-hidden-bar">
+			<div class="sidebar-menu">			
+				<!--ANOTHER SEARCH BAR-->
+				<div class="divide-20"></div>
+
+				<div class="hidden-search-bar">
+					<input class="search" type="text" placeholder="搜索设备"><i class="fa fa-search search-icon"></i>
 				</div>
-				<!-- /SIDEBAR -->
 
-				<!--隐藏菜单-->
-				<div class="side-hidden-bar" id="side-hidden-bar">
-					<div class="sidebar-menu nav-collapse">			
-						<!--ANOTHER SEARCH BAR-->
-						<div class="divide-20"></div>
+				<!-- SIDEBAR MENU -->
+				<ul class="zero-sub">
+					<li class="has-sub">
+						<a href="javascript:;" class=""><i class="fa fa-tachometer"></i><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
+						<ul class="sub">  
 
-						<div class="hidden-search-bar">
-							<input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
-							<a href="javascript:;" class=""><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
-						</div>
-
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<li class="has-sub">
-								<a href="javascript:;" class="">
-								<i class="fa fa-tachometer fa-3x"></i>
-								</a>
-								<ul class="sub">
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 1</span>
-										<span class="arrow"></span>
-										</a>
-										<ul class="sub-sub">
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="open" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-											</ul>
-											</li>
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 2</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span></a></li>
-											</ul>
-											</li>
-										</ul>
-									</li>
-
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 2</span>
-										<span class="arrow"></span>
-										</a>
-									</li>
-								</ul>
-							</li>
 						</ul>
+					</li>
+				</ul>
 						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
+			</div>
+		</div>
 
 				<!--/隐藏菜单-->
 
-				<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
-					<ul>
-						<li><span class="name">设备列表</span></li>
-						<li><i class = "fa fa-angle-right"></i></li>
-					</ul>
-				</div>
+		<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
+			<ul>
+				<li><span class="name">设备列表</span></li>
+				<li><i class = "fa fa-angle-right"></i></li>
+			</ul>
+		</div>				
+
 
 
 		<div class="main-content" id="main-content">
@@ -173,6 +145,7 @@
 					<div id="content" class="col-lg-12">
 						
 						<div class="divide-20"></div>
+
 						<div class="row">
 							<div class="col-md-12">
 								<div class="box border grey">
@@ -184,7 +157,7 @@
 												<div class="tabbable">
 													<ul class="nav nav-tabs">
 														<li class="active"><a href="#tab_1_1" data-toggle="tab">报表方案<i class="fa fa-plus add-button" href="#small-dialog"></i></a></li>
-														<li><a href="#tab_1_2" data-toggle="tab">告警方案</a></li>
+														<li><a href="#tab_1_2" data-toggle="tab">告警方案<i class="fa fa-plus add-button" href="#small-dialog"></i></a></li>
 													</ul>
 														<div class="tab-content">
 														   <div class="tab-pane fade in active" id="tab_1_1">
@@ -402,8 +375,218 @@
 
 														   </div>
 														   <div class="tab-pane fade" id="tab_1_2">
-																<div class="divide-10"></div>
-															  <p> Everyone turned toward me and gave me the death stare and I knew I had screwed up once again, they all walked in slow motion towards me saying the same familiar chant I had heard earlier, before anyone could reach me I awoke in a frantic sweaty rush in my bed. My legs were no longer on fire and I felt slightly normal again. I noticed that my mom, a preacher, and several other family members were standing around me. </p>
+														   		<div class="divide-10"></div>
+
+														   		<div class="row">
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 1</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 2</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 3</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 4</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  	</div>
+
+															  	<div class="divide-10"></div>
+															  		
+															  	<div class="row">
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 1</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情n</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 2</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 3</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 4</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  	</div>
+
+															  	<div class="divide-10"></div>
+															  		
+															  	<div class="row">
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 1</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 2</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 3</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 4</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  	</div>
+
+															  	<div class="divide-10"></div>
+															  		
+															  	<div class="row">
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 1</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 2</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 3</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  		<div class="col-md-3">
+															  			<div class="table-case-box status-warning">
+															  				<div class="title">告警方案 4</div>
+															  				<div class="icon">
+															  					<i class="fa fa-warning fa-3x"></i>
+															  				</div>
+															  				<div class="status"></div>
+															  				<div class="detail">
+															  					<button class="btn btn-danger">详情</button>
+															  				</div>
+															  			</div>
+															  		</div>
+															  	</div>
+															  
 														   </div>
 														   
 														</div>
