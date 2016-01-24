@@ -3290,19 +3290,6 @@ input[type="button"].btn-block {
   background-color: #3090C7;
 }
 
-.small-dialog-form-btn > .btn {
-  background-color: #2888C4;
-  width: 150px;
-  border-radius: 20px;
-  border: none;
-}
-.small-dialog-form-btn > .btn:hover,
-.small-dialog-form-btn > .btn:focus,
-.small-dialog-form-btn > .btn:active {
-  z-index: 2;
-  background-color: #3090C7;
-}
-
 
 .row.add-user-row {
   width: 100% !important;

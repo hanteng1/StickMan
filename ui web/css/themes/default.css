@@ -273,9 +273,9 @@ input::-webkit-input-placeholder {
   padding: 0;
   margin-top: 0px;
   border-bottom: 1px solid #FFFFFF !important;
-  /*border-top: 1px solid #FFFFFF !important;*/
+  /*border-top: 1px solid #FFFFFF !important;
   border-top: 1px solid #e7e7e7;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;*/
 }
 
 .side-hidden-bar .sidebar-menu > ul {
@@ -327,19 +327,16 @@ input::-webkit-input-placeholder {
 }
 .sidebar-menu > ul > li.has-sub .sub {
   position: relative;
-  background: #f4f4f4;
   /*border-top: 1px solid #e7e7e7;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;*/
 }
 .sidebar-menu > ul > li.has-sub .sub .has-sub-sub .sub-sub{
   position: relative;
-  background: #f4f4f4;
   /*border-top: 1px solid #e7e7e7;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;*/
 }
 .sidebar-menu > ul > li.has-sub .sub .has-sub-sub .sub-sub .has-sub-sub-sub .sub-sub-sub{
   position: relative;
-  background: #f4f4f4;
   /*border-top: 1px solid #e7e7e7;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;*/
 }
@@ -402,6 +399,20 @@ input::-webkit-input-placeholder {
 
 .side-hidden-bar.chart-draw .sidebar-menu > ul > li > ul > li > ul > li > ul > li a  .equip-check-marker:before{
   display: block;
+}
+
+.body-right .sidebar-menu > ul > li > ul > li > ul > li > ul > li a .equip-check-marker:before{
+  float: right;
+  margin-right: 10px;
+  margin-top: 0;
+  display: inline;
+  font-size: 18px;
+  font-family: FontAwesome;
+  height: auto;
+  content: "\f096";
+  font-weight: 300;
+  text-shadow: none;
+  color: #b6b6b4;
 }
 
 .sidebar-menu > ul > li > ul > li > ul > li > ul > li a .sub-sub-sub-menu-text {
@@ -594,12 +605,12 @@ input::-webkit-input-placeholder {
 .sidebar-menu > ul > li.has-sub.open > a,
 .sidebar-menu > ul > li > a:hover,
 .sidebar-menu > ul > li:hover > a {
-  background: #e7e7e7;
+  /*background: #e7e7e7;*/
 }
 .sidebar-menu > ul > li.has-sub.open > a,
 .sidebar-menu > ul > li.has-sub > a:hover,
 .sidebar-menu > ul > li.has-sub:hover > a {
-  background: #f4f4f4;
+  /*background: #f4f4f4;*/
 }
 .sidebar-menu > ul > li.has-sub.open > ul > li.has-sub-sub.open > a {
   background: #f4f4f4;
@@ -642,10 +653,10 @@ input::-webkit-input-placeholder {
 .sidebar-menu > ul > li > ul.sub > li.active > a,
 .sidebar-menu > ul > li > ul.sub > li > a:hover,
 .sidebar-menu > ul > li > ul.sub > li.current {
-  background: #f4f4f4 !important;
+  /*background: #f4f4f4 !important;*/
 }
 .sidebar-menu > ul > li > ul.sub > li > a:hover {
-  background: #f4f4f4 !important;
+  /*background: #f4f4f4 !important;*/
 }
 
 /* Quick launch */
