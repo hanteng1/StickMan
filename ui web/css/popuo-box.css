@@ -405,6 +405,15 @@ button::-moz-focus-inner {
   vertical-align: middle;
 }
 
+
+#small-dialog .small-dialog-body .div-form-body .table-striped > tbody > tr:nth-child(odd) > td,
+#small-dialog .small-dialog-body .div-form-body .table-striped > tbody > tr:nth-child(odd) > th,
+#small-dialog-right .small-dialog-body .div-form-body .table-striped > tbody > tr:nth-child(odd) > td,
+#small-dialog-right .small-dialog-body .div-form-body .table-striped > tbody > tr:nth-child(odd) > th
+{
+  background-color: #f8f8f8;
+}
+
 .small-dialog-form-btn > .btn {
   background-color: #20b2fa;
   width: 182px;

@@ -299,7 +299,7 @@ input::-webkit-input-placeholder {
   border: 0 none;
   padding: 15px 15px 15px 20px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -564,7 +564,7 @@ input::-webkit-input-placeholder {
   padding-left: 30px !important;
   color: #555555;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 300;
   background: none;
 }
@@ -575,7 +575,7 @@ input::-webkit-input-placeholder {
   padding-left: 30px !important;
   color: #555555;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 300;
   background: none;
 }
@@ -586,7 +586,7 @@ input::-webkit-input-placeholder {
   padding-left: 30px !important;
   color: #555555;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 300;
   background: none;
 }
@@ -658,7 +658,7 @@ input::-webkit-input-placeholder {
   color: #555555;
   margin-left: 0px;
   padding-left: 5px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
 }
 .sidebar-menu > ul > li > ul.sub > li:first-child > a {
