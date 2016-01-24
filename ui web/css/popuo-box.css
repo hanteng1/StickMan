@@ -1,9 +1,9 @@
 /* Styles for dialog window */
 #small-dialog {
 	background: white;
-	padding:20px;
+	padding: 60px 20px;
 	text-align: center;
-	max-width: 650px;
+	width: 1000px;
 	margin: 40px auto;
 	position: relative;
   height: auto;
@@ -211,7 +211,7 @@ button::-moz-focus-inner {
   outline:none;
   font-family: 'Open Sans', sans-serif;		
  }
-  .mfp-close:hover, .mfp-close:focus {
+.mfp-close:hover, .mfp-close:focus {
     opacity: 1; }
 
 .mfp-close-btn-in .mfp-close {
@@ -257,6 +257,7 @@ button::-moz-focus-inner {
 #small-dialog .title {
   font-size: 24px;
   border-bottom: 1px solid #eeeeee;
+  padding-bottom: 30px;
 }
 
 #small-dialog label
@@ -268,18 +269,31 @@ button::-moz-focus-inner {
 
 #small-dialog .small-dialog-body
 {
-  height: 500px;
+  height: 800px;
+  padding: 0;
 }
 #small-dialog .small-dialog-body .body-left {
   width: 50%;
   float: left;
   text-align: left;
+  border-right: 2px solid #f8f8f8;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: block;
+  height: 750px;
+  overflow-y: scroll;
+
 }
 
 #small-dialog .small-dialog-body .body-right {
   width: 50%;
   float: right;
   text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: block;
+  height: 750px;
+  overflow-y: scroll;
 }
 
 #small-dialog .small-dialog-body .m-input-group {
@@ -288,24 +302,27 @@ button::-moz-focus-inner {
   border: none;
 }
 #small-dialog .small-dialog-body .m-input-group .title{
-  font-size: 14px;
-  float: left;
+  font-size: 16px;
   margin-right: 10px;
   margin-left: 10px;
+  text-decoration: none;
 }
 
-input.m-input-middle {
+#small-dialog .small-dialog-body .m-input-group input.m-input-middle {
   vertical-align: middle;
-  width: 200px;
-  border-radius: 4px;
-  height: 30px;
+  width: 280px;
+  border-radius: 10px;
+  height: 45px;
 }
 
 #small-dialog .small-dialog-body .div-form-title {
-  background-color: #95B9C7;
+  background-color: #e6f8ff;
+  margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
+  height: 55px;
+  padding-top: 15px;
 }
 
 #small-dialog .small-dialog-body .div-form-title .title-name {
@@ -317,13 +334,32 @@ input.m-input-middle {
   margin-bottom: 20px;
 }
 
-#small-dialog .small-dialog-body .div-form-body .title {
-  margin-bottom: 10px;
+#small-dialog .small-dialog-body .div-form-body p {
+  font-size: 18px;
+}
+
+
+#small-dialog .small-dialog-body .div-form-body input[type="radio"] {
+  margin-right: 10px;
+  vertical-align: middle;
+  font-size: 16px;
 }
 
 #small-dialog .small-dialog-body .div-form-body .title input.m-input-middle {
   margin-right: 10px;
   vertical-align: middle;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 220px;
+  height: 40px;
+}
+
+#small-dialog .small-dialog-body .div-form-body .title a {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #20b2fa;
+  color: #ffffff;
   font-size: 16px;
 }
 
@@ -331,6 +367,44 @@ input.m-input-middle {
   font-size: 16px;
   float: left;
   margin-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#small-dialog .small-dialog-body .div-form-body .table > thead > tr > th,
+#small-dialog .small-dialog-body .div-form-body .table > tbody > tr > th,
+#small-dialog .small-dialog-body .div-form-body .table > tfoot > tr > th,
+#small-dialog .small-dialog-body .div-form-body .table > thead > tr > td,
+#small-dialog .small-dialog-body .div-form-body .table > tbody > tr > td,
+#small-dialog .small-dialog-body .div-form-body .table > tfoot > tr > td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 1.428571429;
+  vertical-align: middle;
+}
+
+.small-dialog-form-btn > .btn {
+  background-color: #20b2fa;
+  width: 182px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+}
+.small-dialog-form-btn > .btn + .btn {
+  margin-left: 30px;
+}
+.small-dialog-form-btn > .btn.cancel{
+  background-color: #e8e8e8;
+  color: #cfcfcf;
+} 
+
+.small-dialog-form-btn > .btn:hover,
+.small-dialog-form-btn > .btn:focus,
+.small-dialog-form-btn > .btn:active {
+  z-index: 2;
+  background-color: #3090C7;
 }
 
 p.div-form-radio {
