@@ -157,7 +157,7 @@
 												<div class="tabbable">
 													<ul class="nav nav-tabs">
 														<li class="active"><a href="#tab_1_1" data-toggle="tab">报表方案<i class="fa fa-plus add-button" href="#small-dialog"></i></a></li>
-														<li><a href="#tab_1_2" data-toggle="tab">告警方案<i class="fa fa-plus add-button" href="#small-dialog"></i></a></li>
+														<li><a href="#tab_1_2" data-toggle="tab">告警方案<i class="fa fa-plus add-button" href="#small-dialog-right"></i></a></li>
 													</ul>
 														<div class="tab-content">
 														   <div class="tab-pane fade in active" id="tab_1_1">
@@ -715,6 +715,163 @@
 		</div>
 
 
+	</div>
+
+	<div class="mfp-hide" id="small-dialog-right">
+		<div class="title">添加告警方案</div> 
+
+		<div class="divide-20"></div>
+
+		<div class="small-dialog-body">
+			<div class="body-left">
+				<div class="m-input-group">	
+						<span class="title">名称 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入方案名称">
+				</div>
+				
+				<div class="m-input-group">
+						<span class="title">描述 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入方案名称">
+				</div>
+
+				<div class="div-form-title"><span class="title-name">统计时间</span></div>
+				<div class="div-form-body">
+						<p class="div-form-radio"><input type="radio" class="" value=""> 每小时</p>
+						<p class="div-form-radio"><input type="radio" class="" value=""> 每天</p>
+						<p class="div-form-radio"><input type="radio" class="" value=""> 每周</p>
+						<p class="div-form-radio"><input type="radio" class="" value=""> 每月</p>
+				</div>
+				<br/>
+				<div class="div-form-body">
+						<p class="div-form-radio"><input type="radio" class="" value=""> 自定义</p>
+						<p class="div-form-radio">从 <select>
+ 															<option value="1">1</option>
+  															<option value="2">2</option>
+  															<option value="3">3</option>
+  															<option value="4">4</option>
+													</select> 分</p>
+						<p class="div-form-radio">到 <select>
+ 															<option value="1">1</option>
+  															<option value="2">2</option>
+  															<option value="3">3</option>
+  															<option value="4">4</option>
+													</select> 分</p>
+					
+				</div>
+
+				<br/>
+				<div class="div-form-title"><span class="title-name">通知邮件</span>
+				</div>
+				<div class="div-form-body">
+						<div class="title"><input type="text" class="m-input-middle" id="" placeholder="请输入邮寄地址"><a class="btn btn-default" href="#">+ 添加</a> </div>
+						<br/>
+						<table class="table table-striped">
+							<tbody>
+								<tr>
+									<td><span class="title">邮寄地址 1</span></td>
+									<td><a href=""><i class="fa fa-trash-o fa-2x"></i></a></td>
+								</tr>
+								<tr>
+									<td><span class="title">邮寄地址 2</span></td>
+									<td><a href=""><i class="fa fa-trash-o fa-2x"></i></a></td>
+								</tr>
+								<tr>
+									<td><span class="title">邮寄地址 3</span></td>
+									<td><a href=""><i class="fa fa-trash-o fa-2x"></i></a></td>
+								</tr>
+								<tr>
+									<td><span class="title">邮寄地址 4</span></td>
+									<td><a href=""><i class="fa fa-trash-o fa-2x"></i></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+				</div>
+
+				<!--warning type-->
+				<div class="div-form-title"><span class="title-name">告警类型</span>
+				</div>
+
+				<div class="sidebar-menu">
+					<ul class="zero-sub">
+						<li class="has-sub">
+							
+							<ul class="sub"> 
+								<li class="has-sub-sub">
+										<a href="javascript:;" class=""><span class="sub-menu-text">系统警告</span>
+										<span class="arrow"></span>
+										</a>
+										<ul class="sub-sub">
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">设备掉线</span><span class="equip-check-marker"></span></a></li>
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">设备重启</span><span class="equip-check-marker"></span></a></li>
+										</ul>
+								</li>
+
+								<li class="has-sub-sub">
+										<a href="javascript:;" class=""><span class="sub-menu-text">暂态事件</span>
+										<span class="arrow"></span>
+										</a>
+										<ul class="sub-sub">
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">xxxx</span><span class="equip-check-marker"></span></a></li>
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">xxxx</span><span class="equip-check-marker"></span></a></li>
+										</ul>
+								</li>
+
+								<li class="has-sub-sub">
+										<a href="javascript:;" class=""><span class="sub-menu-text">谐波越界</span>
+										<span class="arrow"></span>
+										</a>
+										<ul class="sub-sub">
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">xxxx</span><span class="equip-check-marker"></span></a></li>
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">xxxx</span><span class="equip-check-marker"></span></a></li>
+										</ul>
+								</li>
+
+								<li class="has-sub-sub">
+										<a href="javascript:;" class=""><span class="sub-menu-text">设备警告</span>
+										<span class="arrow"></span>
+										</a>
+										<ul class="sub-sub">
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">xxxx</span><span class="equip-check-marker"></span></a></li>
+											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">xxxx</span><span class="equip-check-marker"></span></a></li>
+										</ul>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+			
+			<div class="body-right">
+				<div class="div-form-title"><span class="title-name">区域选择</span></div>
+
+				<div class="sidebar-menu">			
+				
+					<div class="divide-20"></div>
+
+					<!-- SIDEBAR MENU -->
+					<ul class="zero-sub">
+						<li class="has-sub">
+							<a href="javascript:;" class=""><i class="fa fa-tachometer"></i><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
+							<ul class="sub">  
+								<!--leave empty -->
+							</ul>
+						</li>
+					</ul>
+						
+				</div>
+				
+						
+				<!-- /SIDEBAR MENU -->
+			</div>
+
+		</div>
+
+		<div class="small-dialog-form-btn">
+				<a class="btn btn-default cancel" href="#">取 消</a>
+				<a class="btn btn-default" href="#">保 存</a>
+		</div>
 	</div>
 
 	<section class="contact-script">

@@ -414,6 +414,20 @@ input::-webkit-input-placeholder {
   text-shadow: none;
   color: #b6b6b4;
 }
+.body-left .sidebar-menu > ul > li > ul > li > ul > li a .equip-check-marker:before{
+  float: right;
+  margin-right: 10px;
+  margin-top: 0;
+  display: inline;
+  font-size: 18px;
+  font-family: FontAwesome;
+  height: auto;
+  content: "\f096";
+  font-weight: 300;
+  text-shadow: none;
+  color: #b6b6b4;
+}
+
 
 .sidebar-menu > ul > li > ul > li > ul > li > ul > li a .sub-sub-sub-menu-text {
   color: #b6b6b4;

@@ -9,6 +9,16 @@
   height: auto;
 }
 
+#small-dialog-right {
+  background: white;
+  padding: 60px 20px;
+  text-align: center;
+  width: 1000px;
+  margin: 40px auto;
+  position: relative;
+  height: auto;
+}
+
 /**
 
 /**
@@ -16,7 +26,8 @@
  */
 
 /* start state */
-.my-mfp-zoom-in #small-dialog {
+.my-mfp-zoom-in #small-dialog,
+.my-mfp-zoom-in #small-dialog-right {
 opacity: 0;
 -webkit-transition: all 0.2s ease-in-out;
 -moz-transition: all 0.2s ease-in-out;
@@ -29,7 +40,8 @@ transition: all 0.2s ease-in-out;
 transform: scale(0.8);
 }
 /* animate in */
-.my-mfp-zoom-in.mfp-ready #small-dialog {
+.my-mfp-zoom-in.mfp-ready #small-dialog,
+.my-mfp-zoom-in.mfp-ready #small-dialog-right {
 opacity: 1;
 -webkit-transform: scale(1);
 -moz-transform: scale(1);
@@ -38,7 +50,8 @@ opacity: 1;
 transform: scale(1);
 }
 /* animate out */
-.my-mfp-zoom-in.mfp-removing #small-dialog {
+.my-mfp-zoom-in.mfp-removing #small-dialog,
+.my-mfp-zoom-in.mfp-removing #small-dialog-right {
 -webkit-transform: scale(0.8);
 -moz-transform: scale(0.8);
 -ms-transform: scale(0.8);
@@ -254,25 +267,27 @@ button::-moz-focus-inner {
 } 
 
 
-#small-dialog .title {
+#small-dialog .title,
+#small-dialog-right .title {
   font-size: 24px;
   border-bottom: 1px solid #eeeeee;
   padding-bottom: 30px;
 }
 
-#small-dialog label
+#small-dialog label,
+#small-dialog-right label
 {
   float: right;
   font-size: 16px;
   padding-top: 0px;
 }
 
-#small-dialog .small-dialog-body
+.small-dialog-body
 {
   height: 800px;
   padding: 0;
 }
-#small-dialog .small-dialog-body .body-left {
+.small-dialog-body .body-left {
   width: 50%;
   float: left;
   text-align: left;
@@ -285,7 +300,7 @@ button::-moz-focus-inner {
 
 }
 
-#small-dialog .small-dialog-body .body-right {
+.small-dialog-body .body-right {
   width: 50%;
   float: right;
   text-align: left;
@@ -296,26 +311,26 @@ button::-moz-focus-inner {
   overflow-y: scroll;
 }
 
-#small-dialog .small-dialog-body .m-input-group {
+.small-dialog-body .m-input-group {
   width: 100%;
   margin-bottom: 20px;
   border: none;
 }
-#small-dialog .small-dialog-body .m-input-group .title{
+.small-dialog-body .m-input-group .title{
   font-size: 16px;
   margin-right: 10px;
   margin-left: 10px;
   text-decoration: none;
 }
 
-#small-dialog .small-dialog-body .m-input-group input.m-input-middle {
+.small-dialog-body .m-input-group input.m-input-middle {
   vertical-align: middle;
   width: 280px;
   border-radius: 10px;
   height: 45px;
 }
 
-#small-dialog .small-dialog-body .div-form-title {
+.small-dialog-body .div-form-title {
   background-color: #e6f8ff;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -325,27 +340,27 @@ button::-moz-focus-inner {
   padding-top: 15px;
 }
 
-#small-dialog .small-dialog-body .div-form-title .title-name {
+.small-dialog-body .div-form-title .title-name {
   margin-left: 10px;
 }
 
-#small-dialog .small-dialog-body .div-form-body {
+.small-dialog-body .div-form-body {
   padding-top: 10px;
   margin-bottom: 20px;
 }
 
-#small-dialog .small-dialog-body .div-form-body p {
+.small-dialog-body .div-form-body p {
   font-size: 18px;
 }
 
 
-#small-dialog .small-dialog-body .div-form-body input[type="radio"] {
+.small-dialog-body .div-form-body input[type="radio"] {
   margin-right: 10px;
   vertical-align: middle;
   font-size: 16px;
 }
 
-#small-dialog .small-dialog-body .div-form-body .title input.m-input-middle {
+.small-dialog-body .div-form-body .title input.m-input-middle {
   margin-right: 10px;
   vertical-align: middle;
   font-size: 16px;
@@ -354,7 +369,7 @@ button::-moz-focus-inner {
   height: 40px;
 }
 
-#small-dialog .small-dialog-body .div-form-body .title a {
+.small-dialog-body .div-form-body .title a {
   width: 90px;
   height: 40px;
   border-radius: 20px;
@@ -363,7 +378,8 @@ button::-moz-focus-inner {
   font-size: 16px;
 }
 
-#small-dialog .small-dialog-body .div-form-body table.table .title {
+#small-dialog .small-dialog-body .div-form-body table.table .title,
+#small-dialog-right .small-dialog-body .div-form-body table.table .title {
   font-size: 16px;
   float: left;
   margin-left: 10px;
@@ -376,7 +392,13 @@ button::-moz-focus-inner {
 #small-dialog .small-dialog-body .div-form-body .table > tfoot > tr > th,
 #small-dialog .small-dialog-body .div-form-body .table > thead > tr > td,
 #small-dialog .small-dialog-body .div-form-body .table > tbody > tr > td,
-#small-dialog .small-dialog-body .div-form-body .table > tfoot > tr > td {
+#small-dialog .small-dialog-body .div-form-body .table > tfoot > tr > td,
+#small-dialog-right .small-dialog-body .div-form-body .table > thead > tr > th,
+#small-dialog-right .small-dialog-body .div-form-body .table > tbody > tr > th,
+#small-dialog-right .small-dialog-body .div-form-body .table > tfoot > tr > th,
+#small-dialog-right .small-dialog-body .div-form-body .table > thead > tr > td,
+#small-dialog-right .small-dialog-body .div-form-body .table > tbody > tr > td,
+#small-dialog-right .small-dialog-body .div-form-body .table > tfoot > tr > td  {
   padding-top: 0px;
   padding-bottom: 0px;
   line-height: 1.428571429;
