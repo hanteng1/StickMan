@@ -387,6 +387,12 @@ button::-moz-focus-inner {
   padding-bottom: 15px;
 }
 
+#small-dialog .box table.table .title,
+#small-dialog .box table.table .date
+{
+  font-size: 14px;
+}
+
 #small-dialog .small-dialog-body .div-form-body .table > thead > tr > th,
 #small-dialog .small-dialog-body .div-form-body .table > tbody > tr > th,
 #small-dialog .small-dialog-body .div-form-body .table > tfoot > tr > th,
@@ -405,7 +411,8 @@ button::-moz-focus-inner {
   vertical-align: middle;
 }
 
-
+#small-dialog .box .table-striped > tbody > tr:nth-child(odd) > td,
+#small-dialog .box .table-striped > tbody > tr:nth-child(odd) > th,
 #small-dialog .small-dialog-body .div-form-body .table-striped > tbody > tr:nth-child(odd) > td,
 #small-dialog .small-dialog-body .div-form-body .table-striped > tbody > tr:nth-child(odd) > th,
 #small-dialog-right .small-dialog-body .div-form-body .table-striped > tbody > tr:nth-child(odd) > td,
@@ -423,6 +430,10 @@ button::-moz-focus-inner {
   color: #ffffff;
   font-size: 22px;
 }
+.small-dialog-form-btn > .btn.green{
+  background-color: #1fc049;
+}
+
 .small-dialog-form-btn > .btn + .btn {
   margin-left: 30px;
 }

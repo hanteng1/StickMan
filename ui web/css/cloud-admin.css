@@ -1386,6 +1386,10 @@ th {
 .table .content {
   color: #555555;
 }
+.table .title.grey,
+.table .date.grey {
+  color: #bbbbbb;
+}
 .table .number,
 .table .date {
   color: #4863a0;
@@ -1455,6 +1459,50 @@ th {
 .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
 }
+
+.panel-body .table-bordered {
+  border: none;
+}
+.panel-body .table-bordered > thead > tr > th,
+.panel-body .table-bordered > tbody > tr > th,
+.panel-body .table-bordered > tfoot > tr > th,
+.panel-body .table-bordered > thead > tr > td,
+.panel-body .table-bordered > tbody > tr > td,
+.panel-body .table-bordered > tfoot > tr > td {
+  border: none;
+}
+.panel-body .table-bordered > thead > tr > th,
+.panel-body .table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
+
+.panel-body .table-bordered > thead > tr,
+.panel-body .table-bordered > tbody > tr,
+.panel-body .table-bordered > tfoot > tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.panel-body .table-bordered > tbody > tr:last-child{
+  border-bottom: none;
+}
+.panel-body .table-bordered > tbody > tr > td {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 20px;
+}
+.panel-body .table-bordered.event-list-table > thead > tr > th {
+  text-align: center;
+  font-size: 16px;
+}
+.panel-body .table-bordered.event-list-table > tbody > tr > td {
+  font-size: 14px;
+  text-align: center;
+}
+
+.panel-body .table-bordered.event-list-table > tbody > tr > td .date {
+  color: #bbbbbb;
+}
+
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #e6f8ff;
@@ -1737,7 +1785,7 @@ output {
 }
 
 .quality-form  > ul > li .quality-form-title {
-  font-size: 12px;
+  font-size: 14px;
 }
 .quality-form  > ul > li .quality-form-control {
   margin-left: 10px;
@@ -1921,6 +1969,52 @@ textarea.form-control {
   zoom: 2.0;
   margin-top: 0;
 }
+
+.table .radio input[type="radio"],
+.table .radio-inline input[type="radio"],
+.table .checkbox input[type="checkbox"],
+.table .checkbox-inline input[type="checkbox"]
+{
+  float: left;
+  margin-right: 15px;
+  margin-left: 10px;
+  zoom: 1.0;
+  margin-top: 5px;
+}
+.table .radio-inline input.query-times{
+  float:none;
+  width: 125px;
+  height: 55px;
+  border-radius: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center; 
+}
+
+.table .radio-inline input.data-form-control{
+  float: none;
+  width: 280px;
+  height: 55px;
+  border-radius: 40px;
+  display: inline;
+  text-align: left;
+}
+
+.table.query-table > tbody > tr > td a.btn {
+  background-color: #20b2fa;
+  width: 120px;
+  height: 55px;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #ffffff;
+  padding-top: 15px;
+}
+.table > tbody > tr.query-tr .radio-inline input[type="radio"]
+{
+  margin-top: 20px;
+}
+
+
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: -5px;
@@ -2157,6 +2251,7 @@ textarea.input-lg {
     text-align: right;
   }
 }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -3337,18 +3432,39 @@ input[type="button"].btn-block {
   background-color: #3090C7;
 }
 
-.equip-form-btn > .btn {
-  background-color: #2888C4;
-  width: 150px;
-  border-radius: 20px;
-  border: none;
+.equip-form-btn {
+  margin-top: 45px;
 }
+.equip-form-btn > .btn {
+  background-color: #20b2fa;
+  width: 240px;
+  height: 45px;
+  border-radius: 40px;
+  border: none;
+  padding-top: 6px;
+  font-size: 22px;
+  color: #ffffff;
+}
+.equip-form-btn > .btn + .btn {
+  margin-left: 40px;
+}
+.equip-form-btn > .btn.reset {
+  background-color: #1fc049;
+}
+
 .equip-form-btn > .btn:hover,
 .equip-form-btn > .btn:focus,
 .equip-form-btn > .btn:active {
   z-index: 2;
   background-color: #3090C7;
 }
+.equip-form-btn > .btn.reset:hover,
+.equip-form-btn > .btn.reset:focus,
+.equip-form-btn > .btn.reset:active {
+  z-index: 2;
+  background-color: #1f8049;
+}
+
 .btn-group > .btn:focus,
 .btn-group-vertical > .btn:focus {
   outline: none;
@@ -6942,21 +7058,24 @@ fieldset[disabled] .btn-yellow.active {
 .row .clearfix.bottom-row {
   border-bottom: none;
   margin-bottom: 0;
+  padding: 0;
 }
 .row .clearfix.bottom-row > ul {
   list-style: none;
   padding-left: 0;
   width: 100%;
+  margin-bottom: 0;
 }
 .row .clearfix.bottom-row > ul > li {
   display: inline-block;
   vertical-align: middle;
   width: 33%;
+  height: 80px;
   background-color: #e4e4e4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 16px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 22px;
 }
 .row .clearfix.bottom-row > ul > li i{
   padding-top: 0px;
