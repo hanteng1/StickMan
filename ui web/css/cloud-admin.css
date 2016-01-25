@@ -1649,7 +1649,7 @@ legend {
   border-bottom: 1px solid #e5e5e5;
 }
 label {
-  display: inline-block;
+  display: inline;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -1965,8 +1965,8 @@ textarea.form-control {
 .checkbox-inline input[type="checkbox"] {
   float: left;
   margin-right: 5px;
-  margin-left: 10px;
-  zoom: 2.0;
+  margin-left: 5px;
+  zoom: 1.5;
   margin-top: 0;
 }
 
@@ -2179,8 +2179,9 @@ textarea.input-lg {
   }
 }
 .form-horizontal{
-  margin-left: 100px;
+  margin-left: 10px;
   width: 280px;
+  max-width: 100%;
   border: 1px solid #e0e0e0;
   background-color: #fbfbfb;
   padding: 0;
@@ -7307,15 +7308,19 @@ fieldset[disabled] .btn-yellow.active {
   height: 72px;
 }
 .box .box-title h4 {
-  font-family: 'Open Sans';
-  display: inline-block;
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 12px;
   margin: 0;
   padding: 0;
   margin-bottom: 7px;
   color: #555555;
 }
+
+.box .box-title h4 .checkbox {
+  display: inline-block;
+  font-size: 22px;
+  margin: 0;
+}
+
 .box .box-title h4 i {
   margin-right: 10px;
   color: #666;
