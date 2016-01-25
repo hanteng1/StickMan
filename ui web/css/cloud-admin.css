@@ -3810,6 +3810,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-bottom: 30px;
 }
 
+.panel-full-body .zone-tabbale .nav-tabs {
+  margin-bottom: 10px;
+}
+
 .nav-tabs > li {
   float: none;
   display: inline-block;
@@ -7033,12 +7037,17 @@ fieldset[disabled] .btn-yellow.active {
 }
 
 .row .clearfix {
-  border-bottom: 1px solid #E5E4E2;
   margin-bottom: 20px;
+}
+.row .clearfix.tab-clear {
+  padding: 0;
+  font-size: 14px;
+  border-bottom: 1px solid #dddddd;
 }
 .row .clearfix > ul {
   list-style: none;
   padding-left: 20px;
+  float: left;
 }
 .row .clearfix > ul > li {
   display: inline-block;
@@ -7096,7 +7105,9 @@ fieldset[disabled] .btn-yellow.active {
 .zone-case-box {
   display: inline-block;
   clear: both;
-  width: 70%;
+  width: 400px;
+  height: 390px;
+  max-width: 70%;
   margin-bottom: 15px;
   margin-left: 10px;
   margin-right: 10px;
@@ -7111,11 +7122,12 @@ fieldset[disabled] .btn-yellow.active {
   margin-left: 20px;
   margin-bottom: 20px;
   font-size: 18px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #e4e4e4;
 }
 .zone-case-box .product-line {
   margin-bottom: 10px;
-  min-height: 70px;
+  min-height: 90px;
   border-bottom: 1px solid #e4e4e4;
 }
 
@@ -7148,6 +7160,14 @@ fieldset[disabled] .btn-yellow.active {
   margin-top: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.zone-case-box .detail button {
+  width: 220px;
+  height: 45px;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #c8c8c8;
 }
 
 .user-case-box {
@@ -7237,6 +7257,9 @@ fieldset[disabled] .btn-yellow.active {
   background-color: #fbfbfb;
   padding: 30px 0;
   vertical-align: middle;
+}
+.table-case-box.equip-case {
+  height: 360px;
 }
 
 .table-case-box .title {

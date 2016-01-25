@@ -21,16 +21,16 @@
 </head>
 <body>
 	<!-- HEADER -->
-	<header class="navbar clearfix" id="header">
+	<div class="navbar-fixed-top">
+		<header class="navbar clearfix" id="header">
 		<div class="container">
 			<div class="col-md-4">
 				<div class="navbar-brand">
 					<!-- COMPANY LOGO -->
 					<a href="index.html">
-						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive" height="30" width="120">
+						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive">
 						<span class="navbar-name">| 电能质量监测系统</span>
 					</a>
-
 					<!-- /COMPANY LOGO -->
 				</div>
 			</div>
@@ -47,7 +47,7 @@
 				<!-- BEGIN TOP NAVIGATION MENU -->					
 				<ul class="nav navbar-nav pull-right">
 					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<li class="dropdown user" id="header-user">
+					<li class="user">
 						<img alt="" src="img/avatars/avatar2.jpg" />
 						<span class="username">Hugh, 欢迎你 !</span>
 					</li>
@@ -73,212 +73,173 @@
 				<!-- END TOP NAVIGATION MENU -->
 			</div>			
 		</div>
+		</header>
+		<!--/HEADER -->
 
-	</header>
-	<!--/HEADER -->
+	</div>
+	
+
+		
+
+	
 	<!-- PAGE -->
 	<section id="page">
-				<!-- SIDEBAR -->
-				<div id="sidebar" class="sidebar mini-menu">
-					<div class="sidebar-menu nav-collapse">				
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<!--数据-->
-							<li>
-								<a href="index.html">
-								<span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span>
-								</a>				
-							</li>
-							<!--设备-->
-							<li class="active"><a class="" href="" target="_blank"><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
-							<!--用户-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
-							<!--方案-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
-							<!--日志-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>
+		<!-- SIDEBAR -->
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-menu nav-collapse">				
+				<!-- SIDEBAR MENU -->
+				<ul>
+					<!--数据-->
+					<li><a href="index.html"><span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span></a></li>
+					<!--设备-->
+					<li class="active"><a href=""><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
+					<!--用户-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
+					<!--方案-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
+					<!--日志-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>   
+				</ul>
+				<!-- /SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
+
+		<!--隐藏菜单-->
+		<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
+		<div class="side-hidden-bar" id="side-hidden-bar">
+			<div class="sidebar-menu">			
+				<!--ANOTHER SEARCH BAR-->
+				<div class="divide-20"></div>
+
+				<div class="hidden-search-bar">
+					<input class="search" type="text" placeholder="搜索设备"><i class="fa fa-search search-icon"></i>
+				</div>
+
+				<!-- SIDEBAR MENU -->
+				<ul class="zero-sub">
+					<li class="has-sub">
+						<a href="javascript:;" class=""><i class="fa fa-tachometer"></i><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
+						<ul class="sub">  
+
 						</ul>
+					</li>
+				</ul>
 						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
-				<!-- /SIDEBAR -->
+			</div>
+		</div>
 
-				<!--隐藏菜单-->
-				<div class="side-hidden-bar" id="side-hidden-bar">
-					<div class="sidebar-menu nav-collapse">			
-						<!--ANOTHER SEARCH BAR-->
-						<div class="divide-20"></div>
+		<!--/隐藏菜单-->
 
-						<div class="hidden-search-bar">
-							<input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
-							<a href="javascript:;" class=""><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
-						</div>
-
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<li class="has-sub">
-								<a href="javascript:;" class="">
-								<i class="fa fa-tachometer fa-3x"></i>
-								</a>
-								<ul class="sub">
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 1</span>
-										<span class="arrow"></span>
-										</a>
-										<ul class="sub-sub">
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="open" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-											</ul>
-											</li>
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 2</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span></a></li>
-											</ul>
-											</li>
-										</ul>
-									</li>
-
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 2</span>
-										<span class="arrow"></span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
-
-				<!--/隐藏菜单-->
-
-				<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
-					<ul>
-						<li><span class="name">设备列表</span></li>
-						<li><i class = "fa fa-angle-right"></i></li>
-					</ul>
-				</div>
+		<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
+			<ul>
+				<li><span class="name">设备列表</span></li>
+				<li><i class = "fa fa-angle-right"></i></li>
+			</ul>
+		</div>	
 
 
 		<div class="main-content" id="main-content">
 			<div class="container">
 				<div class="row">
-					<div id="content" class="col-lg-12">
+					<div id="content" class="col-md-12">
 						
 						<!-- PAGE HEADER-->
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="page-header">
-									<!-- STYLER -->
-									
-									<!-- /STYLER -->
-									<!-- BREADCRUMBS -->
-									<ul class="mbreadcrumb">
-										<li>
-											<a href="index.html"><i class="fa fa-chevron-left fa-1x"></i></a>
-										</li>
-										<li>
-											<span class="date-range pull-right">
-											<div class="btn-group">
-												<a class="js_update btn btn-default active" href="#">基础信息</a>
-												<a class="js_update btn btn-default" href="#">电能质量参数</a>
-												<a class="js_update btn btn-default" href="#">PQDIF设置</a>
-												<a class="js_update btn btn-default" href="#">系统设置</a>
-												<a class="js_update btn btn-default" href="#">设备重启</a>
-											</div>
-											</span>
-										</li>
-									</ul>
-									<!-- /BREADCRUMBS -->
-									
-								</div>
-							</div>
-						</div>
+							<div class="page-header">
+								<!-- BREADCRUMBS -->
+								<ul class="mbreadcrumb">
+									<li class="back-button">
+										<a href="index.html"><i class="fa fa-chevron-left"></i></a>
+									</li>
+									<li class="event-buttons">
+										<div class="btn-group">
+											<a class="js_update btn active" href="#">基础信息</a>
+											<a class="js_update btn" href="#">电能质量参数</a>
+											<a class="js_update btn" href="#">PQDIF设置</a>
+											<a class="js_update btn" href="#">系统设置</a>
+											<a class="js_update btn" href="#">设备重启</a>
+										</div>
+									</li>
+								</ul>
+								<!-- /BREADCRUMBS -->
 
-						<!-- DASHBOARD CONTENT -->
-						<div class="row production-line-row">
-							<div class="clearfix">
-								<ul>
-									<li><span class="content-title pull-left">区域</span><i class="fa fa-angle-right"></i></li>
-									<li><span class="content-title pull-left">生产线</span><i class="fa fa-angle-right"></i></li>
-									<li><span class="content-title pull-left">设备名</span><i class="fa fa-clock-o"></i></li>
-								</ul>	
-							</div>
+								<div class="clearfix">
+									<ul>
+										<li><span class="content-title pull-left">区域</span><i class="fa fa-angle-right"></i></li>
+										<li><span class="content-title pull-left">生产线</span><i class="fa fa-angle-right"></i></li>
+										<li><span class="content-title pull-left active">设备名</span><i class="fa fa-clock-o active"></i></li>
+									</ul>	
+								</div>
+
+								<!-- COLUMN 1 -->
+								<div class="col-md-4">
+									<div class="row">
+								  		<div class="col-md-2"></div>	
+								  		<div class="col-md-10">
+									 		<div class="dashbox panel panel-default ">
+												<div class="panel-body blue">
+										   			<div class="panel-left">
+										   				<div class="title">今日耗电量 (W)</div>
+														<div class="number">5600</div>
+										   			</div>
+										   			<div class="panel-right white">
+														<i class="fa fa-align-right fa-2x"></i>
+										   			</div>
+										   
+												</div>
+									 		</div>
+								  		</div>
+								  		
+									</div>
+									<div class="divide-20"></div>
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-10">
+									 		<div class="dashbox panel panel-default">
+												<div class="panel-body red">
+										   			<div class="panel-left">
+										   				<div class="title">报警数值 (次)</div>
+														<div class="number">8</div>
+										  			 </div>
+										   			<div class="panel-right white">
+														<i class="fa fa-align-right fa-2x"></i>
+										   			</div>
+										   
+												</div>
+									 		</div>
+								  		</div>
+								  		
+							   		</div>
+								</div>
+								<!-- /COLUMN 1 -->
+							
+								<!-- COLUMN 2 -->
+								<div class="col-md-8">
+									<!-- BOX -->
+									<div class="box">
+										<div class="box-body">
+											<figure class="chart" id="chart1" style="min-width:250px"></figure>
+										</div>
+									</div>
+									<!-- /BOX -->
+								</div>
+								<!-- /COLUMN 2 -->
+
+							
+								<div class="clearfix bottom-row">
+									<ul>
+										<li><span class="">园区1</span><i class="fa fa-edit fa-1x"></i></li>
+										<li><span class="">园区2</span><i class="fa fa-edit fa-1x"></i></li>
+										<li><span class="">园区3</span><i class="fa fa-edit fa-1x"></i></li>
+									</ul>	
+								</div>
+									
+							</div><!-- /PAGE HEADER -->
+
 
 						
-							<!-- COLUMN 1 -->
-							<div class="col-md-4">
-								<div class="row">
-								  <div class="col-md-2"></div>	
-								  <div class="col-md-8">
-									 <div class="dashbox panel panel-default ">
-										<div class="panel-body red">
-										   <div class="panel-left">
-										   		<div class="title">今日耗电量 (W)</div>
-												<div class="number">5600</div>
-										   </div>
-										   <div class="panel-right white">
-												<i class="fa fa-align-right fa-2x"></i>
-										   </div>
-										   
-										</div>
-									 </div>
-								  </div>
-								  <div class="col-md-2"></div>	
-								</div>
-								<div class="divide-20"></div>
-								<div class="row">
-									<div class="col-md-2"></div>
-									<div class="col-md-8">
-									 <div class="dashbox panel panel-default">
-										<div class="panel-body blue">
-										   <div class="panel-left">
-										   		<div class="title">报警数值 (次)</div>
-												<div class="number">8</div>
-										   </div>
-										   <div class="panel-right white">
-												<i class="fa fa-align-right fa-2x"></i>
-										   </div>
-										   
-										</div>
-									 </div>
-								  </div>
-								  <div class="col-md-2"></div>
-							   </div>
-							</div>
-							<!-- /COLUMN 1 -->
-							
-							<!-- COLUMN 2 -->
-							<div class="col-md-8">
-								<!-- BOX -->
-								<div class="box">
-									<div class="box-body">
-										<figure class="chart" id="chart1" style="min-width:250px"></figure>
-									</div>
-								</div>
-								<!-- /BOX -->
-							</div>
-							<!-- /COLUMN 2 -->
-
-							<div class="clearfix bottom-row">
-								<ul>
-									<li><span class="">园区1</span><i class="fa fa-edit fa-1x"></i></li>
-									<li><span class="">园区2</span><i class="fa fa-edit fa-1x"></i></li>
-									<li><span class="">园区3</span><i class="fa fa-edit fa-1x"></i></li>
-								</ul>	
-							</div>
-							
-
-						</div>
-					   	<!-- /DASHBOARD CONTENT -->
+						</div><!--/ROW-->
 
 						<div class="row">
 					   		<div class="col-md-6">

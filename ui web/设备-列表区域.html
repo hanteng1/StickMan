@@ -15,21 +15,19 @@
 	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 	<!-- DATE RANGE PICKER -->
 	<link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
-	<!-- FONTS -->
-	<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<!-- HEADER -->
-	<header class="navbar clearfix" id="header">
+	<div class="navbar-fixed-top">
+		<header class="navbar clearfix" id="header">
 		<div class="container">
 			<div class="col-md-4">
 				<div class="navbar-brand">
 					<!-- COMPANY LOGO -->
 					<a href="index.html">
-						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive" height="30" width="120">
+						<img src="img/logo/logo.png" alt="PICOHOOD" class="img-responsive">
 						<span class="navbar-name">| 电能质量监测系统</span>
 					</a>
-
 					<!-- /COMPANY LOGO -->
 				</div>
 			</div>
@@ -46,7 +44,7 @@
 				<!-- BEGIN TOP NAVIGATION MENU -->					
 				<ul class="nav navbar-nav pull-right">
 					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<li class="dropdown user" id="header-user">
+					<li class="user">
 						<img alt="" src="img/avatars/avatar2.jpg" />
 						<span class="username">Hugh, 欢迎你 !</span>
 					</li>
@@ -72,99 +70,67 @@
 				<!-- END TOP NAVIGATION MENU -->
 			</div>			
 		</div>
+		</header>
+		<!--/HEADER -->
 
-	</header>
-	<!--/HEADER -->
+	</div>
+
+	
 	<!-- PAGE -->
 	<section id="page">
-				<!-- SIDEBAR -->
-				<div id="sidebar" class="sidebar mini-menu">
-					<div class="sidebar-menu nav-collapse">				
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<!--数据-->
-							<li>
-								<a href="index.html">
-								<span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span>
-								</a>				
-							</li>
-							<!--设备-->
-							<li class="active"><a class="" href="" target="_blank"><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
-							<!--用户-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
-							<!--方案-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
-							<!--日志-->
-							<li><a class="" href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>
+		<!-- SIDEBAR -->
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-menu nav-collapse">				
+				<!-- SIDEBAR MENU -->
+				<ul>
+					<!--数据-->
+					<li><a href="index.html"><span class="menu-icon"><i class="fa fa-tachometer"></i></span> <br/><span>数据</span></a></li>
+					<!--设备-->
+					<li class="active"><a href=""><span class="menu-icon"><i class="fa fa-desktop fa-fw"></i> </span> <br/><span>设备</span></a></li>
+					<!--用户-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-envelope-o fa-fw"></i> </span> <br/><span>用户</span></a></li>
+					<!--方案-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-th-large fa-fw"></i> </span> <br/><span>方案</span></a></li>
+					<!--日志-->
+					<li><a href=""><span class="menu-icon"><i class="fa fa-picture-o fa-fw"></i></span> <br/> <span>日志</span></a></li>   
+				</ul>
+				<!-- /SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
+
+		<!--隐藏菜单-->
+		<!--select an equipment only or for chart drawing, with class name "chart-draw"-->
+		<div class="side-hidden-bar" id="side-hidden-bar">
+			<div class="sidebar-menu">			
+				<!--ANOTHER SEARCH BAR-->
+				<div class="divide-20"></div>
+
+				<div class="hidden-search-bar">
+					<input class="search" type="text" placeholder="搜索设备"><i class="fa fa-search search-icon"></i>
+				</div>
+
+				<!-- SIDEBAR MENU -->
+				<ul class="zero-sub">
+					<li class="has-sub">
+						<a href="javascript:;" class=""><i class="fa fa-tachometer"></i><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
+						<ul class="sub">  
+
 						</ul>
+					</li>
+				</ul>
 						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
-				<!-- /SIDEBAR -->
+			</div>
+		</div>
 
-				<!--隐藏菜单-->
-				<div class="side-hidden-bar" id="side-hidden-bar">
-					<div class="sidebar-menu nav-collapse">			
-						<!--ANOTHER SEARCH BAR-->
-						<div class="divide-20"></div>
+		<!--/隐藏菜单-->
 
-						<div class="hidden-search-bar">
-							<input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
-							<a href="javascript:;" class=""><span class="search-text">全部展开</span><span class="big-arrow"></span></a>
-						</div>
-
-						<!-- SIDEBAR MENU -->
-						<ul>
-							<li class="has-sub">
-								<a href="javascript:;" class="">
-								<i class="fa fa-tachometer fa-3x"></i>
-								</a>
-								<ul class="sub">
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 1</span>
-										<span class="arrow"></span>
-										</a>
-										<ul class="sub-sub">
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 1</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="open" href="#"><span class="sub-sub-sub-menu-text">设备 2 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 3 : 10</span><span class="equip-marker"></span></a></li>
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 4 : 10</span><span class="equip-marker"></span></a></li>
-											</ul>
-											</li>
-											<li class="has-sub-sub-sub"><a class="" href="#"><span class="sub-sub-menu-text">生产线 2</span>
-											<span class="arrow"></span>
-											</a>
-											<ul class="sub-sub-sub">
-												<li><a class="" href="#"><span class="sub-sub-sub-menu-text">设备 1 : 10</span></a></li>
-											</ul>
-											</li>
-										</ul>
-									</li>
-
-									<li class="has-sub-sub">
-										<a href="javascript:;" class=""><span class="sub-menu-text">区域 2</span>
-										<span class="arrow"></span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<!-- /SIDEBAR MENU -->
-					</div>
-				</div>
-
-				<!--/隐藏菜单-->
-
-				<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
-					<ul>
-						<li><span class="name">设备列表</span></li>
-						<li><i class = "fa fa-angle-right"></i></li>
-					</ul>
-				</div>
+		<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
+			<ul>
+				<li><span class="name">设备列表</span></li>
+				<li><i class = "fa fa-angle-right"></i></li>
+			</ul>
+		</div>	
 
 
 		<div class="main-content" id="main-content">
@@ -172,15 +138,16 @@
 				<div class="divide-20"></div>
 				<div class="row">
 					<div id="content" class="col-lg-12">
+
 						<div class="box border grey">
 							<div class="box-body">
 								<div class="panel panel-table">
 									<div class="panel-body panel-full-body">
-										<div class="tabbable">
+										<div class="tabbable zone-tabbale">
 											<ul class="nav nav-tabs tab-small">
-												<li class="active"><a href="#tab_1_1" data-toggle="tab">区域<i class="fa fa-plus add-button" href="#small-dialog"></i></a></li>
-												<li><a href="#tab_1_2" data-toggle="tab">生产线</a></li>
-												<li><a href="#tab_1_3" data-toggle="tab">设备</a></li>
+												<li class="active"><a href="#tab_1_1" data-toggle="tab">区域(10)<i class="fa fa-plus add-button" href="#small-dialog"></i></a></li>
+												<li><a href="#tab_1_2" data-toggle="tab">生产线(20)</a></li>
+												<li><a href="#tab_1_3" data-toggle="tab">设备(30)</a></li>
 											</ul>
 
 
@@ -214,7 +181,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -235,7 +202,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -256,7 +223,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -279,7 +246,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -300,7 +267,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -321,7 +288,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -344,7 +311,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -365,7 +332,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -386,7 +353,7 @@
 																<div class="col-md-6"><span class="badge badge-green">3</span><i class="fa fa-angle-right fa-2x"></i></div>
 															</div>
 															<div class="detail">
-															  	<button class="btn btn-danger">删除</button>
+															  	<button class="btn btn-danger">删 除</button>
 															</div>
 														</div>
 													</div>
@@ -637,7 +604,7 @@
 
 												<div class="row">
 													<div class="col-md-3">
-														<div class="table-case-box status-online">
+														<div class="table-case-box status-online equip-case">
 															<div class="title">设备 1</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -651,7 +618,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-online">
+														<div class="table-case-box status-online equip-case">
 															<div class="title">设备 2</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -665,7 +632,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-online">
+														<div class="table-case-box status-online equip-case">
 															<div class="title">设备 3</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -679,7 +646,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-online">
+														<div class="table-case-box status-online equip-case">
 															<div class="title">设备 4</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -698,7 +665,7 @@
 												<div class="divide-10"></div>
 												<div class="row">
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 5</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -712,7 +679,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 6</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -726,7 +693,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 7</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -740,7 +707,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 8</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -759,7 +726,7 @@
 												<div class="divide-10"></div>
 												<div class="row">
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 9</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -773,7 +740,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 10</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -787,7 +754,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 11</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -801,7 +768,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 12</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -820,7 +787,7 @@
 												<div class="divide-10"></div>
 												<div class="row">
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 13</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -834,7 +801,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 14</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -848,7 +815,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 15</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
@@ -862,7 +829,7 @@
 														</div>
 													</div>
 													<div class="col-md-3">
-														<div class="table-case-box status-offline">
+														<div class="table-case-box status-offline equip-case">
 															<div class="title">设备 16</div>
 															<div class="icon">
 															  	<i class="fa fa-laptop fa-3x"></i>
