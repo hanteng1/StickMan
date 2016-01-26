@@ -1820,7 +1820,7 @@ output {
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #95b9c7;
+  background-color: #e6f8ff;
 }
 .setting-form {
   margin-bottom: 10px;
@@ -3403,19 +3403,26 @@ input[type="button"].btn-block {
 }
 
 .setting-form-btn > .btn {
-  background-color: #2888C4;
-  width: 150px;
+  background-color: #20b2fa;
+  width: 182px;
+  height: 45px;
   border-radius: 20px;
+  color: #ffffff;
   border: none;
+  font-size: 22px;
 }
 .setting-form-btn > .btn + .btn {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .setting-form-btn > .btn:hover,
 .setting-form-btn > .btn:focus,
 .setting-form-btn > .btn:active {
   z-index: 2;
   background-color: #3090C7;
+}
+.setting-form-btn > .btn.cancel {
+  background-color: #e8e8e8;
+  color: #cfcfcf;
 }
 
 .equip-form-btn {
