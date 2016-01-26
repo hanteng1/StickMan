@@ -162,9 +162,9 @@ var App = function () {
           var $eq_id = '' + eq.attr("id");
           //problem  current_selected_chart_name
           var chart_zone_ul = jQuery('.' + current_selected_chart_name).children('.box-body').children('.panel').children('.panel-body').children(".first-column").children(".big").children(".label-eps");  //ul
-          //$('<li><a class="label-ep le' + $eq_id +'" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
+          $('<li><a class="label-ep le' + $eq_id +'" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
           //$('<li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
-          $('<li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep2"></span><span class="title">设备 1</span></a></li>').appendTo(chart_zone_ul);
+          //$('<li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep2"></span><span class="title">设备 1</span></a></li>').appendTo(chart_zone_ul);
         }
 
       }
@@ -2026,14 +2026,45 @@ var App = function () {
 	}
 
   var handleTitleCheckbox = function(){
+
+  	var boxchecked = false;  //for temporary use
+
     $(":checkbox").click(function(){
+
       if($(this).attr("name") == "box-title-check"){
+
+      	if($(this).attr("value") == "频率"){
+
+      		if(boxchecked == false)
+      		{
+      			var tt = $('<div class="panel-body"><div class="chart-title">频率</div><div class="col-md-8 first-column"><div id="chart_2_1" class="chart"></div><div class="chart-labels"><ul><li><a class="label-cm lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">有效值A项</span></a></li><li><a class="label-cm lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">有效值B项</span></a></li><li><a class="label-cm lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">有效值C项</span></a></li><li><a class="label-cm lc4" href="javascript:;"><span class="color-mark cp4"></span><span class="title">有效值AB项</span></a></li><li><a class="label-cm lc5" href="javascript:;"><span class="color-mark cp5"></span><span class="title">有效值BC项</span></a></li><li><a class="label-cm lc6" href="javascript:;"><span class="color-mark cp6"></span><span class="title">有效值CA项</span></a></li></ul></div><div class="chart-labels big"><ul class="label-eps"><li><a class="label-ep le2" href="javascript:;"><span class="color-mark ep2"></span><span class="title">设备 2</span></a></li><li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep2"></span><span class="title">设备 1</span></a></li></ul></div></div><div class="col-md-4"><form class="form-horizontal " action="#"><div class="form-group"><label class="control-label">数据项 </label><div class=""><label class="radio-inline"> <input type="radio" class="uniform" value="" checked> 有效值 </label></div></div><div class="form-group"><label class="control-label">通道类型</label><div><label class="checkbox-inline cc1"> <input type="checkbox" class="uniform" value="a"> A相 </label><label class="checkbox-inline cc2"> <input type="checkbox" class="uniform" value="b"> B相 </label><label class="checkbox-inline cc3"> <input type="checkbox" class="uniform" value="c"> C相 </label></div><div><label class="checkbox-inline cc4"> <input type="checkbox" class="uniform" value="ab"> AB线 </label><label class="checkbox-inline cc5"> <input type="checkbox" class="uniform" value="bc"> BC线 </label><label class="checkbox-inline cc6"> <input type="checkbox" class="uniform" value="ca"> CA线 </label></div></div><div class="form-group"><label class="control-label">值 </label><div class=""><label class="radio-inline"> <input type="radio" class="uniform" value="" checked> 值 </label></div></div><div class="form-group"><label class="control-label">图表项 </label><div><label class="radio-inline"> <input type="radio" class="uniform" name="optionsRadios1" value="option1" checked> 趋势图 </label><label class="radio-inline"> <input type="radio" class="uniform" name="optionsRadios1" value="option2"> 趋势表 </label></div></div><div class="form-group comfirm-btn"><a class="btn btn-default" href="javascript:;"><span>确   定</span></a></div></form></div></div>');
+				var mboxbody = $(this).parents(".box").children(".box-body").children(".panel");
+				tt.appendTo(mboxbody);
+
+      			var chart_2_1 = "chart_2_1";
+        		var pchart = Pcharts("#" + chart_2_1);
+        		boxchecked = true;
+      		}else if(boxchecked == true)
+      		{
+      			$(this).parents(".box").children(".box-body").children(".panel").children(".panel-body").remove();
+      			boxchecked = false;
+      		}
+
+      		
+      	}
+
         //alert($(this).attr("value"));
 
         //add graph to box-body
-        var tt = $('<div class="panel panel-table"><div class="panel-body">dfdfd</div></div>');
-        var mboxbody = $(this).parents(".box").children(".box-body");
-        tt.appendTo(mboxbody);
+        //var tt = $('<div class="panel panel-table"><div class="panel-body">dfdfd</div></div>');
+        //var mboxbody = $(this).parents(".box").children(".box-body");
+        //tt.appendTo(mboxbody);
+
+        
+        //pchart.initChart();
+        //pchart.enableLabels();
+        //var testChart = Charts();
+        //testChart..initCharts();
 
       }
       

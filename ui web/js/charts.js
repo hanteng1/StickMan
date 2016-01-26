@@ -284,6 +284,7 @@ var Charts = function () {
                     }
                 });
 
+
                 jQuery('.label-ep').click(function(){
                     var etitle = jQuery(this).children(".title");
                     etitle.toggleClass("open"); 
@@ -320,7 +321,6 @@ var Charts = function () {
                     {
                         //toggle off
                         online_equipments[curEquipmentIndex-1] = 0;
-
                     }
                     
                  });
