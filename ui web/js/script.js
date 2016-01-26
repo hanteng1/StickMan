@@ -2863,7 +2863,7 @@ var App = function () {
     
 		$(".sparklinepie").each(function() {
 		  var height;
-		  height = "250px";
+		  height = "200px";
 		  if ($(this).hasClass("big")) {
 			height = "70px";
 		  }

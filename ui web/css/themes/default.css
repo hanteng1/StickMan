@@ -177,6 +177,7 @@ input::-webkit-input-placeholder {
   .navbar .search-bar .search {
     width: 370px;
     height: 50px;
+    font-size: 14px;
     padding-right: 54px !important;
   }
 
