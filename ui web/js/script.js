@@ -770,9 +770,11 @@ var App = function () {
   				if(cur_toggle_margin_left == "380px")
   				{
   					jQuery('#side-hidden-bar-toggle').css("margin-left", "291px");
+  					jQuery('#main-content').css("margin-left", "360px");
   				}else if(cur_toggle_margin_left == "100px")
   				{
 					jQuery('#side-hidden-bar-toggle').css("margin-left", "76px");
+					jQuery('#main-content').css("margin-left", "130px");
   				}
 
   				window_resized_small = true;
@@ -784,9 +786,11 @@ var App = function () {
   				if(cur_toggle_margin_left == "291px")
   				{
   					jQuery('#side-hidden-bar-toggle').css("margin-left", "380px");
+  					jQuery('#main-content').css("margin-left", "450px");
   				}else if(cur_toggle_margin_left == "76px")
   				{
 					jQuery('#side-hidden-bar-toggle').css("margin-left", "100px");
+					jQuery('#main-content').css("margin-left", "160px");
   				}
 
   				window_resized_small = false;
@@ -806,7 +810,7 @@ var App = function () {
                 	$(".side-hidden-bar").fadeToggle(100, function (){
                 	});
             	}else{
-            		jQuery('#main-content').animate({marginLeft:"361px"});
+            		jQuery('#main-content').animate({marginLeft:"360px"});
                 	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"291px"});
                 	$(".side-hidden-bar").fadeToggle(100, function (){
                 	});
@@ -823,7 +827,7 @@ var App = function () {
             		jQuery('#main-content').animate({marginLeft:"160px"});
                		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"100px"});
             	}else{
-            		jQuery('#main-content').animate({marginLeft:"160px"});
+            		jQuery('#main-content').animate({marginLeft:"130px"});
                		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"76px"});
             	}
 

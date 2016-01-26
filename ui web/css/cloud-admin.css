@@ -6951,6 +6951,12 @@ fieldset[disabled] .btn-yellow.active {
 #main-content {
   margin-left: 160px;
 }
+
+@media (max-width: 1350px){
+  #main-content {
+    margin-left: 130px;
+  }
+}
 /* Content */
 #content {
   background-color: #ffffff;
