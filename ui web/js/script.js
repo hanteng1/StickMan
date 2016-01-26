@@ -7,6 +7,8 @@ var App = function () {
 	var is_mini_menu = false; //is mini-menu activated
 	var is_fixed_header = false; //is fixed header activated
 	var responsiveFunctions = []; //responsive function holder
+	var window_resized_small = false;
+	var window_resized_big = false;
 
   var current_selected_chart_name = 'none';
 	
@@ -756,22 +758,76 @@ var App = function () {
       }
 
 
+    	$(window).resize(function() {
+  			// This will execute whenever the window is resized
+  			///$(window).height(); // New height
+  			//window_resized_small
+  			//window_resized_big 
+  			if($(window).width() <= 1350 && window_resized_small == false) {
+  				//small size css
+  				var cur_toggle_margin_left = jQuery('#side-hidden-bar-toggle').css("margin-left");
+
+  				if(cur_toggle_margin_left == "380px")
+  				{
+  					jQuery('#side-hidden-bar-toggle').css("margin-left", "291px");
+  				}else if(cur_toggle_margin_left == "100px")
+  				{
+					jQuery('#side-hidden-bar-toggle').css("margin-left", "76px");
+  				}
+
+  				window_resized_small = true;
+  				window_resized_big = false;
+  			}else if ($(window).width() > 1350 && window_resized_big == false)
+  			{
+  				var cur_toggle_margin_left = jQuery('#side-hidden-bar-toggle').css("margin-left");
+
+  				if(cur_toggle_margin_left == "291px")
+  				{
+  					jQuery('#side-hidden-bar-toggle').css("margin-left", "380px");
+  				}else if(cur_toggle_margin_left == "76px")
+  				{
+					jQuery('#side-hidden-bar-toggle').css("margin-left", "100px");
+  				}
+
+  				window_resized_small = false;
+  				window_resized_big = true;
+  			}
+	  	});
+
         //cc();  //needed if changing height of the bar dynamically
         jQuery(".side-hidden-bar-toggle").click(function () {
             if(side_bar_hidden) {  //the bar is hidden
-                jQuery('#main-content').animate({marginLeft:"450px"});
-                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
-                $(".side-hidden-bar").fadeToggle(100, function (){
-                  //$(this).toggleClass("open")
-                });
+
+            	var cur_margin_left = jQuery(this).css("margin-left");
+
+            	if(cur_margin_left == "100px") {   //the number is important, see css file
+            		jQuery('#main-content').animate({marginLeft:"450px"});
+                	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
+                	$(".side-hidden-bar").fadeToggle(100, function (){
+                	});
+            	}else{
+            		jQuery('#main-content').animate({marginLeft:"361px"});
+                	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"291px"});
+                	$(".side-hidden-bar").fadeToggle(100, function (){
+                	});
+            	}
 
                 //jQuery('#sidebar').addClass("mini-menu");
 
                 side_bar_hidden = false;
             }
             else {  //the bar is open
-               jQuery('#main-content').animate({marginLeft:"160px"});
-               jQuery('#side-hidden-bar-toggle').animate({marginLeft:"100px"});
+            	var cur_margin_left = jQuery(this).css("margin-left");
+            	if(cur_margin_left == "380px")
+            	{
+            		jQuery('#main-content').animate({marginLeft:"160px"});
+               		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"100px"});
+            	}else{
+            		jQuery('#main-content').animate({marginLeft:"160px"});
+               		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"76px"});
+            	}
+
+              
 
                if($(".side-hidden-bar").hasClass("chart-draw")){
                   $(".side-hidden-bar").removeClass("chart-draw");
