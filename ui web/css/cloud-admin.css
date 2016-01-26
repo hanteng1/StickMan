@@ -1507,6 +1507,10 @@ th {
 .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #e6f8ff;
 }
+.panel-body > .table-striped > thead > tr > th {
+  text-align: center;
+}
+
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
   background-color: #f5f5f5;
@@ -1807,25 +1811,6 @@ output {
 }
 .quality-form  > ul > li .quality-form-explain {
   
-}
-
-.add-zone-form-control
-{
-  width: 50%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #555555;
-  vertical-align: middle;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  border-radius: 20px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .setting-brand {
@@ -7216,7 +7201,7 @@ fieldset[disabled] .btn-yellow.active {
   margin-right: 10px;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
-  background-color: #38acec;
+  background-color: #20b2fa;
   padding: 10px 0;
   vertical-align: middle;
 }
@@ -7363,11 +7348,11 @@ fieldset[disabled] .btn-yellow.active {
   background-color: #3090C7;
 }
 .box .box-title .tools .btn-group > .btn.big{
-  width: 120px;
-  height: 56px;
+  width: 100px;
+  height: 40px;
   border-radius: 40px;
-  font-size: 22px;
-  padding-top: 13px;
+  font-size: 16px;
+  padding-top: 8px;
 } 
 .box .box-title .tools .btn-group > .btn + .btn {
   margin-left: 10px;
@@ -7463,13 +7448,13 @@ fieldset[disabled] .btn-yellow.active {
   margin-bottom: 0;
 }
 .box.border.query-box > .box-title{
-  height: 102px;
-  padding: 25px 20px;
+  height: 89px;
+  padding: 18px 18px;
 }
 .box.border > .box-title h4,
 .box.solid > .box-title h4 {
   display: inline-block;
-  font-size: 26px;
+  font-size: 22px;
   margin: 0px 30px 0px 0px;
   font-weight: 400;
   padding: 0;

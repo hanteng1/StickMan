@@ -720,7 +720,7 @@ var App = function () {
       };
 
       //do another time with iterate if the app's name has pop-up dialog
-      if(App.isPage("fangan-baobiaofangan")){
+      if(App.isPage("fangan-baobiaofangan") || App.isPage("yonghu")){
       	$('.body-right').each(function(){
       		sub_area = jQuery(this).children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub');
 
@@ -1721,17 +1721,12 @@ var App = function () {
 	/*	Data Tables
 	/*-----------------------------------------------------------------------------------*/
 	var handleDataTables = function () {
+
+		
 		$('#datatable1').dataTable({
 				"sPaginationType": "bs_full"
 			});
-		$('#datatable2').dataTable({
-				"sPaginationType": "bs_full",
-				sDom: "<'row'<'dataTables_header clearfix'<'col-md-4'l><'col-md-8'Tf>r>>t<'row'<'dataTables_footer clearfix'<'col-md-6'i><'col-md-6'p>>>",
-                oTableTools: {
-                    aButtons: ["copy", "print", "csv", "xls", "pdf"],
-                    sSwfPath: "js/datatables/extras/TableTools/media/swf/copy_csv_xls_pdf.swf"
-                }
-			});
+		
 		$('.datatable').each(function(){
 			var datatable = $(this);
 			// SEARCH - Add the placeholder for Search and Turn this into in-line form control
@@ -1742,6 +1737,8 @@ var App = function () {
 			var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
 			length_sel.addClass('form-control input-sm');
 		});
+
+
 	}
 	/*-----------------------------------------------------------------------------------*/
 	/*	jqGrid
@@ -3884,17 +3881,29 @@ var App = function () {
 
       if(App.isPage("shebei-jichuxinxi")){
         handleXcharts();
+         handlePopUp();
+      }
+      if(App.isPage("shebei-xitongshezhi")){
+        handleXcharts();
+         handlePopUp();
       }
       if(App.isPage("shebei-pqdifshezhi")){
         handleXcharts();
+        handleDateColorpicker();
+         handlePopUp();
+        //handleDataTables();
+
       }
       if(App.isPage("shebei-liebiequyu")){
         handlePopUp();
       }
+      if(App.isPage("yonghu")){
+        handlePopUp();
+      }
       if (App.isPage("shezhi")) {
         
-      };
-			if (App.isPage("widgets_box")) {
+      }
+		if (App.isPage("widgets_box")) {
 				handleBoxSortable(); //Function to handle Box sortables
       }
       if(App.isPage("rizhi")) {
@@ -4014,8 +4023,8 @@ var App = function () {
 			handleSidebarAndContentHeight();  //Function to hide sidebar and main content height
 			responsiveSidebar();		//Function to handle sidebar responsively
 			handleTeamView(); //Function to toggle team view
-      handleHiddenSideBar();
-      handleSidebar(); //Function to display the sidebar
+      	handleHiddenSideBar();
+      	handleSidebar(); //Function to display the sidebar
 			handleHomePageTooltips(); //Function to handle tooltips
 			handleBoxTools(); //Function to handle box tools
 			handleSlimScrolls(); //Function to handle slim scrolls
