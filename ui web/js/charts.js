@@ -364,7 +364,7 @@ var Charts = function () {
                     }
                 });  
 
-                var updateInterval = 3000;
+                var updateInterval = 1000;
                 //real time update
                 function update() {
                     getRandomDataForTest(data_collections, online_equipments, online_channels);
