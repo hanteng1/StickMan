@@ -40,6 +40,33 @@
   height: auto;
 }
 
+@media (max-width: 1350px){
+  #small-dialog {
+    padding: 46px 15px;
+    width: 770px;
+    margin: 30px auto;
+  }
+
+  #small-dialog-character,
+  #small-dialog-user {
+    padding: 46px 15px;
+    width: 770px;
+    margin: 30px auto;
+  }
+
+  #small-dialog-right {
+    padding: 46px 15px;
+    width: 770px;
+    margin: 30px auto;
+  }
+
+  #small-dialog-add-zone {
+    padding: 7px 15px 38px;
+    width: 384px;
+    margin: 30px auto;
+  }
+}
+
 /**
 
 /**
@@ -566,3 +593,170 @@ p.div-form-radio {
 }
 
 
+@media (max-width: 1350px){
+  #small-dialog .title,
+  #small-dialog-right .title,
+  #small-dialog-add-zone .title,
+  #small-dialog-character .title,
+  #small-dialog-user .title
+  {
+    font-size: 15px;
+    padding-bottom: 23px;
+  }
+
+  #small-dialog label,
+  #small-dialog-right label,
+  #small-dialog-character label,
+  #small-dialog-user label
+  {
+    font-size: 12px;
+  }
+
+  .small-dialog-body
+  {
+    height: 615px;
+  }
+  #small-dialog-character .small-dialog-body
+  {
+    height: 460px;
+  }
+  #small-dialog-user .small-dialog-body
+  {
+    height: 300px;
+  }
+  .small-dialog-body .body-left {
+    padding-left: 38px;
+    padding-right: 38px;
+    height: 570px;
+  }
+
+  #small-dialog-character .small-dialog-body .body-left {
+    height: 420px;  
+  }
+  #small-dialog-user .small-dialog-body .body-left {
+    height: 270px;  
+  }
+
+  .small-dialog-body .body-right {
+    padding-left: 38px;
+    padding-right: 38px;
+    height: 570px;
+  }
+
+  #small-dialog-character .small-dialog-body .body-right {
+    height: 420px;  
+  }
+  #small-dialog-user .small-dialog-body .body-right {
+    height: 270px;  
+  }
+
+  .small-dialog-body .m-input-group {
+    margin-bottom: 15px;
+  }
+  .small-dialog-body .m-input-group .title {
+    font-size: 12px;
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+
+  .small-dialog-body .m-input-group input.m-input-middle {
+    margin-right: 7px;
+    width: 170px;
+    height: 30px;
+  }
+
+  .small-dialog-body .div-form-title {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    height: 40px;
+    padding-top: 11px;
+  }
+
+  .small-dialog-body .div-form-title .title-name {
+    margin-left: 7px;
+  }
+
+  .small-dialog-body .div-form-body {
+    padding-top: 7px;
+    margin-bottom: 15px;
+  }
+
+  .small-dialog-body .div-form-body p {
+    font-size: 14px;
+  }
+
+
+  .small-dialog-body .div-form-body input[type="radio"] {
+    margin-right: 7px;
+    font-size: 12px;
+  }
+
+
+  .small-dialog-body .div-form-body .title input.m-input-middle {
+    margin-right: 7px;
+    font-size: 12px;
+    border-radius: 15px;
+    width: 170px;
+    height: 30px;
+  }
+
+  .small-dialog-body .div-form-body .title a {
+    width: 69px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 12px;
+  }
+
+  #small-dialog .small-dialog-body .div-form-body table.table .title,
+  #small-dialog-right .small-dialog-body .div-form-body table.table .title {
+    font-size: 12px;
+    margin-left: 7px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  #small-dialog .box table.table .title,
+  #small-dialog .box table.table .date
+  {
+    font-size: 10px;
+  }
+
+
+  .small-dialog-form-btn > .btn {
+    width: 140px;
+    height: 34px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+
+  .small-dialog-form-btn > .btn + .btn {
+    margin-left: 23px;
+  }
+
+  #small-dialog-add-zone .add-zone-form-control
+  {
+    width: 260px;
+    height: 46px;
+    padding: 5px 9px;
+    font-size: 10px;
+    border-radius: 30px;
+  }
+
+  #small-dialog-add-zone .small-dialog-form-btn > .btn {
+    width: 107px;
+    height: 46px;
+    border-radius: 30px;
+    padding-top: 12px;
+    font-size: 16px;
+  }
+
+
+  #small-dialog-add-zone .small-dialog-form-btn > .btn + .btn {
+    margin-left: 38px;
+  }
+
+  p.div-form-radio {
+    margin: 0 8px;
+  }
+}

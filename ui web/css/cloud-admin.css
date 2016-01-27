@@ -3910,6 +3910,27 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-top: 8px;
 }
 
+@media (max-width: 1350px){
+  .panel-full-body .nav-tabs {
+    margin-bottom: 25px;
+  }
+
+  .panel-full-body .zone-tabbale .nav-tabs {
+    margin-bottom: 8px;
+  }
+
+  .panel-full-body .nav-tabs > li > a{
+    font-size: 20px;
+    height: 58px;
+    padding-top: 12px;
+  }
+  .panel-full-body .nav-tabs > li > a .add-button{
+    margin-right: 23px;
+    margin-top: 6px;
+  }
+
+}
+
 .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #dddddd;
 }
@@ -7047,6 +7068,8 @@ fieldset[disabled] .btn-yellow.active {
 /* Content */
 #main-content {
   margin-left: 160px;
+  /* the min-width value is very important */
+  min-width: 1000px;
 }
 
 @media (max-width: 1350px){
@@ -7093,6 +7116,42 @@ fieldset[disabled] .btn-yellow.active {
 .row .content-title .red {
   color: #e41b17;
   margin-left: 10px;
+}
+
+.equip-row {
+  padding:30px 40px 60px;
+}
+.equip-row .equip-row-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.equip-row .equip-row-title-sub {
+  float: right;
+  margin-left: 20px;
+} 
+
+.equip-row .equip-row-title-sub .red {
+  color: #e41b17;
+  margin-left: 10px;
+}
+
+.row.chart-title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.row.warning{
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 32px;
+  color: #e41b17;
+}
+
+.row.warning .row-warning {
+  padding-top: 20px;
+  margin-right: 20px;
 }
 
 .row .clearfix {
@@ -7186,7 +7245,7 @@ fieldset[disabled] .btn-yellow.active {
   clear: both;
   width: 400px;
   height: 390px;
-  max-width: 70%;
+  max-width: 85%;
   margin-bottom: 15px;
   margin-left: 10px;
   margin-right: 10px;
@@ -7243,10 +7302,55 @@ fieldset[disabled] .btn-yellow.active {
 
 .zone-case-box .detail button {
   width: 220px;
+  max-width: 100%;
   height: 45px;
   border-radius: 30px;
   font-size: 16px;
   color: #c8c8c8;
+}
+
+
+@media (max-width: 1350px){
+  .zone-case-box {
+    width: 305px;
+    height: 300px;
+  }
+  .zone-case-box .title {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+  .zone-case-box .product-line {
+    margin-bottom: 7px;
+    min-height: 69px;
+  }
+
+  .zone-case-box .product-line .content {
+    font-size: 12px;
+  }
+
+  .zone-case-box .product-line .badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 35px;
+    font-size: 24px;
+    padding-top: 4px;
+    margin-right: 15px;
+  }
+
+
+  .zone-case-box .detail {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .zone-case-box .detail button {
+    width: 169px;
+    height: 34px;
+    font-size: 12px;
+  }
+
 }
 
 .user-case-box {
@@ -7327,6 +7431,7 @@ fieldset[disabled] .btn-yellow.active {
   display: inline-block;
   clear: both;
   width: 285px;
+  max-width: 85%;
   height: 335px;
   margin-bottom: 30px;
   margin-left: 10px;
@@ -7362,6 +7467,7 @@ fieldset[disabled] .btn-yellow.active {
 }
 .table-case-box .detail button {
   width: 160px;
+  max-width: 70%;
   font-size: 18px;
 }
 
@@ -7372,6 +7478,43 @@ fieldset[disabled] .btn-yellow.active {
 }
 .table-case-box.status-warning .icon {
   color: #fba2a1;
+}
+
+
+@media (max-width: 1350px){
+  .table-case-box {
+    width: 219px;
+    height: 257px;
+    margin-bottom: 23px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 20px 0;
+  }
+  .table-case-box.equip-case {
+    height: 277px;
+  }
+
+  .table-case-box .title {
+    font-size: 18px;
+  }
+
+  .table-case-box .icon {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .table-case-box .detail {
+    width: 70%;
+    margin-top: 7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .table-case-box .detail button {
+    width: 123px;
+    font-size: 14px;
+  }
+
 }
 
 .box {
@@ -7447,6 +7590,17 @@ fieldset[disabled] .btn-yellow.active {
   font-size: 16px;
   padding-top: 8px;
 } 
+
+@media (max-width: 1350px){
+  .box .box-title .tools .btn-group > .btn.big{
+    width: 77px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 12px;
+    padding-top: 6px;
+  } 
+}
+
 .box .box-title .tools .btn-group > .btn + .btn {
   margin-left: 10px;
 }
@@ -8991,8 +9145,8 @@ div[data-role="editor-toolbar"] {
 .login {
   background: url("../img/login/login-bg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   background-size:100% 100%;
-  height: 100%;
-  min-height: 100%;
+  /*height: 100%;
+  min-height: 100%;*/
 }
 .login #logo {
   margin-top: 30px;
@@ -9151,6 +9305,89 @@ div[data-role="editor-toolbar"] {
   width: 42px;
   text-decoration: none !important;
 }
+
+@media (max-width: 1350px){
+  .login-box-plain {
+    margin-top: 165px;
+    padding: 0px 0px 46px;
+    width: 420px;
+    height: 490px;
+  }
+  .login-box-plain input,
+  .login-box-plain textarea {
+    font-size: 12px;
+    padding: 7px 6px 6px;
+    padding-left: 25px !important;
+  }
+  .login-box-plain form i {
+    font-size: 77px;
+    height: 9px;
+    margin: 4px 0px 2px 5px;
+    width: 9px;
+  }
+  .login-box-plain .login-title {
+    height: 76px;
+    margin-bottom: 34px;
+
+  }
+  .login-box-plain .login-title > ul {
+    margin-left: 46px;
+    padding-top: 13px;
+  }
+
+  .login-box-plain .login-title > ul > li {
+    margin-right: 7px;
+  }
+
+  .login-box-plain .login-title .name {
+    font-size: 20px;
+  }
+  .login-box-plain .login-title img {
+    width: 98px;
+    height: 49px;
+  }
+
+  .login-box-plain .login-body {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+
+  .login-box-plain .login-body form .form-group{
+    margin-bottom: 17px;
+  }
+  .login-box-plain .login-body form .form-group i{
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .login-box-plain .login-body form .form-group input {
+    height: 50px;
+    border-radius: 23px;
+  }
+
+  .login-box-plain .login-body form .form-group.verification > ul > li a{
+    height: 50px;
+    width:115px;
+    border-radius: 40px;
+    font-size: 16px;
+    padding-top: 12px;
+  }
+  .login-box-plain .login-body form .form-group input.verification-form {
+    padding-left: 0;
+    width: 150px;
+  }
+  .login-box-plain .login-body form .form-group button{
+    height: 46px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+}
+
+
+
+
 .login-helpers {
   margin-top: 20px;
   font-size: 12px;
@@ -9164,6 +9401,15 @@ div[data-role="editor-toolbar"] {
   line-height: 50px;
   text-align: center;
 }
+
+@media (max-width: 1350px){
+  .bigintro {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+}
+
 .logo a {
   transition: all 0.4s ease-in-out 0s;
 }
@@ -9731,6 +9977,7 @@ div[data-role="editor-toolbar"] {
   margin: 0;
   margin-bottom: 10px;
   width: 110px;
+  max-width: 100%;
   height: 53px;
   border-radius: 10px;
   text-align: center;
@@ -9792,6 +10039,7 @@ div[data-role="editor-toolbar"] {
   background: url("../img/zone-image.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   height: 232px;
   width: 370px;
+  max-width: 100%;
   font-size: 32px;
   color: #eeeeee;
   padding-top: 85px;
