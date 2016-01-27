@@ -1,4 +1,4 @@
-function Pcharts(idofChart) {
+function Pcharts(idofChart, idvalueofchart) {
 
     if (!jQuery.plot) {
        return;
@@ -128,15 +128,12 @@ function Pcharts(idofChart) {
                             "#810541", "#7E354D", "#7F4E52", "#7F5A58", "#C5908E", "#E8ADAA"   //purple
                             ]; 
 
-        var online_equipments = [0, 0, 0, 0, 0, 0];
-        var online_channels = [0, 0, 0, 0, 0, 0];
-
-        this.test_1 = online_equipments;
-        this.test_2 = online_channels;
+        this.online_equipments = [0, 0, 0, 0, 0, 0];
+        this.online_channels = [0, 0, 0, 0, 0, 0];
 
         var data_plot = [chart2_data_default];
 
-        var plot = $.plot($(idofChart), data_plot, {    //"#chart_2_1"
+        var plot = $.plot($("#" + idofChart), data_plot, {    //"#chart_2_1"
                 series: {
                     lines: {
                         show: true,
@@ -202,12 +199,14 @@ function Pcharts(idofChart) {
             }
         });
 
-        this.testVar = 10;
+        this.testVar = idvalueofchart;
 
         var updateInterval = 3000;
+
+        var pchart_scope = this;
         //real time update
         function update() {
-            getRandomDataForTest(data_collections, online_equipments, online_channels);
+            getRandomDataForTest(data_collections, pchart_scope.online_equipments, pchart_scope.online_channels);
             plot.setData(data_collections);
             plot.draw();
             setTimeout(update, updateInterval);
@@ -221,8 +220,9 @@ function Pcharts(idofChart) {
     {
         //alert(this.test_1);
         var parent = this;
+        //alert( parent.testVar);
         
-        jQuery('.label-ep').click(function(){
+        jQuery('.label-ep-' + parent.testVar).click(function(){
         var etitle = jQuery(this).children(".title");
         etitle.toggleClass("open"); 
         var emark = jQuery(this).children(".color-mark");
@@ -253,19 +253,21 @@ function Pcharts(idofChart) {
         if(emark.hasClass("open"))
         {
             //toggle on
-            parent.test_1[curEquipmentIndex-1] = 1;
+            parent.online_equipments[curEquipmentIndex-1] = 1;
 
         }else
         {
             //toggle off
-            parent.test_1[curEquipmentIndex-1] = 0;
+            parent.online_equipments[curEquipmentIndex-1] = 0;
         }
+
+        //alert( parent.testVar);
         
      });
 
 
 
-    jQuery('.label-cm').click(function(){
+    jQuery('.label-cm-' + parent.testVar).click(function(){
         var etitle = jQuery(this).children(".title");
         etitle.toggleClass("open"); 
         var emark = jQuery(this).children(".color-mark");
@@ -296,12 +298,14 @@ function Pcharts(idofChart) {
         if(emark.hasClass("open"))
         {
             //toggle on
-            parent.test_2[curChannelIndex-1] = 1;
+            parent.online_channels[curChannelIndex-1] = 1;
         }else
         {
             //toggle off
-            parent.test_2[curChannelIndex-1] = 0;
+            parent.online_channels[curChannelIndex-1] = 0;
         }
+
+         //alert( parent.testVar);
     });  
     
 }  //end of function enablelabels
