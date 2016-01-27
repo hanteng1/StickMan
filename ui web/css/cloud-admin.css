@@ -7118,6 +7118,15 @@ fieldset[disabled] .btn-yellow.active {
   margin-left: 10px;
 }
 
+.zone-product-equipment-tag {
+  color: #444444;
+}
+.zone-product-equipment-tag:hover {
+  text-decoration: none;
+  color: #444444;
+}
+
+
 .equip-row {
   padding:30px 40px 60px;
 }
