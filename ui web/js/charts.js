@@ -309,6 +309,7 @@ var Charts = function () {
 
 
                 jQuery('.label-ep').click(function(){
+
                     var etitle = jQuery(this).children(".title");
                     etitle.toggleClass("open"); 
                     var emark = jQuery(this).children(".color-mark");
@@ -352,6 +353,11 @@ var Charts = function () {
                  });
 
                 jQuery('.label-cm').click(function(){
+
+                    var embedded_form_upper_row = jQuery(this).parents(".panel-body").children(".embedded-form").children(".form-horizontal").children(".chanel-types").children(".upper-row");
+                    var embedded_form_lower_row = jQuery(this).parents(".panel-body").children(".embedded-form").children(".form-horizontal").children(".chanel-types").children(".lower-row");
+                                        
+
                     var etitle = jQuery(this).children(".title");
                     etitle.toggleClass("open"); 
                     var emark = jQuery(this).children(".color-mark");
@@ -383,12 +389,90 @@ var Charts = function () {
                     {
                         //toggle on
                         online_channels[curChannelIndex-1] = 1;
+
+                        if(curChannelIndex > 3)
+                        {
+                            embedded_form_lower_row.children("label").each(function(){
+                                if($(this).hasClass("cc" + curChannelIndex))
+                                {
+                                    $(this).children("input").prop('checked', true);
+                                }
+                            });
+                        }else
+                        {
+                            embedded_form_upper_row.children("label").each(function(){
+                                if($(this).hasClass("cc" + curChannelIndex))
+                                {
+                                    $(this).children("input").prop('checked', true);
+                                }
+                            });
+                        }
                     }else
                     {
                         //toggle off
                         online_channels[curChannelIndex-1] = 0;
+
+                        if(curChannelIndex > 3)
+                        {
+                            embedded_form_lower_row.children("label").each(function(){
+                                if($(this).hasClass("cc" + curChannelIndex))
+                                {
+                                    $(this).children("input").prop('checked', false);
+                                }
+                            });
+                        }else
+                        {
+                            embedded_form_upper_row.children("label").each(function(){
+                                if($(this).hasClass("cc" + curChannelIndex))
+                                {
+                                    $(this).children("input").prop('checked', false);
+                                }
+                            });
+                        }
                     }
-                });  
+                }); 
+
+                
+                $(":checkbox").click(function(){
+                    if($(this).attr("name") == "chanel-type-check"){
+                        var label_cms = jQuery(this).parents(".panel-body").children(".first-column").children(".upper-labels").children("ul");
+
+                        if($(this).prop('checked') == true){
+                            var label_index = $(this).attr("value");
+                            var label_index_value = parseInt(label_index);
+                            //alert(label_index );
+
+                            label_cms.children("li").each(function(){
+
+                                if($(this).children("a").hasClass("lc" + label_index))
+                                {
+                                    $(this).children(".lc" + label_index).children(".title").toggleClass("open");
+                                    $(this).children(".lc" + label_index).children(".color-mark").toggleClass("open");
+
+                                    //set channel value to 1
+                                    online_channels[label_index_value-1] = 1;
+                                }
+                            });
+
+                        }else
+                        {
+                            var label_index = $(this).attr("value");
+                            var label_index_value = parseInt(label_index);
+                            label_cms.children("li").each(function(){
+
+                                if($(this).children("a").hasClass("lc" + label_index))
+                                {
+                                    $(this).children(".lc" + label_index).children(".title").toggleClass("open");
+                                    $(this).children(".lc" + label_index).children(".color-mark").toggleClass("open");
+
+                                     //set channel value to 0
+                                     online_channels[label_index_value-1] = 0;
+                                }
+                            });
+
+                        }
+                    }
+                });
 
                 var updateInterval = 1000;
                 //real time update
@@ -398,7 +482,6 @@ var Charts = function () {
                     //update graph
                     plot.setData(data_collections);
                     plot.draw();
-
 
                     //update table
                     //first, remove all td in table-body
