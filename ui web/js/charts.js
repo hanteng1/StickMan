@@ -341,10 +341,6 @@ var Charts = function () {
                         //toggle on
                         online_equipments[curEquipmentIndex-1] = 1;
 
-                        //add table list
-                        //var table_obj = jQuery(this).parents(".panel-body").children(".first-column").children(".chart_in_table").children(".table-striped");
-                        //var table_header = 
-
                     }else
                     {
                         //toggle off
@@ -503,13 +499,44 @@ var Charts = function () {
                         {
                             if(channels[itrc] == 1) {
                                 getRandomDataWithObject(pDataCollection[6 * itre + itrc + 1]);
+                            }else
+                            {
+                                if(pDataCollection[6 * itre + itrc + 1].length != 0)
+                                {
+                                    clearData(pDataCollection[6 * itre + itrc + 1]);
+                                }
                             }
+                        }
+                    }else if(equips[itre] == 0)
+                    {
+                        for(itrc =0; itrc < 6; itrc++)
+                        {
+                            
+                            if(pDataCollection[6 * itre + itrc + 1].length != 0)
+                            {
+                                clearData(pDataCollection[6 * itre + itrc + 1]);
+                            }
+                            
                         }
                     }
                 }  
             }
 
+            function clearData(pData){
+                pData.length = 0;  //this works
+            }
+
             function getRandomDataWithObject(pData) {
+                //fill the data with 0 if it is not full of size first
+                //attention, this is just for demo
+                //consider the data format according to your need for real implementation
+                if(pData.length == 0)
+                {
+                    for(var itrt = 1; itrt < maximum; itrt++)
+                    {
+                        pData.push([itrt, 0]); //30 
+                    }
+                }
 
                 var previous = pData.length ? pData[pData.length -1][1] : 140;
                 var y = previous + Math.random() * 100 - 50;
