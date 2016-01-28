@@ -81,6 +81,20 @@
 
 
 
+            var el = jQuery(this).parents(".box").children(".box-body");
+            if (jQuery(this).hasClass("box-collapse")) {
+                jQuery(this).removeClass("box-collapse").addClass("box-expand");
+                var i = jQuery(this).children(".collect-arrow");
+                i.addClass("open");
+                el.slideUp(200);
+            } else {
+                jQuery(this).removeClass("box-expand").addClass("box-collapse");
+                var i = jQuery(this).children(".collect-arrow");
+                i.removeClass("open");
+                el.slideDown(200);
+            }
+
+
 
 @media (max-width: 1350px){
 }

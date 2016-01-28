@@ -2116,7 +2116,59 @@ var App = function () {
 	}
 
 
+ 	var handleChartSwitch = function(){
+ 		//by default, set all existing chart_in_table to invisible by sliding up
+ 		$(".chart_in_table").each(function(){
+ 			if($(this).hasClass("not-visible")){
+ 				//do nothing
+ 			}else{
+ 				jQuery(this).addClass("not-visible");
+ 				jQuery(this).slideUp(1);
+ 			}
+ 		});
 
+
+ 		$(":radio").click(function(){
+ 			if($(this).attr("name") == "graph-table-switch-radio"){
+
+ 				var chart_in_graph = jQuery(this).parents(".panel-body").children(".first-column").children(".chart_in_graph");
+				var chart_in_table = jQuery(this).parents(".panel-body").children(".first-column").children(".chart_in_table"); 				
+
+ 				if($(this).prop('checked') ==  true)
+ 				{
+ 					//caution, might have bug here if the radio check does not work propably
+ 					if($(this).attr("value") == "option-graph")
+ 					{
+
+ 						if(chart_in_graph.hasClass("not-visible")){
+ 							
+ 							chart_in_graph.removeClass("not-visible");
+
+ 							chart_in_table.slideUp(100, function(){
+ 								chart_in_graph.slideDown(100);
+ 								chart_in_table.addClass("not-visible");
+ 							});
+ 						}
+
+
+ 					}else if($(this).attr("value") == "option-table"){
+ 						if(chart_in_table.hasClass("not-visible")){
+
+ 							chart_in_table.removeClass("not-visible");
+
+ 							chart_in_graph.slideUp(100, function(){
+ 								chart_in_table.slideDown(100);
+ 								chart_in_graph.addClass("not-visible");
+ 							});
+ 							
+ 						}
+
+ 					}
+
+ 				}
+ 			}
+ 		});
+ 	}
 
 
   var handleTitleCheckbox = function(){
@@ -3962,6 +4014,7 @@ var App = function () {
         handleSparkline();
         handleXcharts();
         handleTitleCheckbox();
+        handleChartSwitch();
       }
       if(App.isPage("baobiao")) {
         handleXcharts();

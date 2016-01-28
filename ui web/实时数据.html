@@ -536,7 +536,30 @@
 										<div class="chart-title">测试用</div>
 
 										<div class="col-md-8 first-column">
-											<div id="chart_2_1" class="chart"></div>
+											<!--when not in charge, the section was hidden by collapse function-->
+											<div class="chart_in_graph">
+												<div id="chart_2_1" class="chart"></div>
+											</div>
+
+											<div class="chart_in_table"> <!--not visible by default-->
+												<table class="table table-striped">
+													<thead>
+														<tr>
+															<th>数据时间</th>
+															<th>xxxx</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="title">ddd</td>
+															<td>xxxxxxx</td>
+														</tr>
+													</tbody>
+
+												</table>
+
+
+											</div>
 
 											<!--div 1, channels-->
 											<div class="chart-labels">
@@ -590,8 +613,8 @@
 										  <div class="form-group">
 											 <label class="control-label">图表项 </label> 
 											 <div> 
-												<label class="radio-inline"> <input type="radio" class="uniform" name="graph-table-switch-radio" value="option1" checked> 趋势图 </label> 
-												<label class="radio-inline"> <input type="radio" class="uniform" name="graph-table-switch-radio" value="option2"> 趋势表 </label> 
+												<label class="radio-inline"> <input type="radio" class="uniform" name="graph-table-switch-radio" value="option-graph" checked> 趋势图 </label> 
+												<label class="radio-inline"> <input type="radio" class="uniform" name="graph-table-switch-radio" value="option-table"> 趋势表 </label> 
 											 </div>
 										  </div>
 

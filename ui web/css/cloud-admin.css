@@ -1503,6 +1503,10 @@ th {
   color: #bbbbbb;
 }
 
+.panel-body .chart_in_table .table-striped > thead > tr > th {
+  text-align: center;
+}
+
 
 @media (max-width: 1350px){
 
