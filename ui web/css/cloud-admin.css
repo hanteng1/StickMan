@@ -1507,6 +1507,14 @@ th {
   text-align: center;
 }
 
+.panel-body .chart_in_table {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.panel-body .chart_in_table .table-striped > thead > tr > th.not-shown,
+.panel-body .chart_in_table .table-striped > tbody > tr > td.not-shown{
+  display: none;
+}
 
 @media (max-width: 1350px){
 

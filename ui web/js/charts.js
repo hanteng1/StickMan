@@ -122,6 +122,10 @@ var Charts = function () {
             function chart2() {
 
                 //chart2_data_machine_channel, 6 maximum
+                //ATTENTION! IMPORTANT
+                //这里的数据1-6只代表6组数据，名字跟选择的区域－生产线－设备的序号没有关系，根据选择的设备的名字再改变这6组数据的名称
+                //这里设置最多6组数据，也可以根据需求更改
+
                 var chart2_data_1_1 = [];  //1
                 var chart2_data_1_2 = [];  //2
                 var chart2_data_1_3 = [];  //3
@@ -193,6 +197,17 @@ var Charts = function () {
                     [1, 0]
                 ];
 
+                //attention: the name is not for real
+                var data_names = ["默认",
+                                  "设备1-A项","设备1-B项","设备1-C项","设备1-AB项","设备1-BC项","设备1-CA项",
+                                  "设备2-A项","设备2-B项","设备2-C项","设备2-AB项","设备2-BC项","设备2-CA项",
+                                  "设备3-A项","设备3-B项","设备3-C项","设备3-AB项","设备3-BC项","设备3-CA项",
+                                  "设备4-A项","设备4-B项","设备4-C项","设备4-AB项","设备4-BC项","设备4-CA项",
+                                  "设备5-A项","设备5-B项","设备5-C项","设备5-AB项","设备5-BC项","设备5-CA项",
+                                  "设备6-A项","设备6-B项","设备6-C项","设备6-AB项","设备6-BC项","设备6-CA项"
+
+                ]
+
                 var data_collections = [chart2_data_default,
                                         chart2_data_1_1, chart2_data_1_2, chart2_data_1_3, chart2_data_1_4, chart2_data_1_5, chart2_data_1_6,
                                         chart2_data_2_1, chart2_data_2_2, chart2_data_2_3, chart2_data_2_4, chart2_data_2_5, chart2_data_2_6,
@@ -215,6 +230,14 @@ var Charts = function () {
                 var online_channels = [0, 0, 0, 0, 0, 0];
 
                 
+                //initialize the table
+                var table_header_tr = jQuery(".table_test").children(".table-striped").children(".table-head").children(".table-head-tr");
+                var table_body = jQuery(".table_test").children(".table-striped").children(".table-body");
+
+                //for (var itrn = 1; itrn < data_collections.length; itrn++) {
+                    //no need to consider the default data for table
+                  //  $('<th class="col-itrn not-shown">'+data_names[itrn]+'</th>').appendTo(table_header);
+                //};
 
                 var data_plot = [chart2_data_default];
 
@@ -317,10 +340,17 @@ var Charts = function () {
                     {
                         //toggle on
                         online_equipments[curEquipmentIndex-1] = 1;
+
+                        //add table list
+                        //var table_obj = jQuery(this).parents(".panel-body").children(".first-column").children(".chart_in_table").children(".table-striped");
+                        //var table_header = 
+
                     }else
                     {
                         //toggle off
                         online_equipments[curEquipmentIndex-1] = 0;
+
+                        //remove table list
                     }
                     
                  });
@@ -368,8 +398,60 @@ var Charts = function () {
                 //real time update
                 function update() {
                     getRandomDataForTest(data_collections, online_equipments, online_channels);
+
+                    //update graph
                     plot.setData(data_collections);
                     plot.draw();
+
+
+                    //update table
+                    //first, remove all td in table-body
+                    table_header_tr.empty();
+                    table_body.empty();
+                    
+                    //second, put exiting data into the table-body
+                    $('<th class="col-0">数据时间</th>').appendTo(table_header_tr);
+                    var num_of_body_tr = 0;
+                    for (var itrn = 1; itrn < data_collections.length; itrn++) {
+                        //no need to consider the default data for table
+                        var cur_test_data = data_collections[itrn];
+
+                        if(cur_test_data.length > 0)
+                        {
+
+                            $('<th class="col-'+itrn+'">'+data_names[itrn]+'</th>').appendTo(table_header_tr);
+
+                            /*
+                            for(var itrd = 0; itrd < cur_test_data.length; itrd++)
+                            {
+                                //see if need to add new tr + first column
+                                if((itrd + 1) > num_of_body_tr)
+                                {
+                                    $('<tr class="table-body-tr-'+itrd+'"></tr>').appendTo(table_body);
+                                    var new_added_tr = jQuery(".table_test").children(".table-striped").children(".table-body").children(".table-body-tr-" + itrd);
+                                    $('<td class="col-0">ddd</td>').appendTo(new_added_tr);
+
+
+                                    //add the number to its position
+
+                                    num_of_body_tr++;
+                                }else
+                                {
+                                    //tr already exit, fint it
+                                    var already_added_tr = jQuery(".table_test").children(".table-striped").children(".table-body").children(".table-body-tr-" + itrd);
+
+                                    //skip the previous cols...how
+                                    $('<td class="col-">xxxxxxx</td>').appendTo(already_added_tr);
+                                }
+
+                                
+                            }*/
+                            
+                        }
+
+                        
+                    };
+
                     setTimeout(update, updateInterval);
                 }
                 update();
