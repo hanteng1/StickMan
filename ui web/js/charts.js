@@ -421,18 +421,30 @@ var Charts = function () {
 
                             $('<th class="col-'+itrn+'">'+data_names[itrn]+'</th>').appendTo(table_header_tr);
 
-                            /*
+                            
                             for(var itrd = 0; itrd < cur_test_data.length; itrd++)
                             {
                                 //see if need to add new tr + first column
                                 if((itrd + 1) > num_of_body_tr)
                                 {
-                                    $('<tr class="table-body-tr-'+itrd+'"></tr>').appendTo(table_body);
+                                    //add a tr to the beginning of the table_body so that new data apear first
+                                    //$('<tr class="table-body-tr-'+itrd+'"></tr>').appendTo(table_body);
+                                    table_body.prepend($('<tr class="table-body-tr-'+itrd+'"></tr>'));
                                     var new_added_tr = jQuery(".table_test").children(".table-striped").children(".table-body").children(".table-body-tr-" + itrd);
-                                    $('<td class="col-0">ddd</td>').appendTo(new_added_tr);
+                                    $('<td class="col-0">'+cur_test_data[itrd][0]+'</td>').appendTo(new_added_tr);
 
 
-                                    //add the number to its position
+                                    //add the number to its position, cur_test_data[itrd][1]
+                                    for(var itrp = 1; itrp < itrn; itrp++) //iterate the data before and insert empty as long as the data is not empty, its has something, but not as long as the new added one
+                                    {
+                                        if (data_collections[itrp].length > 0) 
+                                        {
+                                            $('<td class="col-'+itrp+'"></td>').appendTo(new_added_tr);
+                                        };
+                                    }
+
+                                    $('<td class="col-'+itrn+'">'+cur_test_data[itrd][1]+'</td>').appendTo(new_added_tr);
+
 
                                     num_of_body_tr++;
                                 }else
@@ -440,12 +452,37 @@ var Charts = function () {
                                     //tr already exit, fint it
                                     var already_added_tr = jQuery(".table_test").children(".table-striped").children(".table-body").children(".table-body-tr-" + itrd);
 
-                                    //skip the previous cols...how
-                                    $('<td class="col-">xxxxxxx</td>').appendTo(already_added_tr);
+                                    //skip the previous cols...how, only take of previous columns...
+                                    for(var itrp = 1; itrp < itrn; itrp++)
+                                    {
+                                        if (data_collections[itrp].length > 0) 
+                                        {
+                                            if(data_collections[itrp].length > itrd) 
+                                            {
+                                                //do nothing, must already added
+                                            }else
+                                            {
+                                                //check if already added, otherwise, add an empty to the tr
+                                                //iterate all the children of current tr
+                                                already_added_tr.children('td').each(function(){
+                                                    if($(this).hasClass("col-" + itrp)){
+                                                        //do nothing
+                                                    }else{
+                                                        $('<td class="col-'+itrp+'"></td>').appendTo(already_added_tr);
+                                                    }
+                                                });
+                                            }
+                                        }
+                                        
+                                    }
+
+                                    $('<td class="col-'+itrn+'">'+cur_test_data[itrd][1]+'</td>').appendTo(already_added_tr);
+
+
                                 }
 
                                 
-                            }*/
+                            }
                             
                         }
 

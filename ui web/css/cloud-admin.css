@@ -1506,10 +1506,16 @@ th {
 .panel-body .chart_in_table .table-striped > thead > tr > th {
   text-align: center;
 }
+.panel-body .chart_in_table .table-striped > tbody > tr > td {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 
 .panel-body .chart_in_table {
   max-width: 100%;
+  max-height: 300px;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 .panel-body .chart_in_table .table-striped > thead > tr > th.not-shown,
 .panel-body .chart_in_table .table-striped > tbody > tr > td.not-shown{
@@ -1529,9 +1535,6 @@ th {
     font-size: 12px;
   }
 }
-
-
-
 
 
 .table-striped > tbody > tr:nth-child(odd) > td,
