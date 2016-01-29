@@ -75,10 +75,10 @@ var App = function () {
 	/*-----------------------------------------------------------------------------------*/
 	var handleSidebar = function () {
 	jQuery('.sidebar-menu .has-sub > a').click(function () {
-            var last = jQuery('.has-sub.open', $('.sidebar-menu'));
-            last.removeClass("open");
-            jQuery('.arrow', last).removeClass("open");
-            jQuery('.sub', last).slideUp(200);
+            //var last = jQuery('.has-sub.open', $('.sidebar-menu'));
+            //last.removeClass("open");
+            //jQuery('.arrow', last).removeClass("open");
+            //jQuery('.sub', last).slideUp(200);
             
 			var thisElement = $(this);
 			var slideOffeset = -200;
@@ -108,10 +108,10 @@ var App = function () {
 		
 	// Handle sub-sub menus
 	jQuery('.sidebar-menu .has-sub .sub .has-sub-sub > a').click(function () {
-            var last = jQuery('.has-sub-sub.open', $('.sidebar-menu'));
-            last.removeClass("open");
-            jQuery('.arrow', last).removeClass("open");
-            jQuery('.sub', last).slideUp(200);
+            //var last = jQuery('.has-sub-sub.open', $('.sidebar-menu'));
+            //last.removeClass("open");
+            //jQuery('.arrow', last).removeClass("open");
+            //jQuery('.sub', last).slideUp(200);
                 
             var sub = jQuery(this).next();
             if (sub.is(":visible")) {
@@ -127,10 +127,10 @@ var App = function () {
 
      // Handle sub-sub-sub menus
     jQuery('.sidebar-menu .has-sub .sub .has-sub-sub .sub-sub .has-sub-sub-sub > a').click(function () {
-            var last = jQuery('.has-sub-sub-sub.open', $('.sidebar-menu'));
-            last.removeClass("open");
-            jQuery('.arrow', last).removeClass("open");
-            jQuery('.sub', last).slideUp(200);
+            //var last = jQuery('.has-sub-sub-sub.open', $('.sidebar-menu'));
+            //last.removeClass("open");
+            //jQuery('.arrow', last).removeClass("open");
+            //jQuery('.sub', last).slideUp(200);
                 
             var sub = jQuery(this).next();
             if (sub.is(":visible")) {
