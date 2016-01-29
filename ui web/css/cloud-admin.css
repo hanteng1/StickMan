@@ -7233,6 +7233,9 @@ fieldset[disabled] .btn-yellow.active {
   float: right;
   margin-right: 10px;
 }
+.row .clearfix.bottom-row > ul > li i:hover {
+  /*cursor: pointer;*/
+}
 
 
 @media (max-width: 1350px){

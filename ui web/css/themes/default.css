@@ -306,6 +306,9 @@ input::-webkit-input-placeholder {
   text-shadow: none;
   color: #3090c7;
 }
+.side-hidden-bar .big-arrow.open:before {
+  content: "\f0d8";
+}
 
 @media (max-width: 1350px){
   .side-hidden-bar .sidebar-menu .hidden-search-bar .search {

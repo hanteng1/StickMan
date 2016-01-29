@@ -80,6 +80,8 @@ var App = function () {
             //jQuery('.arrow', last).removeClass("open");
             //jQuery('.sub', last).slideUp(200);
             
+            /*
+            //origianl function
 			var thisElement = $(this);
 			var slideOffeset = -200;
             var slideSpeed = 200;
@@ -103,7 +105,101 @@ var App = function () {
 					}
 					handleSidebarAndContentHeight();
                 });
+            }*/
+
+
+            //expand all function
+            var sub = jQuery(this).next();  //the sub for li.has-sub-sub
+
+            if($(this).hasClass("expanded")){
+            	//do all collapse
+            	$(this).removeClass("expanded");
+
+            	//change the big arrow direction
+				$(this).children(".big-arrow:first").removeClass("open");
+            	//change the title
+            	//$(this).children(".expand-text:first").text("全部展开");
+
+
+            	sub.children(".has-sub-sub").each(function(){
+
+	            	var li_has_sub_sub_a = jQuery(this).children("a:first");
+	            	var sub_sub = li_has_sub_sub_a.next();
+	            	
+	            	if(sub_sub.is(":visible"))
+	            	{
+	            		jQuery(this).removeClass("open");
+	            		jQuery('.arrow', li_has_sub_sub_a).removeClass("open");
+	            		sub_sub.slideUp(200);
+	            	}else{
+	            		
+	            	}
+	            	
+	            	//next level
+	            	sub_sub.children(".has-sub-sub-sub").each(function(){
+	            		
+	            		var li_has_sub_sub_sub_a = jQuery(this).children("a:first");
+	            		var sub_sub_sub = li_has_sub_sub_sub_a.next();
+
+	            		if(sub_sub_sub.is(":visible")){
+	            			jQuery(this).removeClass("open");
+	            			jQuery('.arrow', li_has_sub_sub_sub_a).removeClass("open");
+	            			sub_sub_sub.slideUp(200);
+	            		}else{
+	            			
+	            		}
+	            		
+	            	});
+	            	
+	            });
+
+            }else{
+            	//do all expand
+            	$(this).addClass("expanded");
+
+            	//change the big arrow direction
+				$(this).children(".big-arrow:first").addClass("open");
+            	//change the title
+            	//$(this).children(".expand-text:first").text("全部收起");
+
+            	sub.children(".has-sub-sub").each(function(){
+
+	            	var li_has_sub_sub_a = jQuery(this).children("a:first");
+	            	var sub_sub = li_has_sub_sub_a.next();
+	            	
+	            	if(sub_sub.is(":visible"))
+	            	{
+	            		
+	            	}else{
+	            		jQuery(this).addClass("open");
+	            		jQuery('.arrow', li_has_sub_sub_a).addClass("open");
+	            		sub_sub.slideDown(200);
+	            	}
+	            	
+	            	//next level
+	            	sub_sub.children(".has-sub-sub-sub").each(function(){
+	            		
+	            		var li_has_sub_sub_sub_a = jQuery(this).children("a:first");
+	            		var sub_sub_sub = li_has_sub_sub_sub_a.next();
+
+	            		if(sub_sub_sub.is(":visible")){
+	            			
+	            		}else{
+	            			jQuery(this).addClass("open");
+	            			jQuery('.arrow', li_has_sub_sub_sub_a).addClass("open");
+	            			sub_sub_sub.slideDown(200);
+	            		}
+	            		
+	            	});
+	            	
+	            });
+
             }
+
+            
+
+
+
         });
 		
 	// Handle sub-sub menus
@@ -746,7 +842,7 @@ var App = function () {
         for (var itrp = 0; itrp < list_data["areas"][itra]["products"].length; itrp++) {
             //product
             //list_data["areas"][itra]["products"][itrp].name
-            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="#"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
+            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
         
             var sub_equipment = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub').children('.product' + list_data["areas"][itra]["products"][itrp].name).children('.sub-sub-sub');
 
