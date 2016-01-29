@@ -493,7 +493,7 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
     {
         //alert(this.test_1);
         var parent = this;
-        alert( parent.testVar);
+        //alert( parent.testVar);
         
         jQuery('.label-ep-' + parent.testVar).click(function(){
         var etitle = jQuery(this).children(".title");
