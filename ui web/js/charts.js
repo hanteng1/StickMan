@@ -234,11 +234,6 @@ var Charts = function () {
                 var table_header_tr = jQuery(".table_test").children(".table-striped").children(".table-head").children(".table-head-tr");
                 var table_body = jQuery(".table_test").children(".table-striped").children(".table-body");
 
-                //for (var itrn = 1; itrn < data_collections.length; itrn++) {
-                    //no need to consider the default data for table
-                  //  $('<th class="col-itrn not-shown">'+data_names[itrn]+'</th>').appendTo(table_header);
-                //};
-
                 var data_plot = [chart2_data_default];
 
                 var plot = $.plot($("#chart_2_1"), data_plot, {
@@ -566,7 +561,7 @@ var Charts = function () {
                         }
 
                         
-                    };
+                    }
 
                     setTimeout(update, updateInterval);
                 }
