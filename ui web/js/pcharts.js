@@ -8,6 +8,17 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
         pData.length = 0;  //this works
     }
 
+
+    //this.running_state = true;
+
+    function clearAllData(){
+        alert("this is called");
+        for(itre =0; itre < pDataCollection.length; itre++)
+        {
+            clearData(pDataCollection[itre]);
+        }
+    }
+
     function getRandomDataForTest(pDataCollection, equips, channels) {
         for(itre = 0; itre < 6; itre++) 
         {
@@ -376,6 +387,16 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
     var updateInterval = 3000;
     //real time update
     function update() {
+
+        /*
+        if(pchart_scope.running_state == 2)  //called stop
+        {
+            alert("stop has been called");
+            clearAllData();
+            return;
+        }*/
+
+
         getRandomDataForTest(data_collections, pchart_scope.online_equipments, pchart_scope.online_channels);
         //update graph
         plot.setData(data_collections);

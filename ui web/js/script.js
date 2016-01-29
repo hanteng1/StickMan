@@ -12,6 +12,12 @@ var App = function () {
 
   	var current_selected_box_name = 'none';  //this is for adding comparison items to a chart, need to know which chart is it
 
+
+
+  	//create an array for pchart object
+  	var pchart_objs = [];
+
+
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Runs callback functions set by App.addResponsiveFunction()
@@ -2118,6 +2124,8 @@ var App = function () {
 
  	var handleChartSwitch = function(){
  		//by default, set all existing chart_in_table to invisible by sliding up
+ 		//has a problem, it sets other table charts to invisible
+ 		/*
  		$(".chart_in_table").each(function(){
  			if($(this).hasClass("not-visible")){
  				//do nothing
@@ -2125,7 +2133,7 @@ var App = function () {
  				jQuery(this).addClass("not-visible");
  				jQuery(this).slideUp(1);
  			}
- 		});
+ 		});*/
 
 
  		$(":radio").click(function(){
@@ -2185,6 +2193,16 @@ var App = function () {
 			var mboxbody = $(this).parents(".box").children(".box-body").children(".panel");
 			tt.appendTo(mboxbody);
 
+			//slide up the table
+			$(this).parents(".box").children(".box-body").children(".panel").children(".panel-body-name-" + $(this).attr("value")).children('.first-column').children(".chart_in_table").each(function(){
+	 			if($(this).hasClass("not-visible")){
+	 				//do nothing
+	 			}else{
+	 				jQuery(this).addClass("not-visible");
+	 				jQuery(this).slideUp(1);
+	 			}
+ 			});
+
 			var chart_name = "chart_" + $(this).attr("value");
 			var table_name = "table_" + $(this).attr("value");
     		var pchart = new Pcharts(chart_name, $(this).attr("value"), table_name);
@@ -2192,8 +2210,25 @@ var App = function () {
 
     		handleChartSwitch();
 
+    		//pchart_objs.push({name: $(this).attr("value"), "obj":pchart});
+
   		}else if($(this).prop('checked') == false)   //boxchecked == true
   		{
+
+  			//clear the pchart object associated
+  			//bugs here, not working
+  			/*
+  			for(var itrpo = 0; itrpo<pchart_objs.length; itrpo++)
+  			{
+  				var cur_obj = pchart_objs[itrpo];
+  				if(cur_obj.name == $(this).attr("value"))
+  				{
+  					cur_obj.name = "past_abandoned";
+  					//cur_obj["obj"] = null;
+  					cur_obj.running_state = 2;
+  				};
+  			}*/
+
   			$(this).parents(".box").children(".box-body").children(".panel").children(".panel-body-name-" + $(this).attr("value")).remove();
   		}
 
