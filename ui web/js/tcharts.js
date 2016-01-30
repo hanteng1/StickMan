@@ -1,4 +1,4 @@
-function Pcharts(idofChart, idvalueofchart, idofTable) {
+function Tcharts(idofChart, idvalueofchart, idofTable) {
 
     if (!jQuery.plot) {
        return;
@@ -8,9 +8,6 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
         pData.length = 0;  //this works
     }
 
-
-    //this.running_state = true;
-
     function clearAllData(){
         alert("this is called");
         for(itre =0; itre < pDataCollection.length; itre++)
@@ -19,7 +16,8 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
         }
     }
 
-    function getRandomDataForTest(pDataCollection, equips, channels) {
+    function updateDataSetForTest(pDataCollection, equips, channels){
+
         for(itre = 0; itre < 6; itre++) 
         {
             if(equips[itre] == 1)
@@ -27,7 +25,17 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
                 for(itrc =0; itrc < 6; itrc++)
                 {
                     if(channels[itrc] == 1) {
-                        getRandomDataWithObject(pDataCollection[6 * itre + itrc + 1]);
+
+
+                        if(pDataCollection[6 * itre + itrc + 1].length != 0)
+                        {
+                            //do not update
+                        }else
+                        {
+                            getRandomDataWithObject(pDataCollection[6 * itre + itrc + 1]);
+
+                        }
+                        
                     }else
                     {
                         if(pDataCollection[6 * itre + itrc + 1].length != 0)
@@ -48,7 +56,21 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
                     
                 }
             }
-        }  
+        }
+
+    }
+
+
+    //fill the pData with random data
+    //bug, why this doesn't work
+    function getAssignedHistroyDataWithObject(pd){
+        //this is just for demo
+
+        for(itre = 0; itre < 100; itre++)  
+        {
+            getRandomDataWithObject(pd);
+        }
+
     }
 
     function getRandomDataWithObject(pData) {
@@ -64,25 +86,29 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
             }
         }
 
-        var previous = pData.length ? pData[pData.length -1][1] : 140;
-        var y = previous + Math.random() * 100 - 50;
-        var rand = y < 0 ? 0 : y > 240 ? 240 : y
-        
-        pData.push([pData.length + 1, rand]); //30 
+        for(var itrpp = 0; itrpp < 30; itrpp++)
+        {
+            var previous = pData.length ? pData[pData.length -1][1] : 140;
+            var y = previous + Math.random() * 100 - 50;
+            var rand = y < 0 ? 0 : y > 240 ? 240 : y
+            
+            pData.push([pData.length + 1, rand]); //30 
 
-        if (pData.length == maximum) {
-            //shift
-            for(var itrp = 0; itrp < pData.length; itrp++){
-              pData[itrp][0] = pData[itrp][0] - 1;
+            if (pData.length == maximum) {
+                //shift
+                for(var itrp = 0; itrp < pData.length; itrp++){
+                  pData[itrp][0] = pData[itrp][0] - 1;
+                }
+                //pData = pData.slice(1);
+                pData.shift();
             }
-            //pData = pData.slice(1);
-            pData.shift();
         }
+
+        
     }
 
 	var maximum = 31;
-
-	var chart2_data_1_1 = [];  //1
+    var chart2_data_1_1 = [];  //1
     var chart2_data_1_2 = [];  //2
     var chart2_data_1_3 = [];  //3
     var chart2_data_1_4 = [];  //4
@@ -258,7 +284,7 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
 
     this.testVar = idvalueofchart;
     //this.tablename = idofTable;
-    var pchart_scope = this;
+    var tchart_scope = this;
 
     //enable label and form functions
     jQuery('.label-cm-' + this.testVar).click(function(){
@@ -296,7 +322,8 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
         if(emark.hasClass("open"))
         {
             //toggle on
-            pchart_scope.online_channels[curChannelIndex-1] = 1;
+            tchart_scope.online_channels[curChannelIndex-1] = 1;
+            update();
 
             if(curChannelIndex > 3)
             {
@@ -318,7 +345,8 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
         }else
         {
             //toggle off
-            pchart_scope.online_channels[curChannelIndex-1] = 0;
+            tchart_scope.online_channels[curChannelIndex-1] = 0;
+            update();
 
             if(curChannelIndex > 3)
             {
@@ -338,11 +366,15 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
                 });
             }
         }
+
+       
+
     }); 
 
     
     $(":checkbox").click(function(){
-        var checkbox_name = "chanel-type-check-" + pchart_scope.testVar;
+
+        var checkbox_name = "chanel-type-check-" + tchart_scope.testVar;
         if($(this).attr("name") == checkbox_name){
             var label_cms = jQuery(this).parents(".panel-body").children(".first-column").children(".upper-labels").children("ul");
 
@@ -359,7 +391,8 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
                         $(this).children(".lc" + label_index).children(".color-mark").toggleClass("open");
 
                         //set channel value to 1
-                        pchart_scope.online_channels[label_index_value-1] = 1;
+                        tchart_scope.online_channels[label_index_value-1] = 1;
+                        update();
                     }
                 });
 
@@ -375,29 +408,22 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
                         $(this).children(".lc" + label_index).children(".color-mark").toggleClass("open");
 
                          //set channel value to 0
-                         pchart_scope.online_channels[label_index_value-1] = 0;
+                         tchart_scope.online_channels[label_index_value-1] = 0;
+                         update();
                     }
                 });
-
             }
         }
+
+        
     });
 
-
-    var updateInterval = 3000;
     //real time update
     function update() {
 
-        /*
-        if(pchart_scope.running_state == 2)  //called stop
-        {
-            alert("stop has been called");
-            clearAllData();
-            return;
-        }*/
+        //alert(tchart_scope.online_equipments +  tchart_scope.online_channels);
+        updateDataSetForTest(data_collections, tchart_scope.online_equipments, tchart_scope.online_channels);
 
-
-        getRandomDataForTest(data_collections, pchart_scope.online_equipments, pchart_scope.online_channels);
         //update graph
         plot.setData(data_collections);
         plot.draw();
@@ -482,15 +508,28 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
             }            
         }
 
-        setTimeout(update, updateInterval);
     }
-    update();
 
-    
+
+
+    //here is a bad idea, not encouraged
+    this.trigger = false;
+    var updateInterval = 1000;
+    function iteration_trigger () {
+
+        if(tchart_scope.trigger == true)
+        {
+            update();
+            tchart_scope.trigger = false;
+        }
+        setTimeout(iteration_trigger, updateInterval);
+    }
+    iteration_trigger();
+
 };
 
     //enablelabels();
-    Pcharts.prototype.enablelabels = function()
+    Tcharts.prototype.enablelabels = function()
     {
         //alert(this.test_1);
         var parent = this;
@@ -528,100 +567,17 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
         {
             //toggle on
             parent.online_equipments[curEquipmentIndex-1] = 1;
-
+            parent.trigger = true;   //bad idea, not encouraged
         }else
         {
             //toggle off
             parent.online_equipments[curEquipmentIndex-1] = 0;
+             parent.trigger = true;   //bad idea, not encouraged
         }
 
         //alert( parent.testVar);
         
      });
-
-    /* 
-    //put it back to the main function, set once intialized
-    jQuery('.label-cm-' + parent.testVar).click(function(){
-        var embedded_form_upper_row = jQuery(this).parents(".panel-body").children(".embedded-form").children(".form-horizontal").children(".chanel-types").children(".upper-row");
-        var embedded_form_lower_row = jQuery(this).parents(".panel-body").children(".embedded-form").children(".form-horizontal").children(".chanel-types").children(".lower-row");                 
-
-        var etitle = jQuery(this).children(".title");
-        etitle.toggleClass("open"); 
-        var emark = jQuery(this).children(".color-mark");
-        emark.toggleClass("open");
-
-        var curChannelIndex = 0;
-        //calculte which equipment label is it
-        if(jQuery(this).hasClass("lc1"))
-        {
-            curChannelIndex = 1;
-        }else if(jQuery(this).hasClass("lc2"))
-        {
-            curChannelIndex = 2;
-        }else if(jQuery(this).hasClass("lc3"))
-        {
-            curChannelIndex = 3;
-        }else if(jQuery(this).hasClass("lc4"))
-        {
-            curChannelIndex = 4;
-        }else if(jQuery(this).hasClass("lc5"))
-        {
-            curChannelIndex = 5;
-        }else if(jQuery(this).hasClass("lc6"))
-        {
-            curChannelIndex = 6;
-        }
-
-        if(emark.hasClass("open"))
-        {
-            //toggle on
-            parent.online_channels[curChannelIndex-1] = 1;
-
-            if(curChannelIndex > 3)
-            {
-                embedded_form_lower_row.children("label").each(function(){
-                    if($(this).hasClass("cc" + curChannelIndex))
-                    {
-                        $(this).children("input").prop('checked', true);
-                    }
-                });
-            }else
-            {
-                embedded_form_upper_row.children("label").each(function(){
-                    if($(this).hasClass("cc" + curChannelIndex))
-                    {
-                        $(this).children("input").prop('checked', true);
-                    }
-                });
-            }
-        }else
-        {
-            //toggle off
-            parent.online_channels[curChannelIndex-1] = 0;
-
-            if(curChannelIndex > 3)
-            {
-                embedded_form_lower_row.children("label").each(function(){
-                    if($(this).hasClass("cc" + curChannelIndex))
-                    {
-                        $(this).children("input").prop('checked', false);
-                    }
-                });
-            }else
-            {
-                embedded_form_upper_row.children("label").each(function(){
-                    if($(this).hasClass("cc" + curChannelIndex))
-                    {
-                        $(this).children("input").prop('checked', false);
-                    }
-                });
-            }
-        }
-
-         //alert( parent.testVar);
-    });  
-
-    */
     
 }  //end of function enablelabels
 

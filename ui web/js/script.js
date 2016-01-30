@@ -17,7 +17,6 @@ var App = function () {
   	//create an array for pchart object
   	var pchart_objs = [];
 
-
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Runs callback functions set by App.addResponsiveFunction()
@@ -2335,12 +2334,27 @@ var App = function () {
 
 			var chart_name = "chart_" + $(this).attr("value");
 			var table_name = "table_" + $(this).attr("value");
-    		var pchart = new Pcharts(chart_name, $(this).attr("value"), table_name);
-    		pchart.enablelabels();
 
-    		handleChartSwitch();
+			if(App.isPage("shishishuju")){
+				var pchart = new Pcharts(chart_name, $(this).attr("value"), table_name);
+    			pchart.enablelabels();
 
-    		pchart_objs.push({name: $(this).attr("value"), "obj":pchart});
+    			handleChartSwitch();
+
+    			pchart_objs.push({name: $(this).attr("value"), "obj":pchart});
+			}
+
+
+			if(App.isPage("lishishuju")){
+				var tchart = new Tcharts(chart_name, $(this).attr("value"), table_name);
+    			tchart.enablelabels();
+
+    			handleChartSwitch();
+
+    			pchart_objs.push({name: $(this).attr("value"), "obj":tchart});
+			}
+
+    		
 
   		}else if($(this).prop('checked') == false)   //boxchecked == true
   		{
@@ -4185,6 +4199,12 @@ var App = function () {
         handleTitleCheckbox();
         handleChartSwitch();
       }
+      if(App.isPage("lishishuju")){
+      	handleXcharts();
+        handleTitleCheckbox();
+        handleChartSwitch();
+      }
+
       if(App.isPage("baobiao")) {
         handleXcharts();
         handleDateColorpicker();

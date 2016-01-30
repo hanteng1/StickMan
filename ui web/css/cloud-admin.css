@@ -7581,6 +7581,11 @@ fieldset[disabled] .btn-yellow.active {
   clear: both;
   min-height: 30px;
 }
+.box .box-title .tools.h-center{
+  float:none;
+  width: 100%;
+  text-align: center;
+}
 .box .box-title .tools > a {
   display: inline-block;
   font-size: 14px;

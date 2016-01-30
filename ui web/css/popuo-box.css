@@ -1,6 +1,7 @@
 /* Styles for dialog window */
 #small-dialog {
 	background: white;
+  border-radius: 20px;
 	padding: 60px 20px;
 	text-align: center;
 	width: 1000px;
@@ -13,6 +14,7 @@
 #small-dialog-user {
   background: white;
   padding: 60px 20px;
+  border-radius: 20px;
   text-align: center;
   width: 1000px;
   margin: 40px auto;
@@ -22,6 +24,7 @@
 
 #small-dialog-right {
   background: white;
+  border-radius: 20px;
   padding: 60px 20px;
   text-align: center;
   width: 1000px;
@@ -32,6 +35,7 @@
 
 #small-dialog-add-zone {
   background: white;
+  border-radius: 10px;
   padding: 10px 20px 50px;
   text-align: center;
   width: 500px;
@@ -272,9 +276,10 @@ button::-moz-focus-inner {
   width: 44px;
   height: 44px;
   line-height: 44px;
+  border-radius: 20px;
   position: absolute;
   right: 0px;
-	top: -43px;
+	top: 0px;
   text-decoration: none;
   text-align: center;
   padding: 0 0 18px 10px;
