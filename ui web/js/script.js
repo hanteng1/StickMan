@@ -192,13 +192,7 @@ var App = function () {
 	            	});
 	            	
 	            });
-
             }
-
-            
-
-
-
         });
 		
 	// Handle sub-sub menus
@@ -1968,6 +1962,44 @@ var App = function () {
 
 
 	}
+
+	/*-----------------------------------------------------------------------------------*/
+	/*	Rizhi Table
+	/*  Here is an example of how to genreate table by js
+	/*-----------------------------------------------------------------------------------*/
+	var handleRizhiTables = function () {
+		var rizhi_data = {title: ["时间","内容"], data:[
+		{id:"1", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录1"},
+		{id:"2", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录2"},
+		{id:"3", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录3"},
+		{id:"4", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录4"},
+		{id:"5", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录5"},
+		{id:"6", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录6"},
+		{id:"7", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录7"},
+		{id:"8", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录8"},
+		{id:"9", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录9"},
+		{id:"10", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录10"},
+		{id:"11", invdate:"2015-12-28 18:29:32", note:"表格里填写的记录11"},
+
+		]};
+
+		var table_header_tr = jQuery(".panel-body .table-striped thead tr");
+		var table_body = jQuery(".panel-body .table-striped tbody");
+
+		for(var itr_title = 0; itr_title < rizhi_data.title.length; itr_title++)
+		{
+			$('<th>'+rizhi_data.title[itr_title]+'</th>').appendTo(table_header_tr);
+		}
+
+		for(var itr_data = 0; itr_data < rizhi_data.data.length; itr_data++)
+		{
+
+			$('<tr><td><span class="date">'+rizhi_data.data[itr_data].invdate+'</span></td><td><span class="content">'+rizhi_data.data[itr_data].note+'</span></td></tr>').appendTo(table_body);
+		}
+
+	}
+
+
 	/*-----------------------------------------------------------------------------------*/
 	/*	jqGrid
 	/*-----------------------------------------------------------------------------------*/
@@ -4243,6 +4275,7 @@ var App = function () {
       }
       if(App.isPage("rizhi")) {
         handleDateColorpicker();
+        handleRizhiTables();
       }
 			if (App.isPage("elements")) {
 				handleBootbox(); //Function to display Date Timepicker
