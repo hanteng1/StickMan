@@ -4234,6 +4234,7 @@ var App = function () {
       if(App.isPage("lishishuju")){
       	handleXcharts();
         handleTitleCheckbox();
+        handleDateColorpicker();
         handleChartSwitch();
       }
 
