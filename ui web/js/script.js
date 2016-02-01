@@ -2420,11 +2420,18 @@ var App = function () {
   				var cur_obj = pchart_objs[itrpo];
   				if(cur_obj.name == $(this).attr("value"))
   				{
-  					$('#'+$(this).attr("value")).off();
-  					$('#'+$(this).attr("value")).find("*").off();
+  					//alert("check here");
+  					//$('#'+$(this).attr("value")).off();
+  					//$('#'+$(this).attr("value")).find("*").off();
+
+  					//change the name
+  					cur_obj.name = "something-else";
+  					//call stop to update
+  					cur_obj["obj"].callstop();
   				};
   			}
 
+  			$(this).parents(".box").children(".box-body").children(".panel").children(".panel-body-name-" + $(this).attr("value")).find("*").off();
   			$(this).parents(".box").children(".box-body").children(".panel").children(".panel-body-name-" + $(this).attr("value")).remove();
   		}
 
