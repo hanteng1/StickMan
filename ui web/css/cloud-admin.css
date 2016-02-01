@@ -5315,16 +5315,16 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .panel-body .chart-labels > ul > li a .color-mark.open.ep1:before{
-  color: #737CA1;
+  color: #f4a347;
 }
 .panel-body .chart-labels > ul > li a .color-mark.open.ep2:before{
-  color: #617C58;
+  color: #ec614e;
 }
 .panel-body .chart-labels > ul > li a .color-mark.open.ep3:before{
-  color: #F3E5AB;
+  color: #b85a8e;
 }
 .panel-body .chart-labels > ul > li a .color-mark.open.ep4:before{
-  color: #CD7F32;
+  color: #7c509d;
 }
 .panel-body .chart-labels > ul > li a .color-mark.open.ep5:before{
   color: #C36241;
