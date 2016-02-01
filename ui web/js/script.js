@@ -2348,6 +2348,19 @@ var App = function () {
  	}
 
 
+ var handleEventGraph = function(){
+ 	var graphbody = $(".graph-chart-col");
+ 	var $event_name = "电压值";
+ 	var tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart-title">'+$event_name+'</div><div class="col-md-12 first-column"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels upper-labels"><ul><li><a class="label-cm-'+$event_name+' lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-cm-'+$event_name+' lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-cm-'+$event_name+' lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="chart-labels lower-labels">'+$event_name+'</div></div></div>');
+ 	tt.appendTo(graphbody);
+
+ 	$event_name = "电流值";
+ 	tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart-title">'+$event_name+'</div><div class="col-md-12 first-column"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels upper-labels"><ul><li><a class="label-cm-'+$event_name+' lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-cm-'+$event_name+' lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-cm-'+$event_name+' lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="chart-labels lower-labels">'+$event_name+'</div></div></div>');
+ 	tt.appendTo(graphbody);
+ 	
+ }
+
+
   var handleTitleCheckbox = function(){
 
     $(":checkbox").click(function(){
@@ -4233,59 +4246,65 @@ var App = function () {
 				//handleGritter();	//Function to display Gritter notifications
                 handleXcharts();    //Function to display xcharts
             }
-      if(App.isPage("shishishuju")){
-        handleSparkline();
-        handleXcharts();
-        handleTitleCheckbox();
-        handleChartSwitch();
-      }
-      if(App.isPage("lishishuju")){
-      	handleXcharts();
-        handleTitleCheckbox();
-        handleDateColorpicker();
-        handleChartSwitch();
-      }
+	      if(App.isPage("shishishuju")){
+	        handleSparkline();
+	        handleXcharts();
+	        handleTitleCheckbox();
+	        handleChartSwitch();
+	      }
+	      if(App.isPage("lishishuju")){
+	      	handleXcharts();
+	        handleTitleCheckbox();
+	        handleDateColorpicker();
+	        handleChartSwitch();
+	      }
+	      if(App.isPage("shijiangaojing"))
+	      {
+	      	handleXcharts();
+	        handleDateColorpicker();
+	        handleEventGraph();
+	      }
 
-      if(App.isPage("baobiao")) {
-        handleXcharts();
-        handleDateColorpicker();
-        handlePopUp();
-      }
-      if(App.isPage("yuanqu-quyushuju")){
-        handleXcharts();
-      }
+	      if(App.isPage("baobiao")) {
+	        handleXcharts();
+	        handleDateColorpicker();
+	        handlePopUp();
+	      }
+	      if(App.isPage("yuanqu-quyushuju")){
+	        handleXcharts();
+	      }
 
-      if(App.isPage("shebei-jichuxinxi")){
-        handleXcharts();
-         handlePopUp();
-      }
-      if(App.isPage("shebei-xitongshezhi")){
-        handleXcharts();
-         handlePopUp();
-      }
-      if(App.isPage("shebei-pqdifshezhi")){
-        handleXcharts();
-        handleDateColorpicker();
-         handlePopUp();
-        //handleDataTables();
+	      if(App.isPage("shebei-jichuxinxi")){
+	        handleXcharts();
+	         handlePopUp();
+	      }
+	      if(App.isPage("shebei-xitongshezhi")){
+	        handleXcharts();
+	         handlePopUp();
+	      }
+	      if(App.isPage("shebei-pqdifshezhi")){
+	        handleXcharts();
+	        handleDateColorpicker();
+	         handlePopUp();
+	        //handleDataTables();
 
-      }
-      if(App.isPage("shebei-liebiequyu")){
-        handlePopUp();
-      }
-      if(App.isPage("yonghu")){
-        handlePopUp();
-      }
-      if (App.isPage("shezhi")) {
-        
-      }
-		if (App.isPage("widgets_box")) {
-				handleBoxSortable(); //Function to handle Box sortables
-      }
-      if(App.isPage("rizhi")) {
-        handleDateColorpicker();
-        handleRizhiTables();
-      }
+	      }
+	      if(App.isPage("shebei-liebiequyu")){
+	        handlePopUp();
+	      }
+	      if(App.isPage("yonghu")){
+	        handlePopUp();
+	      }
+	      if (App.isPage("shezhi")) {
+	        
+	      }
+			if (App.isPage("widgets_box")) {
+					handleBoxSortable(); //Function to handle Box sortables
+	      }
+	      if(App.isPage("rizhi")) {
+	        handleDateColorpicker();
+	        handleRizhiTables();
+	      }
 			if (App.isPage("elements")) {
 				handleBootbox(); //Function to display Date Timepicker
 				handleMagicSuggest(); //Function to display autosuggest
