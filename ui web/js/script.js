@@ -262,7 +262,7 @@ var App = function () {
          	var panel_id = $(this).attr("id");
          	
          	var chart_zone_ul = jQuery(this).children(".first-column").children(".big").children(".label-eps");  //ul
-         	chart_zone_ul.find("*").off();
+         	chart_zone_ul.find("*").off();  //this step is important
          	
          	//see how many listed items are there already
          	//maximum 4
