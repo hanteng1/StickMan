@@ -2357,7 +2357,7 @@ var App = function () {
  	$event_name = "电流值";
  	tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart-title">'+$event_name+'</div><div class="col-md-12 first-column"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels upper-labels"><ul><li><a class="label-cm-'+$event_name+' lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-cm-'+$event_name+' lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-cm-'+$event_name+' lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="chart-labels lower-labels">'+$event_name+'</div></div></div>');
  	tt.appendTo(graphbody);
- 	
+
  }
 
 
@@ -2414,17 +2414,16 @@ var App = function () {
 
   			//clear the pchart object associated
   			//bugs here, not working
-  			/*
+  			
   			for(var itrpo = 0; itrpo<pchart_objs.length; itrpo++)
   			{
   				var cur_obj = pchart_objs[itrpo];
   				if(cur_obj.name == $(this).attr("value"))
   				{
-  					cur_obj.name = "past_abandoned";
-  					//cur_obj["obj"] = null;
-  					cur_obj.running_state = 2;
+  					$('#'+$(this).attr("value")).off();
+  					$('#'+$(this).attr("value")).find("*").off();
   				};
-  			}*/
+  			}
 
   			$(this).parents(".box").children(".box-body").children(".panel").children(".panel-body-name-" + $(this).attr("value")).remove();
   		}
