@@ -3953,7 +3953,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #f4f4f4;
-  background-color: #157dec;
+  background-color: #20b2fa;
   cursor: default;
 }
 .panel-full-body .nav-tabs > li > a .add-button:hover{
@@ -7480,7 +7480,7 @@ fieldset[disabled] .btn-yellow.active {
 .table-case-box .icon {
   margin-top: 43px;
   margin-bottom: 20px;
-  color: #157dec;
+  color: #61bcec;
   font-size: 24px;
 }
 

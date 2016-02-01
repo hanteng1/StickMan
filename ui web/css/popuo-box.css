@@ -2,7 +2,7 @@
 #small-dialog {
 	background: white;
   border-radius: 20px;
-	padding: 60px 20px;
+	padding: 35px 20px;
 	text-align: center;
 	width: 1000px;
 	margin: 40px auto;
@@ -13,7 +13,7 @@
 #small-dialog-character,
 #small-dialog-user {
   background: white;
-  padding: 60px 20px;
+  padding: 35px 20px;
   border-radius: 20px;
   text-align: center;
   width: 1000px;
@@ -25,7 +25,7 @@
 #small-dialog-right {
   background: white;
   border-radius: 20px;
-  padding: 60px 20px;
+  padding: 35px 20px;
   text-align: center;
   width: 1000px;
   margin: 40px auto;
@@ -46,20 +46,20 @@
 
 @media (max-width: 1350px){
   #small-dialog {
-    padding: 46px 15px;
+    padding: 35px 15px;
     width: 770px;
     margin: 30px auto;
   }
 
   #small-dialog-character,
   #small-dialog-user {
-    padding: 46px 15px;
+    padding: 35px 15px;
     width: 770px;
     margin: 30px auto;
   }
 
   #small-dialog-right {
-    padding: 46px 15px;
+    padding: 35px 15px;
     width: 770px;
     margin: 30px auto;
   }
@@ -263,7 +263,7 @@ button.mfp-arrow {
   border: 0;
    background:#FFF;
   -webkit-appearance: none;
-  display: block;
+  display: none;
   padding: 0;
   z-index: 1046; }
  
@@ -273,6 +273,7 @@ button::-moz-focus-inner {
   border: 0; }
 
 .mfp-close {
+  display: none;
   width: 44px;
   height: 44px;
   line-height: 44px;
@@ -332,14 +333,16 @@ button::-moz-focus-inner {
 } 
 
 
-#small-dialog .title,
-#small-dialog-right .title,
-#small-dialog-add-zone .title,
-#small-dialog-character .title,
-#small-dialog-user .title
-{
-  font-size: 20px;
-  padding-bottom: 30px;
+#small-dialog .title.main-title,
+#small-dialog-right .title.main-title,
+#small-dialog-add-zone .title.main-title,
+#small-dialog-character .title.main-title,
+#small-dialog-user .title.main-title {
+  font-size: 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 #small-dialog label,
@@ -355,7 +358,7 @@ button::-moz-focus-inner {
 .small-dialog-body
 {
   height: 800px;
-  padding: 0;
+  padding-top: 20px;
 }
 #small-dialog-character .small-dialog-body
 {
@@ -374,8 +377,7 @@ button::-moz-focus-inner {
   padding-right: 50px;
   display: block;
   height: 750px;
-  overflow-y: scroll;
-
+  overflow-y: auto;
 }
 
 #small-dialog-character .small-dialog-body .body-left {
@@ -393,7 +395,7 @@ button::-moz-focus-inner {
   padding-right: 50px;
   display: block;
   height: 750px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #small-dialog-character .small-dialog-body .body-right {
@@ -406,26 +408,49 @@ button::-moz-focus-inner {
 .small-dialog-body .m-input-group {
   width: 100%;
   margin-bottom: 20px;
-  border: none;
-}
-.small-dialog-body .m-input-group .title {
-  font-size: 16px;
-  margin-right: 10px;
-  margin-left: 10px;
-  text-decoration: none;
+  height: 48px;
 }
 
-.small-dialog-body .m-input-group input.m-input-middle {
-  float: right;
-  margin-right: 10px;
+.small-dialog-body .m-input-group > ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.small-dialog-body .m-input-group > ul > li {
+  display: inline-block;
   vertical-align: middle;
-  width: 230px;
-  border-radius: 10px;
-  height: 45px;
+}
+.small-dialog-body .m-input-group > ul > li.group-title{
+  width: 19%;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.small-dialog-body .m-input-group > ul > li.group-input{
+  width: 80%;
+}
+.small-dialog-body .m-input-group .m-input-middle {
+  float: right;
+  margin-right: 0;
+  width: 100%;
+  height: 48px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .small-dialog-body .div-form-title {
   background-color: #e6f8ff;
+  border-radius: 4px;
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 18px;
@@ -439,32 +464,70 @@ button::-moz-focus-inner {
 }
 
 .small-dialog-body .div-form-body {
-  padding-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-.small-dialog-body .div-form-body p {
+.small-dialog-body .div-form-body .form-horizontal {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: none;
+  background-color: #ffffff;
+}
+
+.small-dialog-body .div-form-body .form-horizontal .form-group {
+
+}
+#small-dialog .small-dialog-body .div-form-body .form-horizontal .form-group label,
+#small-dialog-right .small-dialog-body .div-form-body .form-horizontal .form-group label{
+  float: left;
+}
+.small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline{
+   padding: 0;
+   width: auto;
+   margin-right: 10px;
+   margin-bottom: 10px;
+}
+.small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline input {
+  margin-top: 5px;
+}
+
+.small-dialog-body .div-form-body .div-form-radio {
   font-size: 18px;
+  border: 1px solid #111111;
+  vertical-align: middle;
 }
 
-
-.small-dialog-body .div-form-body input[type="radio"] {
-  margin-right: 10px;
-  vertical-align: middle;
-  font-size: 16px;
+.small-dialog-body .div-form-body .div-form-radio input[type="radio"] {
+  margin-right: 5px;
+  display: inline-block;
 }
 
-
-.small-dialog-body .div-form-body .title input.m-input-middle {
+.small-dialog-body .div-form-body .add-title{
+  margin-top: 20px;
+}
+.small-dialog-body .div-form-body .add-title input.m-input-middle {
+  margin-left: 5px;
   margin-right: 10px;
-  vertical-align: middle;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 20px;
   width: 220px;
   height: 40px;
+  padding: 6px 12px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-.small-dialog-body .div-form-body .title a {
+.small-dialog-body .div-form-body .add-title a {
   width: 90px;
   height: 40px;
   border-radius: 20px;
@@ -504,6 +567,11 @@ button::-moz-focus-inner {
   padding-bottom: 0px;
   line-height: 1.428571429;
   vertical-align: middle;
+}
+
+#small-dialog .small-dialog-body .div-form-body .table > tbody > tr > td a i,
+#small-dialog-right .small-dialog-body .div-form-body .table > tbody > tr > td a i{
+  color: #d6d6d6;
 }
 
 #small-dialog .box .table-striped > tbody > tr:nth-child(odd) > td,
@@ -599,13 +667,13 @@ p.div-form-radio {
 
 
 @media (max-width: 1350px){
-  #small-dialog .title,
-  #small-dialog-right .title,
-  #small-dialog-add-zone .title,
-  #small-dialog-character .title,
-  #small-dialog-user .title
+  #small-dialog .title.main-title,
+  #small-dialog-right .title.main-title,
+  #small-dialog-add-zone .title.main-title,
+  #small-dialog-character .title.main-title,
+  #small-dialog-user .title.main-title
   {
-    font-size: 15px;
+    font-size: 18px;
     padding-bottom: 23px;
   }
 
@@ -614,7 +682,7 @@ p.div-form-radio {
   #small-dialog-character label,
   #small-dialog-user label
   {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .small-dialog-body
@@ -656,18 +724,18 @@ p.div-form-radio {
   }
 
   .small-dialog-body .m-input-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
-  .small-dialog-body .m-input-group .title {
-    font-size: 12px;
-    margin-right: 7px;
-    margin-left: 7px;
+  .small-dialog-body .m-input-group > ul > li.group-title{
+    font-size: 14px;
   }
-
-  .small-dialog-body .m-input-group input.m-input-middle {
-    margin-right: 7px;
-    width: 170px;
-    height: 30px;
+  .small-dialog-body .m-input-group > ul > li.group-input{
+    width: 70%;
+  }
+  .small-dialog-body .m-input-group .m-input-middle {
+    height: 36px;
+    padding: 4px 12px;
+    font-size: 14px;
   }
 
   .small-dialog-body .div-form-title {
@@ -687,16 +755,17 @@ p.div-form-radio {
     margin-bottom: 15px;
   }
 
-  .small-dialog-body .div-form-body p {
-    font-size: 14px;
+  .small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline{
+     padding: 0;
+     width: auto;
+     margin-right: 5px;
+     margin-bottom: 10px;
   }
-
 
   .small-dialog-body .div-form-body input[type="radio"] {
     margin-right: 7px;
     font-size: 12px;
   }
-
 
   .small-dialog-body .div-form-body .title input.m-input-middle {
     margin-right: 7px;
@@ -706,11 +775,24 @@ p.div-form-radio {
     height: 30px;
   }
 
-  .small-dialog-body .div-form-body .title a {
+  .small-dialog-body .div-form-body .add-title a {
     width: 69px;
     height: 30px;
     border-radius: 15px;
     font-size: 12px;
+  }
+
+  .small-dialog-body .div-form-body .add-title{
+    margin-top: 10px;
+  }
+  .small-dialog-body .div-form-body .add-title input.m-input-middle {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    border-radius: 20px;
+    width: 170px;
+    height: 30px;
+    padding: 4px 12px;
   }
 
   #small-dialog .small-dialog-body .div-form-body table.table .title,

@@ -732,7 +732,7 @@ input::-webkit-input-placeholder {
 
 .sidebar-menu > ul > li > a {
   border-bottom: 1px solid #ffffff !important;
-  border-top: 1px solid #e7e7e7 !important;
+  border-top: 1px solid #ffffff !important;  /*#e7e7e7*/
   color: #555555 !important;
 }
 
@@ -763,11 +763,11 @@ input::-webkit-input-placeholder {
 .sidebar-menu > ul > li.active > a {
   background: #dbdbdb !important;
   border-top-color: transparent !important;
-  color: #0d8ed0 !important;
+  color: #008bcd !important;
   border-left: 5px solid #0d8ed0;
 }
 .sidebar-menu > ul > li.active > a i{
-  color: #0d8ed0 !important;
+  color: #008bcd !important;
 }
 
 .sidebar-menu > ul > li > a.open {

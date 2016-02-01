@@ -616,51 +616,58 @@
 
 	<div class="mfp-hide" id="small-dialog">
 		
-		<div class="title">添加报表方案<label class="checkbox"><input type="checkbox" class="uniform" value="">启动</label>
+		<div class="title main-title">添加报表方案<label class="checkbox"><input type="checkbox" class="uniform" value="">启动</label>
 		</div> 
-
-		<div class="divide-20"></div>
 
 		<div class="small-dialog-body">
 			<div class="body-left">
-				<div class="m-input-group">	
-						<span class="title">名称 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入方案名称">
-				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">描述 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入方案名称">
+					<ul>
+						<li class="group-title">名称 :</li>
+						<li class="group-input"><input type="text" class="m-input-middle" id="" placeholder="请输入方案名称"></li>
+					</ul>
+				</div>
+				<div class="m-input-group">
+					<ul>
+						<li class="group-title">描述 :</li>
+						<li class="group-input"><input type="text" class="m-input-middle" id="" placeholder="请输入方案描述"></li>
+					</ul>
 				</div>
 
 				<div class="div-form-title"><span class="title-name">统计时间</span></div>
 				<div class="div-form-body">
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每小时</p>
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每天</p>
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每周</p>
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每月</p>
-				</div>
-				<br/>
-				<div class="div-form-body">
-						<p class="div-form-radio"><input type="radio" class="" value=""> 自定义</p>
-						<p class="div-form-radio">从 <select>
+					<form class="form-horizontal" action="#">
+						<div class="form-group">
+							<div>
+								<label class="checkbox-inline"><input type="checkbox" class="uniform" value=""> 每小时</label>	
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 每天 </label>
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 每周 </label>
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 每月 </label>
+							</div>
+							
+							<div>
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 自定义 </label>
+								<label class="checkbox-inline">从 <select>
  															<option value="1">1</option>
   															<option value="2">2</option>
   															<option value="3">3</option>
   															<option value="4">4</option>
-													</select> 分</p>
-						<p class="div-form-radio">到 <select>
+													</select> 分 </label>
+								<label class="checkbox-inline">到 <select>
  															<option value="1">1</option>
   															<option value="2">2</option>
   															<option value="3">3</option>
   															<option value="4">4</option>
-													</select> 分</p>
-					
+													</select> 分 </label>
+							</div>
+						</div>
+					</form>
 				</div>
-
-				<br/>
+				
 				<div class="div-form-title"><span class="title-name">通知邮件</span>
 				</div>
 				<div class="div-form-body">
-						<div class="title"><input type="text" class="m-input-middle" id="" placeholder="请输入邮寄地址"><a class="btn btn-default" href="#">+ 添加</a> </div>
+						<div class="add-title"><input type="text" class="m-input-middle" id="" placeholder="请输入邮寄地址"><a class="btn btn-default" href="#">+ 添加</a> </div>
 						<br/>
 						<table class="table table-striped">
 							<tbody>
@@ -690,8 +697,6 @@
 				<div class="div-form-title"><span class="title-name">区域选择</span></div>
 
 				<div class="sidebar-menu">			
-				
-					<div class="divide-20"></div>
 
 					<!-- SIDEBAR MENU -->
 					<ul class="zero-sub">
@@ -720,50 +725,57 @@
 	</div>
 
 	<div class="mfp-hide" id="small-dialog-right">
-		<div class="title">添加告警方案</div> 
-
-		<div class="divide-20"></div>
+		<div class="title main-title">添加告警方案</div> 
 
 		<div class="small-dialog-body">
 			<div class="body-left">
-				<div class="m-input-group">	
-						<span class="title">名称 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入方案名称">
-				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">描述 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入方案名称">
+					<ul>
+						<li class="group-title">名称 :</li>
+						<li class="group-input"><input type="text" class="m-input-middle" id="" placeholder="请输入告警名称"></li>
+					</ul>
+				</div>
+				<div class="m-input-group">
+					<ul>
+						<li class="group-title">描述 :</li>
+						<li class="group-input"><input type="text" class="m-input-middle" id="" placeholder="请输入告警描述"></li>
+					</ul>
 				</div>
 
 				<div class="div-form-title"><span class="title-name">统计时间</span></div>
 				<div class="div-form-body">
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每小时</p>
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每天</p>
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每周</p>
-						<p class="div-form-radio"><input type="radio" class="" value=""> 每月</p>
-				</div>
-				<br/>
-				<div class="div-form-body">
-						<p class="div-form-radio"><input type="radio" class="" value=""> 自定义</p>
-						<p class="div-form-radio">从 <select>
+					<form class="form-horizontal" action="#">
+						<div class="form-group">
+							<div>
+								<label class="checkbox-inline"><input type="checkbox" class="uniform" value=""> 每小时</label>	
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 每天 </label>
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 每周 </label>
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 每月 </label>
+							</div>
+							
+							<div>
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 自定义 </label>
+								<label class="checkbox-inline">从 <select>
  															<option value="1">1</option>
   															<option value="2">2</option>
   															<option value="3">3</option>
   															<option value="4">4</option>
-													</select> 分</p>
-						<p class="div-form-radio">到 <select>
+													</select> 分 </label>
+								<label class="checkbox-inline">到 <select>
  															<option value="1">1</option>
   															<option value="2">2</option>
   															<option value="3">3</option>
   															<option value="4">4</option>
-													</select> 分</p>
-					
+													</select> 分 </label>
+							</div>
+						</div>
+					</form>
 				</div>
 
-				<br/>
 				<div class="div-form-title"><span class="title-name">通知邮件</span>
 				</div>
 				<div class="div-form-body">
-						<div class="title"><input type="text" class="m-input-middle" id="" placeholder="请输入邮寄地址"><a class="btn btn-default" href="#">+ 添加</a> </div>
+						<div class="add-title"><input type="text" class="m-input-middle" id="" placeholder="请输入邮寄地址"><a class="btn btn-default" href="#">+ 添加</a> </div>
 						<br/>
 						<table class="table table-striped">
 							<tbody>
@@ -849,8 +861,6 @@
 				<div class="div-form-title"><span class="title-name">区域选择</span></div>
 
 				<div class="sidebar-menu">			
-				
-					<div class="divide-20"></div>
 
 					<!-- SIDEBAR MENU -->
 					<ul class="zero-sub">
