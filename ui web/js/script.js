@@ -952,6 +952,10 @@ var App = function () {
                 	});
             	}
 
+            	jQuery('#side-hidden-bar-toggle .angle-right').addClass("not-shown");
+                jQuery('#side-hidden-bar-toggle .angle-left').removeClass("not-shown");
+                jQuery('#side-hidden-bar-toggle').prop('title', "关闭设备列表");
+
                 //jQuery('#sidebar').addClass("mini-menu");
 
                 side_bar_hidden = false;
@@ -967,8 +971,6 @@ var App = function () {
                		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"76px"});
             	}
 
-              
-
                if($(".side-hidden-bar").hasClass("chart-draw")){
                   $(".side-hidden-bar").removeClass("chart-draw");
                }
@@ -977,6 +979,10 @@ var App = function () {
                  // $(this).toggleClass("open")
                  //jQuery('#sidebar').removeClass("mini-menu");
                 });
+
+                jQuery('#side-hidden-bar-toggle .angle-right').removeClass("not-shown");
+                jQuery('#side-hidden-bar-toggle .angle-left').addClass("not-shown");
+                jQuery('#side-hidden-bar-toggle').prop('title', "打开设备列表");
                 
                 side_bar_hidden = true;
             }
@@ -1177,6 +1183,8 @@ var App = function () {
                   //$(this).toggleClass("open")
                 });
 
+                jQuery('#side-hidden-bar-toggle .angle-right').addClass("not-shown");
+                jQuery('#side-hidden-bar-toggle .angle-left').removeClass("not-shown");
                 side_bar_hidden = false;
             }
             $("#main-content").on('resize', function (e) {

@@ -127,10 +127,11 @@
 
 		<!--/隐藏菜单-->
 
-		<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" title="打开设备列表" id="side-hidden-bar-toggle">
+		<div class="side-hidden-bar-toggle tip-bottom" data-toggle="tooltip" id="side-hidden-bar-toggle">
 			<ul>
 				<li><span class="name">设备列表</span></li>
-				<li><i class = "fa fa-angle-right"></i></li>
+				<li class="angle-right"><i class = "fa fa-angle-right"></i></li>
+				<li class="angle-left not-shown"><i class = "fa fa-angle-left"></i></li>
 			</ul>
 		</div>	
 
@@ -556,47 +557,50 @@
 
 	<div class="mfp-hide" id="small-dialog-character">
 		
-		<div class="title">添加角色权限
+		<div class="title main-title">添加角色权限
 		</div> 
-
-		<div class="divide-20"></div>
 
 		<div class="small-dialog-body">
 			<div class="body-left">
 
 				<div class="div-form-title"><span class="title-name">角色</span></div>
-				<div class="m-input-group">	
-						<span class="title">名称 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入角色名称">
-				</div>
-				<br/>
-				
+
 				<div class="m-input-group">
-						<span class="title">描述 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入角色备注">
+					<ul>
+						<li class="group-title">名称 :</li>
+						<li class="group-input"><input type="text" class="m-input-middle" id="" placeholder="请输入角色名称"></li>
+					</ul>
+				</div>
+				<div class="m-input-group">
+					<ul>
+						<li class="group-title">描述 :</li>
+						<li class="group-input"><input type="text" class="m-input-middle" id="" placeholder="请输入角色备注"></li>
+					</ul>
 				</div>
 
 				<div class="div-form-title"><span class="title-name">权限</span></div>
 				<div class="div-form-body">
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 区域与设备查询</p>
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 设备管理</p>
+					<form class="form-horizontal" action="#">
+						<div class="form-group">
+							<div>
+								<label class="checkbox-inline"><input type="checkbox" class="uniform" value=""> 区域与设备查询</label>	
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 设备管理</label>
+							</div>
+							<div>
+								<label class="checkbox-inline"><input type="checkbox" class="uniform" value=""> 数据查询</label>	
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 服务器配置</label>
+							</div>
+							<div>
+								<label class="checkbox-inline"><input type="checkbox" class="uniform" value=""> 权限管理</label>	
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 日志查询</label>
+							</div>
+							<div>
+								<label class="checkbox-inline"><input type="checkbox" class="uniform" value=""> 用户管理</label>	
+								<label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> 方案管理</label>
+							</div>
+						</div>
+					</form>
 				</div>
-				<br/>
-				<div class="div-form-body">
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 数据查询</p>
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 服务器配置</p>
-				</div>
-				<br/>
-				<div class="div-form-body">
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 权限管理</p>
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 日志查询</p>
-				</div>
-				<br/>
-				<div class="div-form-body">
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 用户管理</p>
-						<p class="div-form-radio"><input type="checkbox" class="" value=""> 方案管理</p>
-				</div>
-				<br/>
-
-				<br/>
 				
 			</div>
 			
@@ -604,8 +608,6 @@
 				<div class="div-form-title"><span class="title-name">区域选择</span></div>
 
 				<div class="sidebar-menu">			
-				
-					<div class="divide-20"></div>
 
 					<!-- SIDEBAR MENU -->
 					<ul class="zero-sub">
@@ -636,48 +638,68 @@
 
 	<div class="mfp-hide" id="small-dialog-user">
 		
-		<div class="title">添加用户权限
+		<div class="title main-title">添加用户权限
 		</div> 
-
-		<div class="divide-20"></div>
 
 		<div class="small-dialog-body">
 			<div class="body-left">
-
-				<div class="m-input-group">	
-						<span class="title">用户名 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入您的用户用">
-				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">密码 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入您的密码">
+					<ul>
+						<li class="group-title small">用户名 :</li>
+						<li class="group-input small"><input type="text" class="m-input-middle" id="" placeholder="请输入您的用户名"></li>
+					</ul>
 				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">重复密码 :</span><input type="text" class="m-input-middle" id="" placeholder="请再次确认您的密码">
+					<ul>
+						<li class="group-title small">密码 :</li>
+						<li class="group-input small"><input type="text" class="m-input-middle" id="" placeholder="请输入您的密码"></li>
+					</ul>
 				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">移动电话 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入您的手机号码">
+					<ul>
+						<li class="group-title small">重复密码 :</li>
+						<li class="group-input small"><input type="text" class="m-input-middle" id="" placeholder="请再次确认您的密码"></li>
+					</ul>
 				</div>
-				
+				<div class="m-input-group">
+					<ul>
+						<li class="group-title small">移动电话 :</li>
+						<li class="group-input small"><input type="text" class="m-input-middle" id="" placeholder="请输入您的手机号码"></li>
+					</ul>
+				</div>
 			</div>
 			
 			<div class="body-right">
 				<div class="m-input-group">
-						<span class="title">固定电话 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入您的固定电话号码">
+					<ul>
+						<li class="group-title small">固定电话 :</li>
+						<li class="group-input small"><input type="text" class="m-input-middle" id="" placeholder="请输入您的固定电话号码"></li>
+					</ul>
 				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">邮箱 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入您的常用邮件">
+					<ul>
+						<li class="group-title small">邮箱  :</li>
+						<li class="group-input small"><input type="text" class="m-input-middle" id="" placeholder="请输入您的常用邮件"></li>
+					</ul>
 				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">地址 :</span><input type="text" class="m-input-middle" id="" placeholder="请输入您的常驻住址">
+					<ul>
+						<li class="group-title small">地址 :</li>
+						<li class="group-input small"><input type="text" class="m-input-middle" id="" placeholder="请输入您的常驻住址"></li>
+					</ul>
 				</div>
-				<br/>
 				<div class="m-input-group">
-						<span class="title">角色 :</span><input type="text" class="m-input-middle" id="" placeholder="请选择角色">
-				</div>	
+					<ul>
+						<li class="group-title small">角色 :</li>
+						<li class="group-input small"><select class="m-input-middle">
+ 													<option value="1">角色1</option>
+  													<option value="2">角色2</option>
+  													<option value="3">角色3</option>
+  													<option value="4">角色4</option>
+													</select>
+						</li>
+					</ul>
+				</div>
 				<!-- /SIDEBAR MENU -->
 			</div>
 

@@ -358,7 +358,12 @@ input::-webkit-input-placeholder {
   padding: 10px 10px;
   vertical-align: middle;
 }
-
+.side-hidden-bar-toggle > ul > li.angle-left.not-shown{
+  display: none;
+} 
+.side-hidden-bar-toggle > ul > li.angle-right.not-shown{
+  display: none;
+} 
 
 @media (max-width: 1350px){
   .side-hidden-bar-toggle {

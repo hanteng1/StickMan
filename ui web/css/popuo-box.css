@@ -425,8 +425,14 @@ button::-moz-focus-inner {
   font-size: 16px;
   padding-left: 10px;
 }
+.small-dialog-body .m-input-group > ul > li.group-title.small {
+  width: 30%;
+}
 .small-dialog-body .m-input-group > ul > li.group-input{
   width: 80%;
+}
+.small-dialog-body .m-input-group > ul > li.group-input.small{
+  width: 68%;
 }
 .small-dialog-body .m-input-group .m-input-middle {
   float: right;
@@ -466,6 +472,7 @@ button::-moz-focus-inner {
 .small-dialog-body .div-form-body {
   margin-bottom: 10px;
   width: 100%;
+
 }
 
 .small-dialog-body .div-form-body .form-horizontal {
@@ -480,9 +487,18 @@ button::-moz-focus-inner {
 
 }
 #small-dialog .small-dialog-body .div-form-body .form-horizontal .form-group label,
-#small-dialog-right .small-dialog-body .div-form-body .form-horizontal .form-group label{
+#small-dialog-right .small-dialog-body .div-form-body .form-horizontal .form-group label,
+#small-dialog-character .small-dialog-body .div-form-body .form-horizontal .form-group label,
+#small-dialog-user .small-dialog-body .div-form-body .form-horizontal .form-group label{
   float: left;
 }
+#small-dialog .small-dialog-body .div-form-body .form-horizontal .form-group ,
+#small-dialog-right .small-dialog-body .div-form-body .form-horizontal .form-group ,
+#small-dialog-character .small-dialog-body .div-form-body .form-horizontal .form-group ,
+#small-dialog-user .small-dialog-body .div-form-body .form-horizontal .form-group{
+  display: inline-block;
+}
+
 .small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline{
    padding: 0;
    width: auto;
@@ -495,7 +511,7 @@ button::-moz-focus-inner {
 
 .small-dialog-body .div-form-body .div-form-radio {
   font-size: 18px;
-  border: 1px solid #111111;
+  
   vertical-align: middle;
 }
 
