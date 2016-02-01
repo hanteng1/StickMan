@@ -3565,7 +3565,7 @@ input[type="button"].btn-block {
 .btn-group > .btn:active,
 .btn-group > .btn.active{
   z-index: 2;
-  background-color: #3090C7;
+  background-color: #20b2fa;
 }
 .btn-group > .btn:focus, {
   outline: none;
@@ -7613,7 +7613,7 @@ fieldset[disabled] .btn-yellow.active {
   height: 7px !important;
 }
 .box .box-title .tools .btn-group > .btn {
-  background-color: #3090C7;
+  background-color: #20b2fa;
 }
 .box .box-title .tools .btn-group > .btn.big{
   width: 100px;
@@ -10019,7 +10019,7 @@ div[data-role="editor-toolbar"] {
   color: #eeeeee;
 }
 .equip-row-dash-div.blue {
-  background-color: #70AFC4;
+  background-color: #20b2fa;
 }
 .equip-row-dash-div.red {
   background-color: #D9534F;
@@ -10057,7 +10057,10 @@ div[data-role="editor-toolbar"] {
   height: 115px;
   border-radius: 5px;
 }
-
+.dashbox .panel-body.big{
+  width: 300px;
+  height: 140px;
+}
 .dashbox .panel-right {
   width: 30%;
   float: right;
@@ -10066,6 +10069,9 @@ div[data-role="editor-toolbar"] {
   border-radius: 4px 0 0 4px;
   color: #FFFFFF;
   text-align: center;
+}
+.dashbox .panel-body.big .panel-right {
+  padding-top: 55px;
 }
 .dashbox .zone-image {
   background: url("../img/zone-image.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -10085,7 +10091,7 @@ div[data-role="editor-toolbar"] {
 }
 .dashbox .blue
 {
-  background-color: #87AFC7;
+  background-color: #20b2fa;
 }
 .dashbox .panel-right.red{
   color: #D9534F;
@@ -10105,6 +10111,9 @@ div[data-role="editor-toolbar"] {
   position: relative;
   text-align: left;
 }
+.dashbox .panel-body.big .panel-left {
+    padding-top: 35px;
+}
 .dashbox .panel-left .number {
   font-size: 32px;
   font-weight: 400;
@@ -10122,16 +10131,29 @@ div[data-role="editor-toolbar"] {
   font-size: 11px;
 }
 
+.dashbox .panel-body.big .panel-left .number{
+  font-size: 36px;
+}
+.dashbox .panel-body.big .panel-left .title {
+  font-size: 22px;
+}
+
 @media (max-width: 1350px){
 
   .dashbox .panel-body {
     width: 202px;
     height: 88px;
   }
-
+  .dashbox .panel-body.big{
+    width: 230px;
+    height: 109px;
+  }
   .dashbox .panel-right {
     padding: 15px;
     padding-top: 30px;
+  }
+  .dashbox .panel-body.big .panel-right {
+    padding-top: 40px;
   }
   
   .dashbox .zone-image {
@@ -10145,6 +10167,9 @@ div[data-role="editor-toolbar"] {
     padding-left: 30px;
     padding-top: 15px;
   }
+  .dashbox .panel-body.big .panel-left {
+    padding-top: 25px;
+  }
   .dashbox .panel-left .number {
     font-size: 24px;
   }
@@ -10155,6 +10180,12 @@ div[data-role="editor-toolbar"] {
     right: 4px;
     top: 4px;
     font-size: 8px;
+  }
+  .dashbox .panel-body.big .panel-left .number{
+    font-size: 28px;
+  }
+  .dashbox .panel-body.big .panel-left .title {
+    font-size: 16px;
   }
 
 }
