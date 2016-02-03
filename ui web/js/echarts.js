@@ -200,15 +200,15 @@ function Echarts(idofChart, idvalueofchart, idofTable) {
     
     var data_colors = [
                         "#eeeeee",
-                        "#737CA1", "#2B3856", "#000080", "#2554C7", "#6960EC", "#3090C7",  //blue
-                        "#617C58", "#667C26", "#306754", "#437C17", "#4E9258", "#3EA055", //green
-                        "#F3E5AB", "#FFD801", "#F2BB66", "#FBB117", "#E2A76F", "#E8A317",  //yellow
-                        "#CD7F32", "#C58917", "#AF7817", "#966F33", "#806517", "#827839",  //orange
+                        "#f6b162", "#f7ba75", "#f8c387", "#f9cc9a", "#fad6ac", "#fbdfbf",  //color for item 1
+                        "#ef7968", "#f1897a", "#f3988c", "#f5a89e", "#f6b8af", "#f8c8c1", //color for item 2
+                        "#c3739f", "#ca83aa", "#d194b5", "#d8a4c1", "#dfb5cc", "#e65d8",  //color for item 3
+                        "#906aac", "#9d7cb6", "#aa8dbf", "#b79fc9", "#c4b0d3", "#d1c2dd",  //color for item 4
                         "#C36241", "#C35817", "#CC6600", "#E66C2C", "#F87431", "#FF8040",  //red
                         "#810541", "#7E354D", "#7F4E52", "#7F5A58", "#C5908E", "#E8ADAA"   //purple
                         ];
 
-    this.online_equipments = [0, 0, 0, 0, 0, 0];  //and by default there are 3 values (频率1,频率2,频率3)
+    this.online_equipments = [1, 1, 1, 0, 0, 0];  //and by default there are 3 values (频率1,频率2,频率3)
     this.online_channels = [1, 0, 0, 0, 0, 0];  //assume there is only 1
 
 
@@ -538,7 +538,7 @@ function Echarts(idofChart, idvalueofchart, idofTable) {
 
 
     //here is a bad idea, not encouraged
-    this.trigger = false;
+    this.trigger = true;
     var updateInterval = 1000;
     function iteration_trigger () {
 
