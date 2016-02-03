@@ -2363,17 +2363,80 @@ var App = function () {
 
 
  var handleEventGraph = function(){
- 	/*
+ 	
  	var graphbody = $(".graph-chart-col");
  	var $event_name = "电压值";
- 	var tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart-title">'+$event_name+'</div><div class="col-md-12 first-column"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels upper-labels"><ul><li><a class="label-cm-'+$event_name+' lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-cm-'+$event_name+' lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-cm-'+$event_name+' lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="chart-labels lower-labels">'+$event_name+'</div></div></div>');
+ 	var tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels big lower-labels"><ul><li><a class="label-ep-current lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-ep-current lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-ep-current lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="" style="font-size: 20px">'+$event_name+'</div></div>');
  	tt.appendTo(graphbody);
+
+ 	var chart_name = "chart_" + $event_name;
+	//var table_name = "table_" + $(this).attr("value");
+ 	var echart_voltage = new Echarts(chart_name, $event_name, "empty");
+    echart_voltage.enablelabels();
 
  	$event_name = "电流值";
- 	tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart-title">'+$event_name+'</div><div class="col-md-12 first-column"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels upper-labels"><ul><li><a class="label-cm-'+$event_name+' lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-cm-'+$event_name+' lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-cm-'+$event_name+' lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="chart-labels lower-labels">'+$event_name+'</div></div></div>');
+ 	tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels big lower-labels"><ul><li><a class="label-ep-current lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-ep-current lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-ep-current lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="" style="font-size: 20px">'+$event_name+'</div></div>');
  	tt.appendTo(graphbody);
 
-	*/
+	chart_name = "chart_" + $event_name;
+ 	var echart_current = new Echarts(chart_name, $event_name, "empty");
+    echart_current.enablelabels();
+
+
+
+	$(":radio").click(function(){
+		if($(this).attr("name") == "event-type"){
+			if($(this).prop('checked') == true){
+				if($(this).attr("value") == "zantai-event"){
+					//alert("zantai-event");
+
+					//hide all others and show row-zantai
+					if($(".row-default").hasClass("not-shown")){
+
+					}else{
+						$(".row-default").addClass("not-shown")
+					}
+
+					if($(".row-wentai").hasClass("not-shown")){
+
+					}else{
+						$(".row-wentai").addClass("not-shown")
+					}					
+
+					if($(".row-zantai").hasClass("not-shown")){
+						$(".row-zantai").removeClass("not-shown")
+
+					}else{
+						
+					}
+
+				}else if($(this).attr("value") == "wentai-event"){
+					//alert("wentai-event");
+
+					//hide all others and show row-wentai
+					if($(".row-default").hasClass("not-shown")){
+
+					}else{
+						$(".row-default").addClass("not-shown")
+					}
+
+					if($(".row-zantai").hasClass("not-shown")){
+
+					}else{
+						$(".row-zantai").addClass("not-shown")
+					}					
+
+					if($(".row-wentai").hasClass("not-shown")){
+						$(".row-wentai").removeClass("not-shown")
+
+					}else{
+						
+					}
+				}
+			}
+		}
+	});
+
 
  }
 

@@ -263,7 +263,7 @@
 														<tbody>
 															<tr>
 																<td>
-																	<label class="radio-inline"> <input type="radio" class="uniform" name="event-type" value=""> 暂态事件 </label>
+																	<label class="radio-inline"> <input type="radio" class="uniform" name="event-type" value="zantai-event"> 暂态事件 </label>
 																</td>
 																<td>
 																	<label class="radio-inline"> <input type="radio" class="uniform" name="ddd" value="a"> 电压暂升 </label>
@@ -273,7 +273,7 @@
 																</td>
 															</tr>
 															<tr>
-																<td><label class="radio-inline"> <input type="radio" class="uniform" name="event-type" value=""> 稳态事件 </label></td>
+																<td><label class="radio-inline"> <input type="radio" class="uniform" name="event-type" value="wentai-event"> 稳态事件 </label></td>
 																<td></td>
 															</tr>
 															<tr class="query-tr">
@@ -381,7 +381,7 @@
 											</div>
 										</div>
 
-										<div class="col-md-6 graph-chart-col">
+										<div class="col-md-6 graph-nothing-col">
 											
 											<!--graph to be added with script-->
 											<!--handleEventGraph-->
@@ -404,7 +404,7 @@
 
 
 				<!--暂态-->
-					  	<div class="row row-zantai">
+					  	<div class="row row-zantai not-shown">
 					  		<div class="col-sm-12">
 								<div class="box border grey">
 					   			<div class="box-title">
@@ -417,7 +417,7 @@
 
 										<div class="col-md-6">
 											<div class="panel-body">
-												<table class="table table-bordered event-list-table">
+												<table class="table table-bordered table-hover event-list-table">
 												 <thead>
 												 	<tr>
 														<th>开始时间</th>
@@ -496,6 +496,24 @@
 											<!--handleEventGraph-->
 											<!--echarts-->
 
+											<!--
+											<div class="panel-body panel-body-name-voltage" id="voltage">
+											
+												<div class="chart_in_graph">
+													<div id="chart_voltage" class="chart"></div>
+												</div>
+												<div class="chart-labels big lower-labels">
+													<ul>
+														<li><a class="label-ep-voltage lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li>
+														<li><a class="label-ep-voltage lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li>
+														<li><a class="label-ep-voltage lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li>
+													</ul>
+												</div>
+												<div class="" style="font-size: 20px">电压值</div>
+												
+											</div>
+											-->
+ 	
 
 										</div>
 
@@ -511,7 +529,7 @@
 					  	</div>
 
 				<!--稳态-->
-					  	<div class="row row-wentai">
+					  	<div class="row row-wentai not-shown">
 					  		<div class="col-sm-12">
 								<div class="box border grey">
 					   			<div class="box-title">
@@ -588,7 +606,7 @@
 											</div>
 										</div>
 
-										<div class="col-md-6 graph-chart-col">
+										<div class="col-md-6 graph-table-col">
 											
 											<!--graph to be added with script-->
 											<!--handleEventGraph-->
