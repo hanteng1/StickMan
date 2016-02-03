@@ -15,6 +15,12 @@ var App = function () {
   	//create an array for pchart object
   	var pchart_objs = [];
 
+
+  	var zone_id = 1;   //1 by default
+  	var product_id = 1;  //1 by default
+  	var equipment_id = 1;  //1 by default
+  	var equipment_running = 'not-running';  //off by default
+
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Runs callback functions set by App.addResponsiveFunction()
@@ -241,90 +247,108 @@ var App = function () {
 
       if(eq.parents(".side-hidden-bar").hasClass("chart-draw")){
         if(eq.hasClass("open")){
-        //is using in chart 
-        //remove
-        eq.removeClass("open");
+	        //is using in chart 
+	        //remove
+	        eq.removeClass("open");
 
-        //remove in chart
-        //find the <li> element in the box 
-        var $eq_id = '' + eq.attr("id");
-        $('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').each(function(){
-        	var chart_zone_ul = jQuery(this).children(".first-column").children(".big").children(".label-eps");  //ul
-        	chart_zone_ul.children("li#" + $eq_id).off();
-        	chart_zone_ul.children("li#" + $eq_id).remove();
-        });
+	        //remove in chart
+	        //find the <li> element in the box 
+	        var $eq_id = '' + eq.attr("id");
+	        $('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').each(function(){
+	        	var chart_zone_ul = jQuery(this).children(".first-column").children(".big").children(".label-eps");  //ul
+	        	chart_zone_ul.children("li#" + $eq_id).off();
+	        	chart_zone_ul.children("li#" + $eq_id).remove();
+	        });
 
-      }else {
-          //is not using in chart
-          //add
-          eq.addClass("open");
+      	}else {
+	          //is not using in chart
+	          //add
+	          eq.addClass("open");
 
-          //get the name of the equipment
-          var $eq_id = '' + eq.attr("id");
-          
-          //for all the existing charts in the box-body
-         $('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').each(function(){
-         	var panel_id = $(this).attr("id");
-         	
-         	var chart_zone_ul = jQuery(this).children(".first-column").children(".big").children(".label-eps");  //ul
-         	chart_zone_ul.find("*").off();  //this step is important
-         	
-         	//see how many listed items are there already
-         	//maximum 4
-         	var $chart_zone_ul_sz = chart_zone_ul.children("li").size();
+	          //get the name of the equipment
+	          var $eq_id = '' + eq.attr("id");
+	          
+	          //for all the existing charts in the box-body
+	         $('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').each(function(){
+	         	var panel_id = $(this).attr("id");
+	         	
+	         	var chart_zone_ul = jQuery(this).children(".first-column").children(".big").children(".label-eps");  //ul
+	         	chart_zone_ul.find("*").off();  //this step is important
+	         	
+	         	//see how many listed items are there already
+	         	//maximum 4
+	         	var $chart_zone_ul_sz = chart_zone_ul.children("li").size();
 
-         	//alert("size " + chart_zone_ul_sz);
-         	$chart_zone_ul_sz+=1;
-         	//alert("size " + $chart_zone_ul_sz);
-         	//format not correct
-         	//<li><a class="label-ep-'+$(this).attr("value")+' le1" href="javascript:;"><span class="color-mark ep1"></span><span class="title">设备 1</span></a></li>
-         	$('<li id="'+$eq_id+'"><a class="label-ep-'+panel_id+' le' + $chart_zone_ul_sz +'" href="javascript:;"><span class="color-mark ep' + $chart_zone_ul_sz +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
-         
-         	//enable the click function
-         	for(var itrpo = 0; itrpo<pchart_objs.length; itrpo++)
-  			{
-  				var cur_obj = pchart_objs[itrpo];
-  				if(cur_obj.name == panel_id)
-  				{
-  					cur_obj["obj"].enablelabels();
-  				}
-  			}
+	         	//alert("size " + chart_zone_ul_sz);
+	         	$chart_zone_ul_sz+=1;
+	         	//alert("size " + $chart_zone_ul_sz);
+	         	//format not correct
+	         	//<li><a class="label-ep-'+$(this).attr("value")+' le1" href="javascript:;"><span class="color-mark ep1"></span><span class="title">设备 1</span></a></li>
+	         	$('<li id="'+$eq_id+'"><a class="label-ep-'+panel_id+' le' + $chart_zone_ul_sz +'" href="javascript:;"><span class="color-mark ep' + $chart_zone_ul_sz +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
+	         
+	         	//enable the click function
+	         	for(var itrpo = 0; itrpo<pchart_objs.length; itrpo++)
+	  			{
+	  				var cur_obj = pchart_objs[itrpo];
+	  				if(cur_obj.name == panel_id)
+	  				{
+	  					cur_obj["obj"].enablelabels();
+	  				}
+	  			}
 
-         });
-
-
-
-
-
-           
-          
-
-          //$('<li><a class="label-ep le' + $eq_id +'" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
-          
-
-
-
-
-          //$('<li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep' + $eq_id +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
-          //$('<li><a class="label-ep le1" href="javascript:;"><span class="color-mark ep2"></span><span class="title">设备 1</span></a></li>').appendTo(chart_zone_ul);
-        
+	         });
 
         }
 
+      }else {
+      	//alert(eq.parents(".has-sub-sub").attr("id") + "   "  +  eq.parents(".has-sub-sub-sub").attr("id") + "    " + eq.attr("id"));
+      	//zone_id = eq.parents(".has-sub-sub").attr("id");
+      	sessionStorage.setItem('zone_id', eq.parents(".has-sub-sub").attr("id"));
+      	//product_id = eq.parents(".has-sub-sub-sub").attr("id");
+      	sessionStorage.setItem('product_id', eq.parents(".has-sub-sub-sub").attr("id"));
+      	//equipment_id = eq.attr("id");
+      	sessionStorage.setItem('equipment_id', eq.attr("id"));
+      	
+      	if(eq.hasClass("running")){
+      		//equipment_running = 1;
+      		sessionStorage.setItem('equipment_running', 'running');
+      	}else{
+      		//equipment_running = 0;
+      		sessionStorage.setItem('equipment_running', 'not-running');
+      	}
+
+      	//re-direct url to the data page
+      	window.location = "实时数据.html";
       }
 
       
 
     });
 
-
-
-    //when it's for normal use
-
-
-
 	}
-	
+
+	/*-----------------------------------------------------------------------------------*/
+	/*	zone-product-equipment list
+	/*-----------------------------------------------------------------------------------*/
+	var handleZPEList = function()
+	{
+		//grab data from sectionstorage
+		zone_id = sessionStorage.getItem('zone_id');
+		product_id = sessionStorage.getItem('product_id');
+		equipment_id = sessionStorage.getItem('equipment_id');
+		equipment_running = sessionStorage.getItem('equipment_running');
+
+		//alert(zone_id + product_id + equipment_id);
+
+		var zpelist = $(".zone-product-equipment-list");
+		if(equipment_running == "running")
+		{
+			$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left active">设备 '+equipment_id+'</span><i class="fa fa-check-circle active"></i></li></ul>').appendTo(zpelist);
+		}else{
+			$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left in-active">设备 '+equipment_id+'</span><i class="fa fa-clock-o in-active"></i></li></ul>').appendTo(zpelist);
+		}
+		
+	}
 
 
 	/*-----------------------------------------------------------------------------------*/
@@ -835,13 +859,13 @@ var App = function () {
       for (var itra = 0; itra < list_data["areas"].length; itra++) {
         
         //area
-        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
+        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
 
         var sub_product = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub');
         for (var itrp = 0; itrp < list_data["areas"][itra]["products"].length; itrp++) {
             //product
             //list_data["areas"][itra]["products"][itrp].name
-            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
+            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'" id="'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
         
             var sub_equipment = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub').children('.product' + list_data["areas"][itra]["products"][itrp].name).children('.sub-sub-sub');
 
@@ -4341,12 +4365,14 @@ var App = function () {
                 handleXcharts();    //Function to display xcharts
             }
 	      if(App.isPage("shishishuju")){
+	      	handleZPEList();
 	        handleSparkline();
 	        handleXcharts();
 	        handleTitleCheckbox();
 	        handleChartSwitch();
 	      }
 	      if(App.isPage("lishishuju")){
+	      	handleZPEList();
 	      	handleXcharts();
 	        handleTitleCheckbox();
 	        handleDateColorpicker();
@@ -4354,12 +4380,14 @@ var App = function () {
 	      }
 	      if(App.isPage("shijiangaojing"))
 	      {
+	      	handleZPEList();
 	      	handleXcharts();
 	        handleDateColorpicker();
 	        handleEventGraph();
 	      }
 
 	      if(App.isPage("baobiao")) {
+	      	handleZPEList();
 	        handleXcharts();
 	        handleDateColorpicker();
 	        handlePopUp();
@@ -4503,9 +4531,9 @@ var App = function () {
 			if (App.isPage("fixed_header_sidebar")) {
 				handleFixedSidebar();	//Function to display fixed sidebar
 			}
-      if (App.isPage("fangan-baobiaofangan")) {
-        handlePopUp();
-      }
+      		if (App.isPage("fangan-baobiaofangan")) {
+        		handlePopUp();
+     		}
 
 			checkLayout();	//Function to check if mini menu/fixed header is activated
 			
@@ -4513,8 +4541,8 @@ var App = function () {
 			handleSidebarAndContentHeight();  //Function to hide sidebar and main content height
 			responsiveSidebar();		//Function to handle sidebar responsively
 			handleTeamView(); //Function to toggle team view
-      	handleHiddenSideBar();
-      	handleSidebar(); //Function to display the sidebar
+      		handleHiddenSideBar();
+      		handleSidebar(); //Function to display the sidebar
 			handleHomePageTooltips(); //Function to handle tooltips
 			handleBoxTools(); //Function to handle box tools
 			handleSlimScrolls(); //Function to handle slim scrolls
