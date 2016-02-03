@@ -3979,6 +3979,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   float: right;
   margin-right: 30px;
   margin-top: 8px;
+  color: #eeeeee;
 }
 
 @media (max-width: 1350px){
