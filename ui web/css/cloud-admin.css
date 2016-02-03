@@ -387,8 +387,8 @@ h3 .small {
 h4,
 h5,
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h4 small,
 h5 small,
@@ -1821,7 +1821,7 @@ output {
     height: 43px;
     padding: 6px 12px;
     font-size: 12px;
-    margin-top: -10px;
+    /*margin-top: -10px;*/
   }
 
   .query-tr .data-form-control {
@@ -7642,6 +7642,20 @@ fieldset[disabled] .btn-yellow.active {
   width: 100%;
   text-align: center;
 }
+.box .box-title .tools > ul,
+.box .box-title .tools.h-center > ul {
+  list-style: none;
+}
+.box .box-title .tools > ul > li,
+.box .box-title .tools.h-center > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.box .box-title .tools > ul > li + li,
+.box .box-title .tools.h-center > ul > li + li {
+  margin-left: 10px;
+}
+
 .box .box-title .tools > a {
   display: inline-block;
   font-size: 14px;
@@ -7706,7 +7720,6 @@ fieldset[disabled] .btn-yellow.active {
   text-shadow: none;
 }
 .box .box-title .tools .btn-group a .collect-arrow:before {
-  float: right;
   margin-top: 1px;
   margin-right: 5px;
   margin-left: 5px;
@@ -7719,7 +7732,6 @@ fieldset[disabled] .btn-yellow.active {
   text-shadow: none;
 }
 .box .box-title .tools .btn-group a .collect-arrow.open:before {
-  float: right;
   margin-top: 1px;
   margin-right: 5px;
   margin-left: 5px;
@@ -7870,6 +7882,7 @@ fieldset[disabled] .btn-yellow.active {
   {
     height: 30px;
     font-size: 12px;
+    padding-top: 4px;
   }
 
   .box .box-title .tools .btn-group a .add-compare-plus:before {
