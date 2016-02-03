@@ -2366,7 +2366,7 @@ var App = function () {
  	
  	var graphbody = $(".graph-chart-col");
  	var $event_name = "电压值";
- 	var tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels big lower-labels"><ul><li><a class="label-ep-current lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-ep-current lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-ep-current lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="" style="font-size: 20px">'+$event_name+'</div></div>');
+ 	var tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels big lower-labels"><ul><li><a class="label-ep-'+$event_name+' le1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-ep-'+$event_name+' le2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-ep-'+$event_name+' le3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="" style="font-size: 20px">'+$event_name+'</div></div>');
  	tt.appendTo(graphbody);
 
  	var chart_name = "chart_" + $event_name;
@@ -2375,7 +2375,7 @@ var App = function () {
     echart_voltage.enablelabels();
 
  	$event_name = "电流值";
- 	tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels big lower-labels"><ul><li><a class="label-ep-current lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-ep-current lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-ep-current lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="" style="font-size: 20px">'+$event_name+'</div></div>');
+ 	tt = $('<div class="panel-body panel-body-name-'+$event_name+'" id="'+$event_name+'"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels big lower-labels"><ul><li><a class="label-ep-'+$event_name+' le1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-ep-'+$event_name+' le2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-ep-'+$event_name+' le3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="" style="font-size: 20px">'+$event_name+'</div></div>');
  	tt.appendTo(graphbody);
 
 	chart_name = "chart_" + $event_name;

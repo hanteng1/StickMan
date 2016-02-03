@@ -1,9 +1,11 @@
 function Echarts(idofChart, idvalueofchart, idofTable) {
 
+    
     if (!jQuery.plot) {
        return;
     }
 
+    //alert("check here");
     function clearData(pData){
         pData.length = 0;  //this works
     }
@@ -206,8 +208,9 @@ function Echarts(idofChart, idvalueofchart, idofTable) {
                         "#810541", "#7E354D", "#7F4E52", "#7F5A58", "#C5908E", "#E8ADAA"   //purple
                         ];
 
-    this.online_equipments = [1, 1, 1, 0, 0, 0];  //and by default there are 3 values (频率1,频率2,频率3)
+    this.online_equipments = [0, 0, 0, 0, 0, 0];  //and by default there are 3 values (频率1,频率2,频率3)
     this.online_channels = [1, 0, 0, 0, 0, 0];  //assume there is only 1
+
 
     //initialize the table
     if(idofTable != "empty")
@@ -215,12 +218,15 @@ function Echarts(idofChart, idvalueofchart, idofTable) {
         table_header_tr = jQuery("." + idofTable).children(".table-striped").children(".table-head").children(".table-head-tr");
         table_body = jQuery("." + idofTable).children(".table-striped").children(".table-body");
     }
+    
 
 
     var data_plot;
     var plot;
+
     if(idofChart != "empty"){
         data_plot = [chart2_data_default];
+
 
         plot = $.plot($("#" + idofChart), data_plot, { 
             series: {
@@ -437,6 +443,7 @@ function Echarts(idofChart, idvalueofchart, idofTable) {
 
         if(idofChart != "empty"){
             //update graph
+
             plot.setData(data_collections);
             plot.draw();
         }
@@ -554,6 +561,9 @@ function Echarts(idofChart, idvalueofchart, idofTable) {
         //alert( parent.testVar);
         
         jQuery('.label-ep-' + parent.testVar).click(function(){
+
+
+
         var etitle = jQuery(this).children(".title");
         etitle.toggleClass("open"); 
         var emark = jQuery(this).children(".color-mark");
