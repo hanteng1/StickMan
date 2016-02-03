@@ -7190,12 +7190,17 @@ fieldset[disabled] .btn-yellow.active {
   margin-left: 10px;
 }
 
-.zone-product-equipment-tag {
+.zone-product-equipment-tag,
+.zone-tag,
+.zone-product-tag {
   color: #444444;
 }
-.zone-product-equipment-tag:hover {
+.zone-product-equipment-tag:hover,
+.zone-tag:hover,
+.zone-product-tag:hover {
   text-decoration: none;
   color: #444444;
+  cursor: pointer;
 }
 
 

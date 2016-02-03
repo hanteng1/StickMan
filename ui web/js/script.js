@@ -327,6 +327,49 @@ var App = function () {
 
 	}
 
+
+	/*-----------------------------------------------------------------------------------*/
+	/*	zone-product-equipment tag at 园区-区域, 区域-生产线, 生产线-设备
+	/*-----------------------------------------------------------------------------------*/
+	var handleZTag = function()
+	{
+		jQuery(".zone-tag").click(function(){
+			sessionStorage.setItem('zone_id', $(this).attr("id"));
+			window.location = "区域-生产线数据.html";
+		});
+	}
+
+	var hanldeZPTag = function()
+	{
+		jQuery(".zone-product-tag").click(function(){
+			sessionStorage.setItem('product_id', $(this).attr("id"));
+			window.location = "生产线-设备数据.html";
+		});
+	}
+
+	var handleZPETag = function()
+	{
+		jQuery(".zone-product-equipment-tag").click(function(){
+			sessionStorage.setItem('equipment_id', $(this).attr("id"));
+			window.location = "实时数据.html";
+		});
+	}	
+
+	var handleZList = function()
+	{
+		zone_id = sessionStorage.getItem('zone_id');
+		var zpelist = $(".zone-product-equipment-list");
+		$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span></li></ul>').appendTo(zpelist);
+	}
+
+	var hanldeZPList = function()
+	{
+		zone_id = sessionStorage.getItem('zone_id');
+		product_id = sessionStorage.getItem('product_id');
+		var zpelist = $(".zone-product-equipment-list");
+		$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span></li></ul>').appendTo(zpelist);
+	}
+
 	/*-----------------------------------------------------------------------------------*/
 	/*	zone-product-equipment list
 	/*-----------------------------------------------------------------------------------*/
@@ -3074,7 +3117,7 @@ var App = function () {
         
 		chart1();
 
-    if(App.isPage("yuanqu-quyushuju")){
+    if(App.isPage("yuanqu-quyushuju") || App.isPage("quyu-shengchanxianshuju") || App.isPage("shengchanxian-shebeishuju")){
       chart4();
       chart2();
     }
@@ -4393,9 +4436,19 @@ var App = function () {
 	        handlePopUp();
 	      }
 	      if(App.isPage("yuanqu-quyushuju")){
+	      	handleZTag();
 	        handleXcharts();
 	      }
-
+	      if(App.isPage("quyu-shengchanxianshuju")){
+	      	handleZList();
+	      	hanldeZPTag();
+	      	handleXcharts();
+	      }
+	      if(App.isPage("shengchanxian-shebeishuju")){
+	      	hanldeZPList();
+	      	handleZPETag();
+	      	handleXcharts();
+	      }
 	      if(App.isPage("shebei-jichuxinxi")){
 	        handleXcharts();
 	         handlePopUp();
