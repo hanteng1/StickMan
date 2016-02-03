@@ -233,7 +233,7 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
     }
 
     var previousPoint = null;
-    $("#chart_2").bind("plothover", function (event, pos, item) {
+    $("#" + idofChart).bind("plothover", function (event, pos, item) {
         $("#x").text(pos.x.toFixed(2));
         $("#y").text(pos.y.toFixed(2));
 
