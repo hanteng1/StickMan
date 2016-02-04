@@ -3965,17 +3965,21 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-right: 1px solid #e4e4e4;
 } 
 
-.nav-tabs > li > a {
+.nav-tabs > li > a,
+.nav-tabs > li.tab
+ {
   line-height: 1.428571429;
   color: #555555;
 }
-.panel-full-body .nav-tabs > li > a{
+.panel-full-body .nav-tabs > li > a,
+.panel-full-body .nav-tabs > li.tab{
   padding: 0;
   font-size: 26px;
   height: 76px;
   padding-top: 16px;
 }
-.panel-full-body .nav-tabs > li > a .add-button{
+.panel-full-body .nav-tabs > li > a .add-button,
+.panel-full-body .nav-tabs > li.tab .add-button{
   float: right;
   margin-right: 30px;
   margin-top: 8px;
@@ -3991,12 +3995,15 @@ textarea.input-group-sm > .input-group-btn > .btn {
     margin-bottom: 8px;
   }
 
-  .panel-full-body .nav-tabs > li > a{
+  .panel-full-body .nav-tabs > li > a,
+  .panel-full-body .nav-tabs > li.tab{
     font-size: 20px;
     height: 58px;
     padding-top: 12px;
   }
-  .panel-full-body .nav-tabs > li > a .add-button{
+  .panel-full-body .nav-tabs > li > a .add-button,
+  .panel-full-body .nav-tabs > li.tab .add-button,
+  {
     margin-right: 23px;
     margin-top: 6px;
   }
@@ -4006,6 +4013,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #dddddd;
 }
+.nav-tabs > li.active.tab,
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
