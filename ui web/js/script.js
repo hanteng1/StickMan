@@ -1240,6 +1240,22 @@ var App = function () {
                 {
                 	current_selected_box_name = 'box-pinlv';
                 }
+                 if(jQuery(this).hasClass('compare-for-box-dianyadianliu'))
+                {
+                	current_selected_box_name = 'box-dianyadianliu';
+                }
+                 if(jQuery(this).hasClass('compare-for-box-gonglvdianneng'))
+                {
+                	current_selected_box_name = 'box-gonglvdianneng';
+                }
+                if(jQuery(this).hasClass('compare-for-box-bupingheng'))
+                {
+                	current_selected_box_name = 'box-bupingheng';
+                }
+                if(jQuery(this).hasClass('compare-for-box-xiebo'))
+                {
+                	current_selected_box_name = 'box-xiebo';
+                }
                 //continue here based on how many box there are
 
 
