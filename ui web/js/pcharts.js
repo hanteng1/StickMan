@@ -151,7 +151,7 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
     ];
 
     //attention: the name is not for real
-    var data_names = ["默认",
+    this.data_names = ["默认",
                       "设备1-A项","设备1-B项","设备1-C项","设备1-AB项","设备1-BC项","设备1-CA项",
                       "设备2-A项","设备2-B项","设备2-C项","设备2-AB项","设备2-BC项","设备2-CA项",
                       "设备3-A项","设备3-B项","设备3-C项","设备3-AB项","设备3-BC项","设备3-CA项",
@@ -245,7 +245,8 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
                 var x = item.datapoint[0].toFixed(2),
                     y = item.datapoint[1].toFixed(2);
 
-                showTooltip(item.pageX, item.pageY, item.series.label + " of " + x + " = " + y);
+                //showTooltip(item.pageX, item.pageY, item.series.label + " of " + x + " = " + y);
+                showTooltip(item.pageX, item.pageY, "" + x + " = " + y);
             }
         } else {
             $("#tooltip").remove();
@@ -412,7 +413,7 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
             if(cur_test_data.length > 0)
             {
 
-                $('<th class="col-'+itrn+'">'+data_names[itrn]+'</th>').appendTo(table_header_tr);
+                $('<th class="col-'+itrn+'">'+ pchart_scope.data_names[itrn]+'</th>').appendTo(table_header_tr);
 
                 
                 for(var itrd = 0; itrd < cur_test_data.length; itrd++)
@@ -488,6 +489,21 @@ function Pcharts(idofChart, idvalueofchart, idofTable) {
 
     Pcharts.prototype.callstop = function(){
         this.running_state = false;
+    }
+
+    //change names
+    Pcharts.prototype.changenames = function(update_name, name_index)
+    {
+        //name_index should be from 1-6
+
+        //"设备1-A项","设备1-B项","设备1-C项","设备1-AB项","设备1-BC项","设备1-CA项",
+        this.data_names[(name_index-1) * 6 + 1] = "设备" + update_name + "-A项";
+        this.data_names[(name_index-1) * 6 + 2] = "设备" + update_name + "-B项";
+        this.data_names[(name_index-1) * 6 + 3] = "设备" + update_name + "-C项";
+        this.data_names[(name_index-1) * 6 + 4] = "设备" + update_name + "-AB项";
+        this.data_names[(name_index-1) * 6 + 5] = "设备" + update_name + "-BC项";
+        this.data_names[(name_index-1) * 6 + 6] = "设备" + update_name + "-CA项";
+
     }
 
     //enablelabels();

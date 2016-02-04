@@ -293,6 +293,7 @@ var App = function () {
 	  				if(cur_obj.name == panel_id)
 	  				{
 	  					cur_obj["obj"].enablelabels();
+	  					cur_obj["obj"].changenames($eq_id, $chart_zone_ul_sz);
 	  				}
 	  			}
 
@@ -2578,6 +2579,10 @@ var App = function () {
 				var pchart = new Pcharts(chart_name, $(this).attr("value"), table_name);
     			pchart.enablelabels();
 
+    			//change names of the data_names
+    			//at this moment, there is only 1
+    			pchart.changenames(equipment_id, 1);
+
     			handleChartSwitch();
 
     			pchart_objs.push({name: $(this).attr("value"), "obj":pchart});
@@ -2587,6 +2592,7 @@ var App = function () {
 			if(App.isPage("lishishuju")){
 				var tchart = new Tcharts(chart_name, $(this).attr("value"), table_name);
     			tchart.enablelabels();
+    			tchart.changenames(equipment_id, 1);
 
     			handleChartSwitch();
 

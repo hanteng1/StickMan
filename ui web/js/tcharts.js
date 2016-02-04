@@ -180,7 +180,7 @@ function Tcharts(idofChart, idvalueofchart, idofTable) {
     ];
 
     //attention: the name is not for real
-    var data_names = ["默认",
+    this.data_names = ["默认",
                       "设备1-A项","设备1-B项","设备1-C项","设备1-AB项","设备1-BC项","设备1-CA项",
                       "设备2-A项","设备2-B项","设备2-C项","设备2-AB项","设备2-BC项","设备2-CA项",
                       "设备3-A项","设备3-B项","设备3-C项","设备3-AB项","设备3-BC项","设备3-CA项",
@@ -527,6 +527,21 @@ function Tcharts(idofChart, idvalueofchart, idofTable) {
     iteration_trigger();
 
 };
+
+    //change names
+    Tcharts.prototype.changenames = function(update_name, name_index)
+    {
+        //name_index should be from 1-6
+
+        //"设备1-A项","设备1-B项","设备1-C项","设备1-AB项","设备1-BC项","设备1-CA项",
+        this.data_names[(name_index-1) * 6 + 1] = "设备" + update_name + "-A项";
+        this.data_names[(name_index-1) * 6 + 2] = "设备" + update_name + "-B项";
+        this.data_names[(name_index-1) * 6 + 3] = "设备" + update_name + "-C项";
+        this.data_names[(name_index-1) * 6 + 4] = "设备" + update_name + "-AB项";
+        this.data_names[(name_index-1) * 6 + 5] = "设备" + update_name + "-BC项";
+        this.data_names[(name_index-1) * 6 + 6] = "设备" + update_name + "-CA项";
+
+    }
 
     //enablelabels();
     Tcharts.prototype.enablelabels = function()
