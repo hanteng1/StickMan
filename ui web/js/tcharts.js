@@ -262,7 +262,7 @@ function Tcharts(idofChart, idvalueofchart, idofTable) {
     }
 
     var previousPoint = null;
-    $("#chart_2").bind("plothover", function (event, pos, item) {
+    $("#" + idofChart).bind("plothover", function (event, pos, item) {
         $("#x").text(pos.x.toFixed(2));
         $("#y").text(pos.y.toFixed(2));
 
@@ -274,7 +274,7 @@ function Tcharts(idofChart, idvalueofchart, idofTable) {
                 var x = item.datapoint[0].toFixed(2),
                     y = item.datapoint[1].toFixed(2);
 
-                showTooltip(item.pageX, item.pageY, item.series.label + " of " + x + " = " + y);
+                showTooltip(item.pageX, item.pageY, "" + x + " = " + y);
             }
         } else {
             $("#tooltip").remove();
@@ -442,7 +442,7 @@ function Tcharts(idofChart, idvalueofchart, idofTable) {
             if(cur_test_data.length > 0)
             {
 
-                $('<th class="col-'+itrn+'">'+data_names[itrn]+'</th>').appendTo(table_header_tr);
+                $('<th class="col-'+itrn+'">'+tchart_scope.data_names[itrn]+'</th>').appendTo(table_header_tr);
 
                 
                 for(var itrd = 0; itrd < cur_test_data.length; itrd++)
@@ -527,6 +527,11 @@ function Tcharts(idofChart, idvalueofchart, idofTable) {
     iteration_trigger();
 
 };
+
+
+    Tcharts.prototype.callstop = function(){
+        this.trigger = false;  //basically this does nothing
+    }
 
     //change names
     Tcharts.prototype.changenames = function(update_name, name_index)

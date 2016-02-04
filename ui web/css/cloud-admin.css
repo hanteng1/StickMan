@@ -7284,7 +7284,8 @@ fieldset[disabled] .btn-yellow.active {
   vertical-align: middle;
   width: 33%;
   height: 80px;
-  background-color: #e4e4e4;
+  background-color: #f4f4f4;
+  color: #888888;
   text-align: center;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -7494,13 +7495,13 @@ fieldset[disabled] .btn-yellow.active {
 
 .character-case-box .title {
   font-size: 18px;
-  color: #eeeeee;
+  color: #ffffff;
 }
 
 .character-case-box .icon {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #eeeeee;
+  color: #ffffff;
 }
 
 .character-case-box .detail {
@@ -7509,7 +7510,10 @@ fieldset[disabled] .btn-yellow.active {
   margin-top: 10px;
   padding-top: 30px;
   padding-bottom: 20px;
-  border-top: 1px solid #c4c4c4;
+  border-top: 1px solid #ffffff;
+}
+.character-case-box .detail .add-button{
+  background-color: #ffffff;
 }
 
 .character-arrow {
