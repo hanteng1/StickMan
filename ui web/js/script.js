@@ -1256,6 +1256,10 @@ var App = function () {
                 {
                 	current_selected_box_name = 'box-xiebo';
                 }
+                if(jQuery(this).hasClass('compare-for-box-bodongshanbian'))
+                {
+                	current_selected_box_name = 'box-bodongshanbian';
+                }
                 //continue here based on how many box there are
 
 

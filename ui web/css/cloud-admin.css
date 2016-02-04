@@ -7617,6 +7617,9 @@ fieldset[disabled] .btn-yellow.active {
   border-bottom: 1px solid #c4c4c4;
   height: 72px;
 }
+.box .box-title.double-layers{
+  height: 100px
+}
 .box .box-title h4 {
   font-size: 12px;
   margin: 0;
@@ -7713,7 +7716,6 @@ fieldset[disabled] .btn-yellow.active {
   margin-left: 10px;
 }
 .box .box-title .tools .btn-group a .add-compare-plus:before {
-  float: left;
   margin-top: 1px;
   margin-right: 5px;
   margin-left: 5px;
@@ -7854,6 +7856,9 @@ fieldset[disabled] .btn-yellow.active {
   .box.solid > .box-title {
     height: 55px;
     padding: 15px 15px;
+  }
+  .box .box-title.double-layers{
+    height: 85px;
   }
   .box.border.query-box > .box-title{
     height: 68px;

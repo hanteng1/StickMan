@@ -450,18 +450,21 @@
 					   <!--/基础数据和向量图-->
 
 
-					   <!--频率-->
+					   <!--电压电流-->
 					    <div class="row">
 					    <div class="col-md-12">
-					   		<div class="box border grey box-pinlv">
+					   		<div class="box border grey box-dianyadianliu">
 					   			<div class="box-title">
-										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="频率" name="box-title-check"> 频率 </label>
+										<h4>
+											<label class="checkbox"> <input type="checkbox" class="uniform" value="电压" name="box-title-check"> 电压 </label>
+											<label class="checkbox"> <input type="checkbox" class="uniform" value="电流" name="box-title-check"> 电流 </label>
+											<label class="checkbox"> <input type="checkbox" class="uniform" value="频率" name="box-title-check"> 频率 </label>
 										</h4>
 										<div class="tools">
 											<div class="btn-group">
 												<a class="box-collapse btn btn-default" href="javascript:;"><span class="collect-text" id="collect-text">收起</span><span class="collect-arrow"></span></a>
 
-												<a class="box-add-compare btn btn-default compare-for-box-pinlv" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
+												<a class="box-add-compare btn btn-default compare-for-box-dianyadianliu" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
 
 											</div>
 										</div>
@@ -483,10 +486,10 @@
 					   	</div>
 					    </div>
 
-					   <!--/频率-->
+					   <!--/电压电流-->
 
 
-					   <!--测试-->
+					   <!--测试
 					    <div class="row">
 					    <div class="col-md-12">
 					   		<div class="box border grey box-test">
@@ -507,14 +510,7 @@
 								</div>
 								<div class="box-body">
 									<div class="panel panel-table">
-									
-
-									<!--content to be added when check box was confirmed-->
-									
-									<!--/content to be added when check box was confirmed-->
-
-
-
+								
 
 									</div>
 								</div>
@@ -522,109 +518,133 @@
 					   	</div>
 					    </div>
 
-					   <!--/测试-->
+					   /测试-->
 
 
-
-					   <!--功率-->
-					   <div class="row">
+					   <!--功率电能-->
+					    <div class="row">
 					    <div class="col-md-12">
-					   		<div class="box border grey">
+					   		<div class="box border grey box-gonglvdianneng">
 					   			<div class="box-title">
-					   					<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-					   					<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv" name="box-title-check">功率</label>
-										<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglvyinsu" name="box-title-check">功率因素</label>
-					   					</h4>
-										
+										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="功率" name="box-title-check"> 功率 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="功率因数" name="box-title-check"> 功率因数 </label>
+										 </h4>
 										<div class="tools">
 											<div class="btn-group">
 												<a class="box-collapse btn btn-default" href="javascript:;"><span class="collect-text" id="collect-text">收起</span><span class="collect-arrow"></span></a>
 
-												<a class="box-add-compare btn btn-default" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
+												<a class="box-add-compare btn btn-default compare-for-box-gonglvdianneng" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
 
 											</div>
 										</div>
 								</div>
 								<div class="box-body">
+									<div class="panel panel-table">
+								
 
-
+									</div>
 								</div>
-
 					   		</div>
 					   	</div>
-					   </div>
-					   <!--/功率-->
+					    </div>
 
-					    <!--电压&电流-->
+					   <!--/功率电能-->
+
+					   <!--不平衡度-->
 					    <div class="row">
 					    <div class="col-md-12">
-					   		<div class="box border grey">
+					   		<div class="box border grey box-bupingheng">
 					   			<div class="box-title">
-					   				<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-					   				<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label> 
-					   				<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-									<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-									<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-					   				</h4>
-
-									<div class="tools">
-										<div class="btn-group">
+										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="电压相位序列" name="box-title-check"> 电压相位序列 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="电流相位序列" name="box-title-check"> 电流相位序列 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="电压不平衡度" name="box-title-check"> 电压不平衡度 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="电流不平衡度" name="box-title-check"> 电流不平衡度 </label>
+										 </h4>
+										<div class="tools">
+											<div class="btn-group">
 												<a class="box-collapse btn btn-default" href="javascript:;"><span class="collect-text" id="collect-text">收起</span><span class="collect-arrow"></span></a>
 
-												<a class="box-add-compare btn btn-default" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
+												<a class="box-add-compare btn btn-default compare-for-box-bupingheng" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
 
 											</div>
-									</div>
+										</div>
 								</div>
 								<div class="box-body">
-									<!--
 									<div class="panel panel-table">
-									<div class="panel-body">
-
-										
-									</div>
-									</div>-->
 								
+
+									</div>
 								</div>
 					   		</div>
 					   	</div>
-					   </div>
-					    <!--/电压&电流-->
+					    </div>
 
-					    <!--电压&电流-->
-					   <div class="row">
+					   <!--/不平衡度-->
+
+					   <!--波动闪变-->
+					    <div class="row">
 					    <div class="col-md-12">
-					   		<div class="box border grey">
+					   		<div class="box border grey box-bodongshanbian">
 					   			<div class="box-title">
-					   				<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-					   				<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label> 
-					   				<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-									<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-									<label class="checkbox"> <input type="checkbox" class="uniform" value="gonglv-dianneng" name="box-title-check">功率/电能</label>
-					   				</h4>
-									<div class="tools">
-										<div class="btn-group">
+										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="电压闪变" name="box-title-check"> 电压闪变 </label>
+										</h4>
+										<div class="tools">
+											<div class="btn-group">
 												<a class="box-collapse btn btn-default" href="javascript:;"><span class="collect-text" id="collect-text">收起</span><span class="collect-arrow"></span></a>
 
-												<a class="box-add-compare btn btn-default" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
+												<a class="box-add-compare btn btn-default compare-for-box-bodongshanbian" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
 
 											</div>
-									</div>
+										</div>
 								</div>
 								<div class="box-body">
-									<!--
 									<div class="panel panel-table">
-									<div class="panel-body">
-
-										
-									</div>
-									</div>-->
 								
+
+									</div>
 								</div>
 					   		</div>
 					   	</div>
-					   </div>
-					    <!--/电压&电流-->
+					    </div>
+
+					   <!--/波动闪变-->
+
+					   <!--谐波-->
+					    <div class="row">
+					    <div class="col-md-12">
+					   		<div class="box border grey box-xiebo">
+					   			<div class="box-title double-layers">
+										<h4><label class="checkbox"> <input type="checkbox" class="uniform" value="谐波电压" name="box-title-check"> 谐波电压 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="基波电压" name="box-title-check"> 基波电压 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="间谐波电压" name="box-title-check"> 间谐波电压 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="总谐波电压" name="box-title-check"> 总谐波电压 </label>
+										 </h4>
+										 <br/>
+										 <h4><label class="checkbox"> <input type="checkbox" class="uniform" value="谐波电流" name="box-title-check"> 谐波电流 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="基波电流" name="box-title-check"> 基波电流 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="间谐波电流" name="box-title-check"> 间谐波电流 </label>
+										<label class="checkbox"> <input type="checkbox" class="uniform" value="总谐波电流" name="box-title-check"> 总谐波电流 </label>
+										 </h4>
+										<div class="tools">
+											<div class="btn-group">
+												<a class="box-collapse btn btn-default" href="javascript:;"><span class="collect-text" id="collect-text">收起</span><span class="collect-arrow"></span></a>
+
+												<a class="box-add-compare btn btn-default compare-for-box-xiebo" href="javascript:;"><span class="add-compare-plus"></span><span class="add-compare-text">添加对比</span></a>
+
+											</div>
+										</div>
+								</div>
+								<div class="box-body">
+									<div class="panel panel-table">
+								
+
+									</div>
+								</div>
+					   		</div>
+					   	</div>
+					    </div>
+
+					   <!--/谐波-->
 
 						
 					
