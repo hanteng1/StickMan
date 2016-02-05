@@ -328,6 +328,47 @@ var App = function () {
 
 	}
 
+	/*-----------------------------------------------------------------------------------*/
+	/*	zone-product-equipment tag at 设备-列表区域, 设备-列表生产线, 设备-列表设备
+	/*-----------------------------------------------------------------------------------*/
+	var handleShebeiZTag = function()
+	{
+		jQuery(".zone-case-box-zone").click(function(){
+			sessionStorage.setItem('zone_id', $(this).attr("id"));
+			window.location = "设备-列表生产线.html";
+		});
+	}
+
+	var handleShebeiZPTag = function()
+	{
+		jQuery(".zone-case-box-product").click(function(){
+			sessionStorage.setItem('product_id', $(this).attr("id"));
+			window.location = "设备-列表设备.html";
+		});
+	}
+
+	var handleShebeiZPETag = function()
+	{
+
+	}
+
+	var handleShebiZList = function()
+	{
+		zone_id = sessionStorage.getItem('zone_id');
+		var zpelist = $(".zone-product-equipment-list");
+		$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线</span></li></ul>').appendTo(zpelist);
+	}
+
+	var handleShebeiZPList = function()
+	{
+
+	}
+
+	var handleShebeiZPEList = function()
+	{
+
+	}
+
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	zone-product-equipment tag at 园区-区域, 区域-生产线, 生产线-设备
@@ -4522,8 +4563,19 @@ var App = function () {
 
 	      }
 	      if(App.isPage("shebei-liebiequyu")){
+	      	handleShebeiZTag();
 	        handlePopUp();
 	      }
+	      if(App.isPage("shebei-liebieshengchanxian")){
+	      	handleShebeiZPTag();
+	      	handleShebiZList();
+	        handlePopUp();
+	      }
+	      if(App.isPage("shebei-liebieshebei")){
+	      	
+	        handlePopUp();
+	      }
+
 	      if(App.isPage("yonghu")){
 	        handlePopUp();
 	      }

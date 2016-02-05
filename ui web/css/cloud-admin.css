@@ -7354,6 +7354,11 @@ fieldset[disabled] .btn-yellow.active {
   padding: 10px 0;
   vertical-align: middle;
 }
+.zone-case-box .zone-case-box-zone {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .zone-case-box .title {
   text-align: left;
   margin-left: 20px;
