@@ -707,6 +707,14 @@ pre code {
   margin-bottom: 30px;
   max-height: 1200px;
 }
+
+.row.production-line-row.warining-info{
+  bottom: 0;
+  position: fixed;
+  z-index: 999;
+  margin-bottom: 0;
+  width: 100%;
+}
 .row.production-line-row .form-group {
   padding-left: 50px;
   padding-right: 50px;
