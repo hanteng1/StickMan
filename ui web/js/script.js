@@ -301,6 +301,21 @@ var App = function () {
 
         }
 
+      }else if(eq.parents(".side-hidden-bar").hasClass("shebeiye")){
+
+      	sessionStorage.setItem('zone_id', eq.parents(".has-sub-sub").attr("id"));
+      	sessionStorage.setItem('product_id', eq.parents(".has-sub-sub-sub").attr("id"));
+      	sessionStorage.setItem('equipment_id', eq.attr("id"));
+      	
+      	if(eq.hasClass("running")){
+      		sessionStorage.setItem('equipment_running', 'running');
+      	}else{
+      		sessionStorage.setItem('equipment_running', 'not-running');
+      	}
+
+      	//re-direct url to the equipment page
+      	window.location = "设备-基础信息.html";
+
       }else {
       	//alert(eq.parents(".has-sub-sub").attr("id") + "   "  +  eq.parents(".has-sub-sub-sub").attr("id") + "    " + eq.attr("id"));
       	//zone_id = eq.parents(".has-sub-sub").attr("id");
@@ -337,6 +352,9 @@ var App = function () {
 			sessionStorage.setItem('zone_id', $(this).attr("id"));
 			window.location = "设备-列表生产线.html";
 		});
+
+		jQuery('#side-hidden-bar').addClass("shebeiye");
+
 	}
 
 	var handleShebeiZPTag = function()
@@ -360,6 +378,9 @@ var App = function () {
 		zone_id = sessionStorage.getItem('zone_id');
 		var zpelist = $(".zone-product-equipment-list");
 		$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线</span></li></ul>').appendTo(zpelist);
+		
+		jQuery('#side-hidden-bar').addClass("shebeiye");
+
 	}
 
 	var handleShebeiZPList = function()
@@ -368,6 +389,9 @@ var App = function () {
 		product_id = sessionStorage.getItem('product_id');
 		var zpelist = $(".zone-product-equipment-list");
 		$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">设备</span></li></ul>').appendTo(zpelist);
+	
+		jQuery('#side-hidden-bar').addClass("shebeiye");
+
 	}
 
 	var handleShebeiZPEList = function()
@@ -389,10 +413,11 @@ var App = function () {
 			$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left in-active">设备 '+equipment_id+'</span><i class="fa fa-clock-o in-active"></i></li></ul>').appendTo(zpelist);
 		}
 
-		//one more step
-		alert("ggggg");
-		var reset_device = $(".reset-device");
-		$('设备'+equipment_id+'确认重启?').appendTo(reset_device);
+		//one more thing
+		jQuery('#side-hidden-bar').addClass("shebeiye");
+
+
+		//cant handle the invisible staff, like the popup
 
 	}
 
@@ -4575,9 +4600,9 @@ var App = function () {
 	      	handleXcharts();
 	      }
 	      if(App.isPage("shebei-jichuxinxi")){
+	      	handleShebeiZPEList();
 	        handleXcharts();
 	        handlePopUp();
-	        handleShebeiZPEList();
 	      }
 	      if(App.isPage("shebei-diannengzhiliangcanshu")){
 	        handleXcharts();
