@@ -4021,7 +4021,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: #20b2fa;
   cursor: default;
 }
-.panel-full-body .nav-tabs > li > a .add-button:hover{
+.panel-full-body .nav-tabs > li > a .add-button:hover,
+.panel-full-body .nav-tabs > li.tab .add-button:hover{
   cursor: pointer;
 }
 .nav-tabs.nav-justified {
@@ -7129,7 +7130,7 @@ fieldset[disabled] .btn-yellow.active {
 }
 /* Badges */
 .badge-green {
-  background-color: #a8bc7b;
+  background-color: #21bf87;
 }
 .badge-orange {
   background-color: #f0ad4e;
@@ -7138,7 +7139,7 @@ fieldset[disabled] .btn-yellow.active {
   background-color: #d9534f;
 }
 .badge-blue {
-  background-color: #70afc4;
+  background-color: #20b2fa;
 }
 /* Scroller */
 .scroller {
@@ -7347,21 +7348,24 @@ fieldset[disabled] .btn-yellow.active {
   margin-bottom: 15px;
   margin-left: 10px;
   margin-right: 10px;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
-  background-color: #eeeeee;
+  background-color: #fbfbfb;
   padding: 10px 0;
   vertical-align: middle;
 }
 .zone-case-box .title {
   text-align: left;
   margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 20px;
   font-size: 18px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e4e4e4;
 }
 .zone-case-box .product-line {
+  width: 80%;
+  margin-left: 10%;
   margin-bottom: 10px;
   min-height: 90px;
   border-bottom: 1px solid #e4e4e4;
@@ -7381,11 +7385,11 @@ fieldset[disabled] .btn-yellow.active {
 }
 
 .zone-case-box .product-line .badge {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
+  width: 66px;
+  height: 66px;
+  border-radius: 66px;
   font-size: 32px;
-  padding-top: 5px;
+  padding-top: 15px;
   margin-right: 20px;
 }
 
@@ -7404,6 +7408,7 @@ fieldset[disabled] .btn-yellow.active {
   height: 45px;
   border-radius: 30px;
   font-size: 16px;
+  background-color: #f1f1f1;
   color: #c8c8c8;
 }
 
@@ -7429,12 +7434,12 @@ fieldset[disabled] .btn-yellow.active {
   }
 
   .zone-case-box .product-line .badge {
-    width: 38px;
-    height: 38px;
-    border-radius: 35px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
     font-size: 24px;
-    padding-top: 4px;
-    margin-right: 15px;
+    padding-top: 12px;
+    margin-right: 10px;
   }
 
 
@@ -7570,6 +7575,8 @@ fieldset[disabled] .btn-yellow.active {
   width: 160px;
   max-width: 70%;
   font-size: 18px;
+  background-color: #f1f1f1;
+  color: #c8c8c8;
 }
 
 .table-case-box.status-offline .icon,
