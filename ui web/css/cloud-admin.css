@@ -7141,6 +7141,9 @@ fieldset[disabled] .btn-yellow.active {
 .badge-blue {
   background-color: #20b2fa;
 }
+.badge-grey {
+  background-color: #dedede;
+}
 /* Scroller */
 .scroller {
   margin: 0 !important;
@@ -7355,6 +7358,15 @@ fieldset[disabled] .btn-yellow.active {
   vertical-align: middle;
 }
 .zone-case-box .zone-case-box-zone {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.zone-case-box .zone-case-box-product {
+  text-decoration: none;
+  cursor: pointer;
+}
+.table-case-box .zone-case-box-equipment {
   text-decoration: none;
   cursor: pointer;
 }
