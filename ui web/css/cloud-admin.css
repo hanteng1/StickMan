@@ -9329,31 +9329,35 @@ div[data-role="editor-toolbar"] {
   min-width: 0;
   padding-left: 33px !important;
 }
-.login-box button {
+.login-box .button {
   width: 100%;
 }
 .login-box-plain {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 7px 7px 7px 7px;
-  margin-top: 215px;
-  padding: 0px 0px 60px;
-  position: relative;
-  width: 550px;
-  height: 640px;
+  padding: 0px 0px 50px;
+  width: 470px;
+  height: 550px;
+
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: -235px;
+
 }
 .login-box-plain input,
 .login-box-plain textarea {
   background: none repeat scroll 0 0 #FFFFFF;
-  font-size: 15px;
+  font-size: 20px;
   margin: 0;
   padding: 10px 8px 8px;
   width: 100%;
   border-radius: 6px;
   box-shadow: none;
   min-width: 0;
-  padding-left: 33px !important;
+  padding-left: 45px !important;
 }
-.login-box-plain button {
+.login-box-plain .button {
   width: 100%;
 }
 .login-box form i,
@@ -9362,7 +9366,7 @@ div[data-role="editor-toolbar"] {
   display: block !important;
   font-size: 16px;
   height: 16px;
-  margin: 9px 2px 4px 10px;
+  margin: 9px 2px 4px 15px;
   position: absolute !important;
   text-align: center;
   width: 16px;
@@ -9370,17 +9374,17 @@ div[data-role="editor-toolbar"] {
 }
 .login-box-plain .login-title {
   background: none repeat scroll 0 0 #008ace;
-  height: 100px;
+  height: 84px;
   width: 100%;
   border-radius: 7px 7px 0px 0px;
-  margin-bottom: 45px;
+  margin-bottom: 36px;
   color: #e7e7e7;
   padding: 0;
 }
 .login-box-plain .login-title > ul {
   list-style: none;
-  margin-left: 60px;
-  padding-top: 18px;
+  margin-left: 50px;
+  padding-top: 16px;
 }
 
 .login-box-plain .login-title > ul > li {
@@ -9390,16 +9394,16 @@ div[data-role="editor-toolbar"] {
 }
 
 .login-box-plain .login-title .name {
-  font-size: 26px;
+  font-size: 20px;
 }
 .login-box-plain .login-title img {
-  width: 128px;
-  height: 64px;
+  width: 109px;
+  height: 55px;
 }
 
 .login-box-plain .login-body {
-  padding-left: 94px;
-  padding-right: 94px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .login-box-plain .login-body form {
@@ -9407,15 +9411,15 @@ div[data-role="editor-toolbar"] {
 }
 
 .login-box-plain .login-body form .form-group{
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   margin-top: 0;
 }
 .login-box-plain .login-body form .form-group i{
-  margin-top: 20px;
+  margin-top: 17px;
   font-size: 26px;
 }
 .login-box-plain .login-body form .form-group input {
-  height: 65px;
+  height: 55px;
   border-radius: 30px;
 }
 
@@ -9430,24 +9434,24 @@ div[data-role="editor-toolbar"] {
   padding: 0;
 }
 .login-box-plain .login-body form .form-group.verification > ul > li a{
-  height: 65px;
-  width: 150px;
+  height: 55px;
+  width: 128px;
   border-radius: 40px;
   background-color: #21b3f9;
   color: #ffffff;
   font-size: 23px;
-  padding-top: 15px;
+  padding-top: 13px;
 }
 .login-box-plain .login-body form .form-group input.verification-form {
   padding-left: 0;
-  width: 200px;
+  width: 170px;
 }
-.login-box-plain .login-body form .form-group button{
-  height: 60px;
-  border-radius: 40px;
+.login-box-plain .login-body form .form-group .button{
+  height: 50px;
+  border-radius: 34px;
   font-size: 22px;
   background-color: #1fc049;
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
 .login-box .social-login a,
@@ -9464,31 +9468,34 @@ div[data-role="editor-toolbar"] {
 
 @media (max-width: 1350px){
   .login-box-plain {
-    margin-top: 100px;
-    padding: 0px 0px 46px;
-    width: 420px;
-    height: 490px;
+    padding: 0px 0px 39px;
+    width: 360px;/*420*/
+    height: 420px;
+
+    top: 85px;
+    left: 50%;
+    margin-left: -180px;
+
   }
   .login-box-plain input,
   .login-box-plain textarea {
-    font-size: 12px;
+    font-size: 16px;
     padding: 7px 6px 6px;
-    padding-left: 25px !important;
+    padding-left: 35px !important;
   }
   .login-box-plain form i {
-    font-size: 77px;
-    height: 9px;
-    margin: 4px 0px 2px 5px;
-    width: 9px;
+    font-size: 66px;
+    height: 7px;
+    margin: 3px 0px 2px 12px;
+    width: 7px;
   }
   .login-box-plain .login-title {
-    height: 76px;
-    margin-bottom: 34px;
-
+    height: 66px;
+    margin-bottom: 29px;
   }
   .login-box-plain .login-title > ul {
-    margin-left: 46px;
-    padding-top: 13px;
+    margin-left: 20px;
+    padding-top: 11px;
   }
 
   .login-box-plain .login-title > ul > li {
@@ -9496,47 +9503,48 @@ div[data-role="editor-toolbar"] {
   }
 
   .login-box-plain .login-title .name {
-    font-size: 20px;
+    font-size: 17px;
   }
   .login-box-plain .login-title img {
-    width: 98px;
-    height: 49px;
+    width: 84px;
+    height: 42px;
   }
 
   .login-box-plain .login-body {
-    padding-left: 72px;
-    padding-right: 72px;
+    padding-left: 61px;
+    padding-right: 61px;
   }
-
 
   .login-box-plain .login-body form .form-group{
-    margin-bottom: 17px;
+    margin-bottom: 14px;
   }
   .login-box-plain .login-body form .form-group i{
-    margin-top: 15px;
-    font-size: 20px;
+    margin-top: 13px;
+    font-size: 17px;
   }
   .login-box-plain .login-body form .form-group input {
-    height: 50px;
-    border-radius: 23px;
+    height: 42px;
+    border-radius: 20px;
   }
 
   .login-box-plain .login-body form .form-group.verification > ul > li a{
-    height: 50px;
-    width:115px;
-    border-radius: 40px;
+    height: 42px;
+    width: 98px;
+    border-radius: 34px;
     font-size: 16px;
-    padding-top: 12px;
+    padding-top: 10px;
   }
   .login-box-plain .login-body form .form-group input.verification-form {
     padding-left: 0;
-    width: 150px;
+    width: 120px;
+    margin-right: 10px;
   }
-  .login-box-plain .login-body form .form-group button{
-    height: 46px;
-    border-radius: 30px;
+  .login-box-plain .login-body form .form-group .button{
+    height: 40px;
+    border-radius: 26px;
     font-size: 16px;
-    margin-top: 15px;
+    margin-top: 13px;
+    padding-top: 7px;
   }
 
 }
@@ -10433,5 +10441,37 @@ ul.stats li small {
 /* WELL BOTTOM */
 .well.well-bottom {
   border-radius: 0 0 4px 4px;
+}
+
+
+.contact-script {
+  text-align: center;
+  color: #999999;
+  background-color: #ffffff;
+}
+
+.contact-script.login-page {
+  position: fixed;
+  bottom: 20px;
+  width:80%;
+  margin: 0 0 0 -40%;
+  left:50%;
+  color: #9c9f9f;
+  background-color: transparent;
+}
+
+.contact-script a,
+.contact-script a:hover,
+.contact-script a:focus
+{
+  color: #999999;
+  text-decoration: none;
+}
+.contact-script.login-page a,
+.contact-script.login-page a:hover,
+.contact-script.login-page a:focus
+{
+  color: #9c9f9f;
+  text-decoration: none;
 }
 

@@ -9,7 +9,6 @@
 	<meta name="author" content="">
 	<!-- STYLESHEETS --><!--[if lt IE 9]><script src="js/flot/excanvas.min.js"></script><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
 	<link rel="stylesheet" type="text/css" href="css/cloud-admin.css" >
-	
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<!-- DATE RANGE PICKER -->
 	<link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
@@ -29,7 +28,7 @@
 			<section id="login" class="visible">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4 col-md-offset-4">
+						<div class="">
 
 							<div class="login-box-plain">
 
@@ -49,7 +48,7 @@
 									<form role="form">
 								  		<div class="form-group">
 											<i class="fa fa-user"></i>
-											<input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的用户名">
+											<input type="text" class="form-control" id="" placeholder="请输入您的用户名">
 								  		</div>
 								  		<div class="form-group"> 
 											<i class="fa fa-lock"></i>
@@ -59,7 +58,7 @@
 								  
 								  		<div class="form-group verification"> 
 											<ul>
-												<li><input type="text" class="form-control verification-form" id="exampleInputVerify" placeholder="请输入验证码"></li>
+												<li><input type="text" class="form-control verification-form" id="exampleInputVerify" placeholder="验证码"></li>
 												<li>
 													<a href="" class="btn btn-default">A B C D</a>
 												</li>
@@ -68,7 +67,7 @@
 
 
 								  		<div class="form-group">
-											<button type="submit" class="btn btn-danger">登 录</button>
+											<a class="button btn btn-danger" href="园区-区域数据.html">登 录</a>
 								  		</div>
 									</form>
 
@@ -86,100 +85,24 @@
 				</div>
 			</section>
 			<!--/LOGIN -->
-			<!-- REGISTER -->
-			<section id="register">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-md-offset-4">
-							<div class="login-box-plain">
-								<h2 class="bigintro">Register</h2>
-								<div class="divide-40"></div>
-								<form role="form">
-								  <div class="form-group">
-									<label for="exampleInputName">Full Name</label>
-									<i class="fa fa-font"></i>
-									<input type="text" class="form-control" id="exampleInputName" >
-								  </div>
-								  <div class="form-group">
-									<label for="exampleInputUsername">Username</label>
-									<i class="fa fa-user"></i>
-									<input type="text" class="form-control" id="exampleInputUsername" >
-								  </div>
-								  <div class="form-group">
-									<label for="exampleInputEmail1">Email address</label>
-									<i class="fa fa-envelope"></i>
-									<input type="email" class="form-control" id="exampleInputEmail1" >
-								  </div>
-								  <div class="form-group"> 
-									<label for="exampleInputPassword1">Password</label>
-									<i class="fa fa-lock"></i>
-									<input type="password" class="form-control" id="exampleInputPassword1" >
-								  </div>
-								  <div class="form-group"> 
-									<label for="exampleInputPassword2">Repeat Password</label>
-									<i class="fa fa-check-square-o"></i>
-									<input type="password" class="form-control" id="exampleInputPassword2" >
-								  </div>
-								  <div class="form-actions">
-									<label class="checkbox"> <input type="checkbox" class="uniform" value=""> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
-									<button type="submit" class="btn btn-success">Sign Up</button>
-								  </div>
-								</form>
-								<!-- SOCIAL REGISTER -->
-								<div class="divide-20"></div>
-								<div class="center">
-									<strong>Or register using your social account</strong>
-								</div>
-								<div class="divide-20"></div>
-								<div class="social-login center">
-									<a class="btn btn-primary btn-lg">
-										<i class="fa fa-facebook"></i>
-									</a>
-									<a class="btn btn-info btn-lg">
-										<i class="fa fa-twitter"></i>
-									</a>
-									<a class="btn btn-danger btn-lg">
-										<i class="fa fa-google-plus"></i>
-									</a>
-								</div>
-								<!-- /SOCIAL REGISTER -->
-								<div class="login-helpers">
-									<a href="#" onclick="swapScreen('login');return false;"> Back to Login</a> <br>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--/REGISTER -->
-			<!-- FORGOT PASSWORD -->
-			<section id="forgot">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-md-offset-4">
-							<div class="login-box-plain">
-								<h2 class="bigintro">Reset Password</h2>
-								<div class="divide-40"></div>
-								<form role="form">
-								  <div class="form-group">
-									<label for="exampleInputEmail1">Enter your Email address</label>
-									<i class="fa fa-envelope"></i>
-									<input type="email" class="form-control" id="exampleInputEmail1" >
-								  </div>
-								  <div class="form-actions">
-									<button type="submit" class="btn btn-info">Send Me Reset Instructions</button>
-								  </div>
-								</form>
-								<div class="login-helpers">
-									<a href="#" onclick="swapScreen('login');return false;">Back to Login</a> <br>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- FORGOT PASSWORD -->
+			
 	</section>
+
+
+	<section class="contact-script login-page">
+		<div class="about-us">
+			<a href=""><span>联系我们</span></a>
+			<span>|</span>
+			<a href=""><span>关于我们</span></a>
+		</div>
+
+		<div class="declaration">
+			<span>版权所有 @ 2016 北京妙微科技有限公司</span>
+		</div>
+
+	</section>
+
+
 	<!--/PAGE -->
 	<!-- JAVASCRIPTS -->
 	<!-- Placed at the end of the document so the pages load faster -->
