@@ -1073,11 +1073,11 @@ var App = function () {
   				if(cur_toggle_margin_left == "380px")
   				{
   					jQuery('#side-hidden-bar-toggle').css("margin-left", "291px");
-  					jQuery('#main-content').css("margin-left", "360px");
+  					jQuery('#main-content').css("margin-left", "310px");
   				}else if(cur_toggle_margin_left == "100px")
   				{
 					jQuery('#side-hidden-bar-toggle').css("margin-left", "76px");
-					jQuery('#main-content').css("margin-left", "130px");
+					jQuery('#main-content').css("margin-left", "95px");  //130
   				}
 
   				window_resized_small = true;
@@ -1089,11 +1089,11 @@ var App = function () {
   				if(cur_toggle_margin_left == "291px")
   				{
   					jQuery('#side-hidden-bar-toggle').css("margin-left", "380px");
-  					jQuery('#main-content').css("margin-left", "450px");
+  					jQuery('#main-content').css("margin-left", "405px");
   				}else if(cur_toggle_margin_left == "76px")
   				{
 					jQuery('#side-hidden-bar-toggle').css("margin-left", "100px");
-					jQuery('#main-content').css("margin-left", "160px");
+					jQuery('#main-content').css("margin-left", "125px");
   				}
 
   				window_resized_small = false;
@@ -1108,12 +1108,12 @@ var App = function () {
             	var cur_margin_left = jQuery(this).css("margin-left");
 
             	if(cur_margin_left == "100px") {   //the number is important, see css file
-            		jQuery('#main-content').animate({marginLeft:"450px"});
+            		jQuery('#main-content').animate({marginLeft:"405px"});
                 	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
                 	$(".side-hidden-bar").fadeToggle(100, function (){
                 	});
             	}else{
-            		jQuery('#main-content').animate({marginLeft:"360px"});
+            		jQuery('#main-content').animate({marginLeft:"310px"});
                 	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"291px"});
                 	$(".side-hidden-bar").fadeToggle(100, function (){
                 	});
@@ -1131,10 +1131,10 @@ var App = function () {
             	var cur_margin_left = jQuery(this).css("margin-left");
             	if(cur_margin_left == "380px")
             	{
-            		jQuery('#main-content').animate({marginLeft:"160px"});
+            		jQuery('#main-content').animate({marginLeft:"125px"}); //160
                		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"100px"});
             	}else{
-            		jQuery('#main-content').animate({marginLeft:"130px"});
+            		jQuery('#main-content').animate({marginLeft:"95px"});  //130
                		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"76px"});
             	}
 
@@ -1315,10 +1315,10 @@ var App = function () {
 
 	      		var cur_margin_left = jQuery(".side-hidden-bar-toggle").css("margin-left");
 	      		if(cur_margin_left == "100px") { 
-	                jQuery('#main-content').animate({marginLeft:"450px"});
+	                jQuery('#main-content').animate({marginLeft:"405px"});
 	                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
 	            }else{
-	            	jQuery('#main-content').animate({marginLeft:"360px"});
+	            	jQuery('#main-content').animate({marginLeft:"310px"});
 	                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"291px"});
 	            }
 
@@ -2775,7 +2775,7 @@ var App = function () {
       tt.className = 'ex-tooltip';
       document.body.appendChild(tt);
       
-      var data = [{"xScale":"linear","comp":[],"main":[{"className":".main.l1","data":[{"y":15,"x":0},{"y":11,"x":03},{"y":8,"x":06},{"y":10,"x":09},{"y":1,"x":12},{"y":6,"x":15},{"y":8,"x":18},{"y":8,"x":21},{"y":8,"x":24},{"y":8,"x":27},{"y":8,"x":30},{"y":8,"x":33},{"y":8,"x":36},{"y":8,"x":39},{"y":8,"x":42},{"y":8,"x":45},{"y":8,"x":48}]}],"type":"line-dotted","yScale":"linear"}
+      var data = [{"xScale":"linear","comp":[],"main":[{"className":".main.l1","data":[{"y":15,"x":0},{"y":11,"x":03},{"y":8,"x":06},{"y":10,"x":09},{"y":1,"x":12},{"y":6,"x":15},{"y":8,"x":18},{"y":6,"x":21},{"y":9,"x":24},{"y":10,"x":27},{"y":11,"x":30},{"y":10,"x":33},{"y":15,"x":36},{"y":17,"x":39},{"y":18,"x":42},{"y":14,"x":45},{"y":12,"x":48}]}],"type":"line-dotted","yScale":"linear"}
                 ];
 
         var order = [0],

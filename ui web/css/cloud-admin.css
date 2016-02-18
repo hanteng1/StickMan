@@ -7159,14 +7159,16 @@ fieldset[disabled] .btn-yellow.active {
 }
 /* Content */
 #main-content {
-  margin-left: 160px;
+  margin-left: 125px;
   /* the min-width value is very important */
   min-width: 1000px;
+  margin-top: -20px;
 }
 
 @media (max-width: 1350px){
   #main-content {
-    margin-left: 130px;
+    margin-left: 95px;
+    margin-top: -40px;
   }
 }
 /* Content */
@@ -10207,12 +10209,12 @@ div[data-role="editor-toolbar"] {
 }
 .dashbox .zone-image {
   background: url("../img/zone-image.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-  height: 232px;
-  width: 370px;
+  height: 140px;
+  width: 300px;
   max-width: 100%;
   font-size: 32px;
   color: #eeeeee;
-  padding-top: 85px;
+  padding-top: 50px;
 }
 .dashbox .green {
   background-color: #3ea055;
@@ -10271,6 +10273,13 @@ div[data-role="editor-toolbar"] {
 }
 
 @media (max-width: 1350px){
+  .dash-div {
+    min-height: 150px;
+  }
+
+  .dash-div.small {
+    padding-top: 25px;
+  }
 
   .dashbox .panel-body {
     width: 202px;
@@ -10289,10 +10298,10 @@ div[data-role="editor-toolbar"] {
   }
   
   .dashbox .zone-image {
-    width: 284px;
-    height: 180px;
+    width: 230px;  /*284 180 */
+    height: 109px;
     font-size: 24px;
-    padding-top: 65px;
+    padding-top: 35px;
   }
 
   .dashbox .panel-left {
