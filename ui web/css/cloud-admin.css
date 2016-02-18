@@ -708,12 +708,16 @@ pre code {
   max-height: 1200px;
 }
 
-.row.production-line-row.warining-info{
-  bottom: 0;
+.row.production-line-row.warning-info{
   position: fixed;
-  z-index: 999;
   margin-bottom: 0;
-  width: 100%;
+  bottom: 0;
+  z-index: 1999;
+  width: 1000px;
+  height: 40px;
+  left: 50%;
+  margin-left: -500px;
+  border-radius: 5px 5px 0 0;
 }
 .row.production-line-row .form-group {
   padding-left: 50px;
@@ -1563,7 +1567,7 @@ th {
   display: none;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
 
   .panel-body .table-bordered > tbody > tr > td {
     padding-left: 15px;
@@ -1823,7 +1827,7 @@ output {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .data-form-control {
     width: 219px;
     height: 43px;
@@ -2110,7 +2114,7 @@ textarea.form-control {
   margin-top: 20px;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .table .radio input[type="radio"],
   .table .radio-inline input[type="radio"],
   .table .checkbox input[type="checkbox"],
@@ -3994,7 +3998,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #eeeeee;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .panel-full-body .nav-tabs {
     margin-bottom: 25px;
   }
@@ -4713,7 +4717,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #f4f4f4;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .mbreadcrumb > li {
     height: 60px;
     min-width: 60px;
@@ -7161,11 +7165,11 @@ fieldset[disabled] .btn-yellow.active {
 #main-content {
   margin-left: 125px;
   /* the min-width value is very important */
-  min-width: 1000px;
+  min-width: 1100px;
   margin-top: -20px;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   #main-content {
     margin-left: 95px;
     margin-top: -40px;
@@ -7227,21 +7231,30 @@ fieldset[disabled] .btn-yellow.active {
 
 
 .equip-row {
-  padding:30px 40px 60px;
+  padding:30px 40px 40px;
 }
 .equip-row .equip-row-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+   
 }
 
 .equip-row .equip-row-title-sub {
   float: right;
-  margin-left: 20px;
+  margin-left: 15px;
+  font-size: 14px;
+  margin-top: 5px;
 } 
 
 .equip-row .equip-row-title-sub .red {
   color: #e41b17;
   margin-left: 10px;
+}
+
+@media (max-width: 1450px){
+  .equip-row {
+    padding:20px 40px 30px;
+  }
 }
 
 .row.chart-title{
@@ -7250,16 +7263,14 @@ fieldset[disabled] .btn-yellow.active {
 }
 .row.warning{
   text-align: center;
-  margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 32px;
+  font-size: 16px;
   color: #e41b17;
 }
 
 .row.warning .row-warning {
-  padding-top: 20px;
-  margin-right: 20px;
+  padding-top: 0px;
 }
 
 .row .clearfix {
@@ -7323,7 +7334,7 @@ fieldset[disabled] .btn-yellow.active {
 }
 
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   #content .page-header {
     margin: 0px 12px 23px;
   }
@@ -7440,7 +7451,7 @@ fieldset[disabled] .btn-yellow.active {
 }
 
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .zone-case-box {
     width: 305px;
     height: 300px;
@@ -7616,7 +7627,7 @@ fieldset[disabled] .btn-yellow.active {
 }
 
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .table-case-box {
     width: 219px;
     height: 257px;
@@ -7748,7 +7759,7 @@ fieldset[disabled] .btn-yellow.active {
   padding-top: 8px;
 } 
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .box .box-title .tools .btn-group > .btn.big{
     width: 77px;
     height: 30px;
@@ -7897,7 +7908,7 @@ fieldset[disabled] .btn-yellow.active {
   color: #919191;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .box.border > .box-title,
   .box.solid > .box-title {
     height: 55px;
@@ -9468,7 +9479,7 @@ div[data-role="editor-toolbar"] {
   text-decoration: none !important;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .login-box-plain {
     padding: 0px 0px 39px;
     width: 360px;/*420*/
@@ -9568,7 +9579,7 @@ div[data-role="editor-toolbar"] {
   text-align: center;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .bigintro {
     font-size: 30px;
     line-height: 38px;
@@ -10272,7 +10283,7 @@ div[data-role="editor-toolbar"] {
   font-size: 22px;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .dash-div {
     min-height: 150px;
   }

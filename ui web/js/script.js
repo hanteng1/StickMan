@@ -1066,7 +1066,7 @@ var App = function () {
   			///$(window).height(); // New height
   			//window_resized_small
   			//window_resized_big 
-  			if($(window).width() <= 1350 && window_resized_small == false) {
+  			if($(window).width() <= 1450 && window_resized_small == false) {
   				//small size css
   				var cur_toggle_margin_left = jQuery('#side-hidden-bar-toggle').css("margin-left");
 
@@ -1082,7 +1082,7 @@ var App = function () {
 
   				window_resized_small = true;
   				window_resized_big = false;
-  			}else if ($(window).width() > 1350 && window_resized_big == false)
+  			}else if ($(window).width() > 1450 && window_resized_big == false)
   			{
   				var cur_toggle_margin_left = jQuery('#side-hidden-bar-toggle').css("margin-left");
 
@@ -2783,6 +2783,8 @@ var App = function () {
         xFormat = d3.time.format('%A'),
         chart = new xChart('line-dotted', data[order[i]], '#chart1', {
         axisPaddingTop: 5,
+        axisPaddingRight: 0,
+        xMax: 50, //change accordingly
         "mouseover": function (d, i) {
             var pos = $(this).offset();
             $(tt).text(d.x + ': ' + d.y)

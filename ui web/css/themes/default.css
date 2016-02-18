@@ -151,7 +151,7 @@ input::-webkit-input-placeholder {
 }
 /* End Navbar */
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .navbar {
     height: 60px;  /*130/100 == 1.3, 1.3 should be enough to tranfer from 1650px to 1280 px*/
   }
@@ -248,7 +248,7 @@ input::-webkit-input-placeholder {
   border-top: none;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   #sidebar {
     width: 76px;
     top: 60px;
@@ -312,7 +312,7 @@ input::-webkit-input-placeholder {
   content: "\f0d8";
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .side-hidden-bar .sidebar-menu .hidden-search-bar .search {
     width: 186px;
   }
@@ -367,7 +367,7 @@ input::-webkit-input-placeholder {
   display: none;
 } 
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .side-hidden-bar-toggle {
     margin-left: 76px;
     top: 160px;
@@ -446,7 +446,7 @@ input::-webkit-input-placeholder {
   margin-right: 0;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   .sidebar .sidebar-menu > ul > li {
     height: 70px;
   }
@@ -870,7 +870,7 @@ input::-webkit-input-placeholder {
 
 
 /*Side hidden bar font size resize  */
-@media (max-width: 1350px){ 
+@media (max-width: 1450px){ 
   .sidebar-menu ul > li > a .arrow:before,
   .sidebar-menu ul > li > ul > li > a .arrow:before,
   .sidebar-menu ul > li > ul > li > ul > li > a .arrow:before {
