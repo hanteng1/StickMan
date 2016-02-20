@@ -408,9 +408,9 @@ var App = function () {
 		var zpelist = $(".zone-product-equipment-list");
 		if(equipment_running == "running")
 		{
-			$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left active">设备 '+equipment_id+'</span><i class="fa fa-check-circle active"></i></li></ul>').appendTo(zpelist);
+			$('<ul><li><a href="设备-列表区域.html"><span class="content-title pull-left">园区</span></a><i class="fa fa-angle-right"></i></li><li><a href="设备-列表生产线.html"><span class="content-title pull-left">区域 '+zone_id+'</span></a><i class="fa fa-angle-right"></i></li><li><a href="设备-列表设备.html"><span class="content-title pull-left">生产线 '+product_id+'</span></a><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left active">设备 '+equipment_id+'</span><i class="fa fa-check-circle active"></i></li></ul>').appendTo(zpelist);
 		}else{
-			$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left in-active">设备 '+equipment_id+'</span><i class="fa fa-clock-o in-active"></i></li></ul>').appendTo(zpelist);
+			$('<ul><li><a href="设备-列表区域.html"><span class="content-title pull-left">园区</span></a><i class="fa fa-angle-right"></i></li><li><a href="设备-列表生产线.html"><span class="content-title pull-left">区域 '+zone_id+'</span></a><i class="fa fa-angle-right"></i></li><li><a href="设备-列表设备.html"><span class="content-title pull-left">生产线 '+product_id+'</span></a><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left in-active">设备 '+equipment_id+'</span><i class="fa fa-clock-o in-active"></i></li></ul>').appendTo(zpelist);
 		}
 
 		//one more thing

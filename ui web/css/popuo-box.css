@@ -48,7 +48,7 @@
   height: auto;
 }
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   #small-dialog {
     padding: 35px 15px;
     width: 770px;
@@ -56,7 +56,10 @@
   }
 
   #small-dialog-character,
-  #small-dialog-user {
+  #small-dialog-view-character,
+  #small-dialog-user,
+  #small-dialog-view-user
+   {
     padding: 35px 15px;
     width: 770px;
     margin: 30px auto;
@@ -666,6 +669,12 @@ button::-moz-focus-inner {
   z-index: 2;
   background-color: #3090C7;
 }
+.small-dialog-form-btn > .btn.cancel:hover,
+.small-dialog-form-btn > .btn.cancel:focus,
+.small-dialog-form-btn > .btn.cancel:active {
+  z-index: 2;
+  background-color: #d4d4d4;
+}
 
 #small-dialog-add-zone .add-zone-form-control,
 #small-dialog-add-product .add-zone-form-control,
@@ -727,7 +736,17 @@ button::-moz-focus-inner {
   z-index: 2;
   background-color: #3090C7;
 }
-
+#small-dialog-add-zone .small-dialog-form-btn > .btn.cancel:hover,
+#small-dialog-add-zone .small-dialog-form-btn > .btn.cancel:focus,
+#small-dialog-add-zone .small-dialog-form-btn > .btn.cancel:active,
+#small-dialog-add-product .small-dialog-form-btn > .btn.cancel:hover,
+#small-dialog-add-product .small-dialog-form-btn > .btn.cancel:focus,
+#small-dialog-add-product .small-dialog-form-btn > .btn.cancel:active,
+#small-dialog-add-equipment .small-dialog-form-btn > .btn.cancel:hover,
+#small-dialog-add-equipment .small-dialog-form-btn > .btn.cancel:focus,
+#small-dialog-add-equipment .small-dialog-form-btn > .btn.cancel:active  {
+  background-color: #d4d4d4;
+} 
 
 p.div-form-radio {
   display: inline;
@@ -736,7 +755,7 @@ p.div-form-radio {
 }
 
 
-@media (max-width: 1350px){
+@media (max-width: 1450px){
   #small-dialog .title.main-title,
   #small-dialog-right .title.main-title,
   #small-dialog-add-zone .title.main-title,

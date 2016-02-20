@@ -3561,7 +3561,8 @@ input[type="button"].btn-block {
 }
 .character-form-btn > .btn {
   float: right;
-  margin-right: 20px;
+  margin-right: 160px;
+  margin-top: 20px;
   background-color: #20b2fa;
   color: #ffffff;
   width: 150px;
@@ -3573,6 +3574,14 @@ input[type="button"].btn-block {
 .character-form-btn > .btn:active {
   z-index: 2;
   background-color: #3090C7;
+}
+
+@media (max-width: 1450px){
+  .character-form-btn > .btn {
+    margin-right: 80px;
+    margin-top: 18px;
+    width: 130px;
+  }
 }
 
 .setting-form-btn > .btn {
@@ -3931,7 +3940,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 0px 15px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -7184,7 +7193,6 @@ fieldset[disabled] .btn-yellow.active {
   /* the min-width value is very important */
   min-width: 1100px;
   margin-top: -20px;
-
 }
 
 @media (max-width: 1450px){
@@ -7404,6 +7412,13 @@ fieldset[disabled] .btn-yellow.active {
   .row .clearfix.zone-product-equipment-list > ul > li i {
     padding-top: 16px;
   }
+
+  .row .clearfix.bottom-row > ul > li {
+    height: 60px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 18px;
+  }
 }
 
 /* Patterns */
@@ -7434,15 +7449,18 @@ fieldset[disabled] .btn-yellow.active {
 .zone-case-box .zone-case-box-zone {
   text-decoration: none;
   cursor: pointer;
+  color: #8b8b8b;
 }
 
 .zone-case-box .zone-case-box-product {
   text-decoration: none;
   cursor: pointer;
+  color: #8b8b8b;
 }
 .table-case-box .zone-case-box-equipment {
   text-decoration: none;
   cursor: pointer;
+  color: #8b8b8b;
 }
 
 .zone-case-box .title {
@@ -7453,6 +7471,7 @@ fieldset[disabled] .btn-yellow.active {
   font-size: 18px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e4e4e4;
+  color: #333333;
 }
 .zone-case-box .product-line {
   width: 80%;
@@ -7462,8 +7481,26 @@ fieldset[disabled] .btn-yellow.active {
   border-bottom: 1px solid #e4e4e4;
 }
 
+.zone-case-box .product-line ul{
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.zone-case-box .product-line ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 45%;
+}
+.zone-case-box .product-line ul li.wenzi {
+  text-align: left;
+}
+.zone-case-box .product-line ul li.tubiao {
+  
+}
+
 .zone-case-box .product-line .content {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .zone-case-box .product-line .sub-content {
@@ -7521,7 +7558,7 @@ fieldset[disabled] .btn-yellow.active {
   }
 
   .zone-case-box .product-line .content {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .zone-case-box .product-line .badge {
@@ -7551,6 +7588,9 @@ fieldset[disabled] .btn-yellow.active {
   display: inline-block;
   clear: both;
   width: 90%;
+  max-width: 225px;
+  height: 190px;
+  margin-top: 10px;
   margin-bottom: 15px;
   margin-left: 10px;
   margin-right: 10px;
@@ -7573,21 +7613,42 @@ fieldset[disabled] .btn-yellow.active {
   padding-bottom: 5px;
   border-top: 1px solid #c4c4c4;
 }
+.user-case-box .detail .add-button {
+  width: 40%;
+}
 
+.user-case-box .detail button{
+  width: 40%;
+}
 .user-case-box .detail > .btn + .btn {
-  margin-left: 15px;
+  margin-left: 10%;
 }
 
 .user-case-box .icon {
   color: #38acec;
+  font-size: 28px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
+.row.character-user-row {
+  border-bottom: 1px solid #d8d8d8;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.row.character-user-row.last-row {
+  border: none;
+}
 .character-case-box {
   display: inline-block;
   clear: both;
-  width: 80%;
-  margin-top: 30px;
+  width: 90%;
+  max-width: 300px;
+  height: 400px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   border: 1px solid #c4c4c4;
@@ -7600,28 +7661,38 @@ fieldset[disabled] .btn-yellow.active {
 .character-case-box .title {
   font-size: 18px;
   color: #ffffff;
+
+  margin-top: 20px;
 }
 
 .character-case-box .icon {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: #ffffff;
+  font-size: 28px;
 }
 
 .character-case-box .detail {
   display: inline-block;
   width: 70%;
   margin-top: 10px;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 20px;
   border-top: 1px solid #ffffff;
 }
 .character-case-box .detail .add-button{
+  width: 80%;
   background-color: #ffffff;
+  margin-bottom: 10px;
+}
+.character-case-box .detail button {
+  width: 80%;
 }
 
 .character-arrow {
-  margin-top: 130px;
+  margin-top: 180px;
+  font-size: 36px;
+  color: #d8d8d8;
 }
 
 .table-case-box {
@@ -7640,7 +7711,7 @@ fieldset[disabled] .btn-yellow.active {
   vertical-align: middle;
 }
 .table-case-box.equip-case {
-  height: 360px;
+  height: 340px;
 }
 
 .table-case-box .title {
@@ -7662,6 +7733,11 @@ fieldset[disabled] .btn-yellow.active {
   padding-bottom: 20px;
   border-top: 1px solid #c4c4c4;
 }
+.table-case-box.equip-case .detail {
+  padding-top: 35px;
+}
+
+
 .table-case-box .detail button {
   width: 160px;
   max-width: 70%;
@@ -7690,7 +7766,7 @@ fieldset[disabled] .btn-yellow.active {
     padding: 20px 0;
   }
   .table-case-box.equip-case {
-    height: 277px;
+    height: 260px;
   }
 
   .table-case-box .title {
@@ -7709,9 +7785,77 @@ fieldset[disabled] .btn-yellow.active {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  .table-case-box.equip-case .detail {
+    padding-top: 25px;
+  }
   .table-case-box .detail button {
     width: 123px;
     font-size: 14px;
+  }
+
+  .character-case-box {
+    height: 300px;
+  }
+  .character-case-box .title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .character-case-box .icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .character-case-box .detail {
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .character-case-box .detail .add-button{
+    margin-bottom: 0px;
+  }
+
+  .character-arrow {
+    margin-top: 130px;
+    font-size: 28px;
+  }
+
+  .row.character-user-row {
+    border-bottom: 1px solid #d8d8d8;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  .user-case-box {
+    height: 145px;
+    margin-bottom: 10px;
+  }
+  .user-case-box .title {
+    font-size: 12px;
+  }
+  .user-case-box .detail {
+    margin-top: 8px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+  }
+  .user-case-box .detail .add-button {
+    width: 45%;
+  }
+  .user-case-box .detail button{
+    width: 45%;
+  }
+  .user-case-box .detail > .btn + .btn {
+    margin-left: 5%;
+  }
+
+  .user-case-box .icon {
+    font-size: 22px;
+    margin-bottom: 6px;
+    margin-top: 6px;
   }
 
 }
