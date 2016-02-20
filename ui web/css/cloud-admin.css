@@ -708,6 +708,17 @@ pre code {
   max-height: 1200px;
 }
 
+.row.production-line-row .top-row{
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
 .row.production-line-row.warning-info{
   position: fixed;
   margin-bottom: 0;
@@ -7199,7 +7210,7 @@ fieldset[disabled] .btn-yellow.active {
   position: relative;
 }
 .row .content-title {
-  color: #666666;
+  color: #8e8e8e;
   display: block;
   font-family: 'Open Sans';
   font-size: 14px;
@@ -7212,7 +7223,7 @@ fieldset[disabled] .btn-yellow.active {
   color: #b6b6b4; 
 } 
 .row .content-title .red {
-  color: #e41b17;
+  color: #f47c6c;
   margin-left: 10px;
 }
 
@@ -7244,10 +7255,11 @@ fieldset[disabled] .btn-yellow.active {
   margin-left: 15px;
   font-size: 14px;
   margin-top: 5px;
+  color: #8e8e8e;
 } 
 
 .equip-row .equip-row-title-sub .red {
-  color: #e41b17;
+  color: #f47c6c;
   margin-left: 10px;
 }
 
@@ -7260,6 +7272,7 @@ fieldset[disabled] .btn-yellow.active {
 .row.chart-title{
   text-align: center;
   margin-bottom: 20px;
+  color: #8e8e8e;
 }
 .row.warning{
   text-align: center;
@@ -7276,6 +7289,12 @@ fieldset[disabled] .btn-yellow.active {
 .row .clearfix {
   margin-bottom: 20px;
 }
+.row .clearfix.zone-product-equipment-list {
+  border-bottom: 1px solid #ededed;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -10px;
+}
 .row .clearfix.tab-clear {
   padding: 0;
   font-size: 14px;
@@ -7286,6 +7305,10 @@ fieldset[disabled] .btn-yellow.active {
   padding-left: 20px;
   float: left;
 }
+.row .clearfix.zone-product-equipment-list > ul {
+  padding-left: 0;
+}
+
 .row .clearfix > ul > li {
   display: inline-block;
   vertical-align: middle;
@@ -7344,12 +7367,21 @@ fieldset[disabled] .btn-yellow.active {
     margin: 13px 17px;
   }
 
+  .row .clearfix.zone-product-equipment-list,
+  .row .clearfix.zone-product-equipment-list .content-title {
+    font-size: 16px;
+  }
+
   .row .clearfix {
     margin-bottom: 15px;
   }
 
   .row .clearfix > ul > li i{
     padding-top: 15px;
+  }
+
+  .row .clearfix.zone-product-equipment-list > ul > li i {
+    padding-top: 16px;
   }
 }
 
@@ -10167,7 +10199,7 @@ div[data-role="editor-toolbar"] {
   background-color: #20b2fa;
 }
 .equip-row-dash-div.red {
-  background-color: #D9534F;
+  background-color: #f47c6c;
 }
 .equip-row-dash-div.green{
   background-color: #1fc087;
@@ -10175,6 +10207,7 @@ div[data-role="editor-toolbar"] {
 .equip-row-dash-div-title {
   text-align: center;
   margin-bottom: 30px;
+  color: #8e8e8e;
 }
 
 .dash-div {

@@ -453,7 +453,7 @@ var App = function () {
 	{
 		zone_id = sessionStorage.getItem('zone_id');
 		var zpelist = $(".zone-product-equipment-list");
-		$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span></li></ul>').appendTo(zpelist);
+		$('<ul><li><a href="园区-区域数据.html"><span class="content-title pull-left">园区</span></a><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">区域 '+zone_id+'</span></li></ul>').appendTo(zpelist);
 	}
 
 	var hanldeZPList = function()
@@ -461,7 +461,7 @@ var App = function () {
 		zone_id = sessionStorage.getItem('zone_id');
 		product_id = sessionStorage.getItem('product_id');
 		var zpelist = $(".zone-product-equipment-list");
-		$('<ul><li><span class="content-title pull-left">区域 '+zone_id+'</span><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span></li></ul>').appendTo(zpelist);
+		$('<ul><li><a href="园区-区域数据.html"><span class="content-title pull-left">园区</span></a><i class="fa fa-angle-right"></i></li><li><a href="区域-生产线数据.html"><span class="content-title pull-left">区域 '+zone_id+'</span></a><i class="fa fa-angle-right"></i></li><li><span class="content-title pull-left">生产线 '+product_id+'</span></li></ul>').appendTo(zpelist);
 	}
 
 	/*-----------------------------------------------------------------------------------*/

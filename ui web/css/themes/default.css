@@ -38,7 +38,7 @@
 }
 
 .navbar .navbar-brand a .navbar-name {
-  color: #e7e7e7;
+  color: #ffffff;
 }
 
 .navbar .navbar-brand a:hover{
@@ -325,6 +325,7 @@ input::-webkit-input-placeholder {
 /*SEARCH ON HIDDEN BAR*/
 
 .side-hidden-bar-toggle {
+  color: #969696;
   background: none repeat scroll 0 0 #f4f4f4;
   padding: 0 !important;
   position: fixed;
@@ -377,7 +378,7 @@ input::-webkit-input-placeholder {
   }
 
   .side-hidden-bar-toggle ul li {
-    padding-left: 6px;
+    padding-left: 5px;
   }
 }
 
