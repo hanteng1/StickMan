@@ -261,43 +261,56 @@ var App = function () {
 	        });
 
       	}else {
-	          //is not using in chart
-	          //add
-	          eq.addClass("open");
 
-	          //get the name of the equipment
-	          var $eq_id = '' + eq.attr("id");
+      		//check the number of existing labels
+      		var already_added_labels_size = $('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').first().children(".first-column").children(".big").children(".label-eps").children("li").size();
+      		
+
+      		if(already_added_labels_size >= 4)
+      		{
+      			alert('4 maximum');
+      		}else{
+      				//is not using in chart
+		          //add
+		          eq.addClass("open");
+
+		          //get the name of the equipment
+		          var $eq_id = '' + eq.attr("id");
+		          
+		          //for all the existing charts in the box-body
+		         $('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').each(function(){
+		         	var panel_id = $(this).attr("id");
+		         	
+		         	var chart_zone_ul = jQuery(this).children(".first-column").children(".big").children(".label-eps");  //ul
+		         	chart_zone_ul.find("*").off();  //this step is important
+		         	
+		         	//see how many listed items are there already
+		         	//maximum 4
+		         	var $chart_zone_ul_sz = chart_zone_ul.children("li").size();
+
+		         	//alert("size " + chart_zone_ul_sz);
+		         	$chart_zone_ul_sz+=1;
+		         	//alert("size " + $chart_zone_ul_sz);
+		         	//format not correct
+		         	//<li><a class="label-ep-'+$(this).attr("value")+' le1" href="javascript:;"><span class="color-mark ep1"></span><span class="title">设备 1</span></a></li>
+		         	$('<li id="'+$eq_id+'"><a class="label-ep-'+panel_id+' le' + $chart_zone_ul_sz +'" href="javascript:;"><span class="color-mark ep' + $chart_zone_ul_sz +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
+		         
+		         	//enable the click function
+		         	for(var itrpo = 0; itrpo<pchart_objs.length; itrpo++)
+		  			{
+		  				var cur_obj = pchart_objs[itrpo];
+		  				if(cur_obj.name == panel_id)
+		  				{
+		  					cur_obj["obj"].enablelabels();
+		  					cur_obj["obj"].changenames($eq_id, $chart_zone_ul_sz);
+		  				}
+		  			}
+
+		         });
+      		}
+
+
 	          
-	          //for all the existing charts in the box-body
-	         $('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').each(function(){
-	         	var panel_id = $(this).attr("id");
-	         	
-	         	var chart_zone_ul = jQuery(this).children(".first-column").children(".big").children(".label-eps");  //ul
-	         	chart_zone_ul.find("*").off();  //this step is important
-	         	
-	         	//see how many listed items are there already
-	         	//maximum 4
-	         	var $chart_zone_ul_sz = chart_zone_ul.children("li").size();
-
-	         	//alert("size " + chart_zone_ul_sz);
-	         	$chart_zone_ul_sz+=1;
-	         	//alert("size " + $chart_zone_ul_sz);
-	         	//format not correct
-	         	//<li><a class="label-ep-'+$(this).attr("value")+' le1" href="javascript:;"><span class="color-mark ep1"></span><span class="title">设备 1</span></a></li>
-	         	$('<li id="'+$eq_id+'"><a class="label-ep-'+panel_id+' le' + $chart_zone_ul_sz +'" href="javascript:;"><span class="color-mark ep' + $chart_zone_ul_sz +'"></span><span class="title">设备 ' + $eq_id + '</span></a></li>').appendTo(chart_zone_ul);
-	         
-	         	//enable the click function
-	         	for(var itrpo = 0; itrpo<pchart_objs.length; itrpo++)
-	  			{
-	  				var cur_obj = pchart_objs[itrpo];
-	  				if(cur_obj.name == panel_id)
-	  				{
-	  					cur_obj["obj"].enablelabels();
-	  					cur_obj["obj"].changenames($eq_id, $chart_zone_ul_sz);
-	  				}
-	  			}
-
-	         });
 
         }
 
@@ -1378,33 +1391,51 @@ var App = function () {
 
                 		//$('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body:first').children(".first-column").children(".big").children(".label-eps").children("li").each(function{
                 		//	var li_index = $(this).attr("id");
-                		//});
+                		//})
 
-                		if($(this).parents(".area" + zone_id).hasClass("area" + zone_id) && $(this).parents(".product" + product_id).hasClass("product" + product_id) && $(this).hasClass("ep" + equipment_id))
+						//set auto expand
+                		if($(this).parents(".area" + zone_id).hasClass("area" + zone_id) && $(this).parents(".product" + product_id).hasClass("product" + product_id))
                 		{
-                			$(this).addClass("open");
+							if($(this).hasClass("ep" + equipment_id))
+							{
+								$(this).addClass("open");
 
-                			var li_has_sub_sub_a = $(this).parents(".area" + zone_id).children("a:first");
-                			var sub_sub = li_has_sub_sub_a.next();
-                			if(sub_sub.is(":visible"))
-			            	{
-			            		
-			            	}else{
-			            		$(this).parents(".area" + zone_id).addClass("open");
-			            		jQuery('.arrow', li_has_sub_sub_a).addClass("open");
-			            		sub_sub.slideDown(200);
-			            	}
+	                			var li_has_sub_sub_a = $(this).parents(".area" + zone_id).children("a:first");
+	                			var sub_sub = li_has_sub_sub_a.next();
+	                			if(sub_sub.is(":visible"))
+				            	{
+				            		
+				            	}else{
+				            		$(this).parents(".area" + zone_id).addClass("open");
+				            		jQuery('.arrow', li_has_sub_sub_a).addClass("open");
+				            		sub_sub.slideDown(200);
+				            	}
 
-			            	var li_has_sub_sub_sub_a = $(this).parents(".product" + product_id).children("a:first");
-			            	var sub_sub_sub = li_has_sub_sub_sub_a.next();
+				            	var li_has_sub_sub_sub_a = $(this).parents(".product" + product_id).children("a:first");
+				            	var sub_sub_sub = li_has_sub_sub_sub_a.next();
 
-			            	if(sub_sub_sub.is(":visible")){
-	            			
-	            			}else{
-	            				$(this).parents(".product" + product_id).addClass("open");
-	            				jQuery('.arrow', li_has_sub_sub_sub_a).addClass("open");
-	            				sub_sub_sub.slideDown(200);
-	            			}
+				            	if(sub_sub_sub.is(":visible")){
+		            			
+		            			}else{
+		            				$(this).parents(".product" + product_id).addClass("open");
+		            				jQuery('.arrow', li_has_sub_sub_sub_a).addClass("open");
+		            				sub_sub_sub.slideDown(200);
+		            			}
+							}else {
+								//other equipments tags in the same list
+								//check if the label-eps has it
+								var eq_idd = $(this).attr("id");
+								var parent_element = $(this);
+								$('.' + current_selected_box_name).children('.box-body').children('.panel').children('.panel-body').first().children(".first-column").children(".big").children(".label-eps").children("li").each(function(){
+									if($(this).attr("id") == eq_idd)
+									{
+										parent_element.addClass("open");
+									}
+								});
+
+							}
+
+                			
 
                 		}
 
