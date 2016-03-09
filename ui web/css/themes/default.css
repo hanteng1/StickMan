@@ -136,7 +136,8 @@ input::-webkit-input-placeholder {
 }
 
 .navbar .nav .settings a,
-.navbar .nav .power a{
+.navbar .nav .power a,
+.navbar .nav .user a{
   padding: 0;
 }
 
