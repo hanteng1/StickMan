@@ -238,6 +238,45 @@ var App = function () {
             }
         });
 
+    //direct to links
+    jQuery('.redirecttag.quyu').click(function(){
+    	//alert("quyu");
+
+    	sessionStorage.setItem('zone_id', $(this).parents(".has-sub-sub").attr("id"));
+
+    	if($(this).parents(".side-hidden-bar").hasClass("shebeiye"))
+    	{
+    		window.location = "设备-列表生产线.html";
+    	}else if($(this).parents(".side-hidden-bar").hasClass("chart-draw"))
+    	{
+    		
+    	}else {
+    		window.location = "区域-生产线数据.html";
+    	}
+    	
+    });
+
+    jQuery('.redirecttag.shengchanxian').click(function(){
+    	//alert("shengchanxian");
+
+    	sessionStorage.setItem('zone_id', $(this).parents(".has-sub-sub").attr("id"));
+    	sessionStorage.setItem('product_id', $(this).parents(".has-sub-sub-sub").attr("id"));
+
+    	if($(this).parents(".side-hidden-bar").hasClass("shebeiye"))
+    	{
+    		window.location = "设备-列表设备.html";
+    	}else if($(this).parents(".side-hidden-bar").hasClass("chart-draw"))
+    	{
+    		
+    	}else {
+    		window.location = "生产线-设备数据.html";
+    	}
+
+    });
+
+
+
+
 
     //select a equipment from hidden side bar
     //when it's for "add compare"
@@ -270,7 +309,7 @@ var App = function () {
       		{
       			alert('4 maximum');
       		}else{
-      				//is not using in chart
+      			//is not using in chart
 		          //add
 		          eq.addClass("open");
 
@@ -1016,13 +1055,13 @@ var App = function () {
       for (var itra = 0; itra < list_data["areas"].length; itra++) {
         
         //area
-        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
+        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span><span class="redirecttag quyu">查看</span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
 
         var sub_product = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub');
         for (var itrp = 0; itrp < list_data["areas"][itra]["products"].length; itrp++) {
             //product
             //list_data["areas"][itra]["products"][itrp].name
-            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'" id="'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
+            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'" id="'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span><span class="redirecttag shengchanxian">查看</span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
         
             var sub_equipment = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub').children('.product' + list_data["areas"][itra]["products"][itrp].name).children('.sub-sub-sub');
 

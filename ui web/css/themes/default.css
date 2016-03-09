@@ -672,6 +672,14 @@ input::-webkit-input-placeholder {
   margin: 5% 0 0;
 }
 
+.sidebar-menu > ul > li > ul.sub .redirecttag {
+  margin-left: 20px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: none repeat scroll 0 0 #999999;
+  border: none;
+  color: #f5f5f5;
+}
 
 .sidebar-menu > ul > li > ul.sub {
   display: block;
@@ -872,6 +880,13 @@ input::-webkit-input-placeholder {
 
 /*Side hidden bar font size resize  */
 @media (max-width: 1450px){ 
+
+  .sidebar-menu > ul > li > ul.sub .redirecttag {
+    margin-left: 20px;
+    padding: 1px 3px;
+    border-radius: 2px;
+  }
+
   .sidebar-menu ul > li > a .arrow:before,
   .sidebar-menu ul > li > ul > li > a .arrow:before,
   .sidebar-menu ul > li > ul > li > ul > li > a .arrow:before {

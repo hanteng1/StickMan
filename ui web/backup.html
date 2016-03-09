@@ -584,3 +584,23 @@ function Pcharts(idofChart) {
 var $event_name = "ddd";
 
 var tt = $('<div class="panel-body panel-body-name-'+$(this).attr("value")+'" id="'+$(this).attr("value")+'"><div class="chart-title">'+$event_name+'</div><div class="col-md-12 first-column"><div class="chart_in_graph"><div id="chart_'+$event_name+'" class="chart"></div></div><div class="chart-labels upper-labels"><ul><li><a class="label-cm-'+$(this).attr("value")+' lc1" href="javascript:;"><span class="color-mark cp1"></span><span class="title">频率值1</span></a></li><li><a class="label-cm-'+$(this).attr("value")+' lc2" href="javascript:;"><span class="color-mark cp2"></span><span class="title">频率值2</span></a></li><li><a class="label-cm-'+$(this).attr("value")+' lc3" href="javascript:;"><span class="color-mark cp3"></span><span class="title">频率值3</span></a></li></ul></div><div class="chart-labels lower-labels">电压值</div></div></div>')
+
+
+
+$('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'">
+    <a href="javascript:;" class="">
+        <span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span><span>test</span>
+    </a>
+    <button>test</button>
+    <ul class="sub-sub"></ul>
+
+
+
+</li>').appendTo(sub_area);
+
+
+
+
+
+
+
