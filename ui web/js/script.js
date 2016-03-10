@@ -15,7 +15,7 @@ var App = function () {
   	//create an array for pchart object
   	var pchart_objs = [];
 
-
+  	var area_id = 1;  //1 by default
   	var zone_id = 1;   //1 by default
   	var product_id = 1;  //1 by default
   	var equipment_id = 1;  //1 by default
@@ -394,6 +394,44 @@ var App = function () {
     });
 
 	}
+
+	/*
+	*
+	*/
+	var handleAreaZoneProductReset = function()
+	{
+		jQuery(".reset-area").click(function(){
+			sessionStorage.setItem('area_id', $(this).attr("id"));
+			window.location.reload();
+		});
+
+		jQuery(".reset-zone").click(function(){
+			sessionStorage.setItem('zone_id', $(this).attr("id"));
+			window.location.reload();
+		});
+
+		jQuery(".reset-product").click(function(){
+			sessionStorage.setItem('product_id', $(this).attr("id"));
+			window.location.reload();
+		});
+	}
+
+	var handleAreaZoneProductView = function()
+	{
+		area_id = sessionStorage.getItem('area_id');
+		if(area_id == null)
+			area_id = 1;
+		zone_id = sessionStorage.getItem('zone_id');
+		product_id = sessionStorage.getItem('product_id');
+
+		//list the view
+		//note that the choice candidates are from database, and here we just set up a sample
+
+		var bottom_row_view = $('.bottom-row');
+
+		$('<ul><li class="dropdown dropup"><span class="editable-text-area">园区'+area_id+'</span><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit fa-1x editable-button" ></i></a><ul class="dropdown-menu reset-area-zone-product"><li><a class="reset-area" id="1">园区1</a></li><li class="divider"></li><li><a class="reset-area" id="2">园区2</a></li><li class="divider"></li><li><a class="reset-area" id="3">园区3</a></li><li class="divider"></li><li><a class="reset-area" id="4">园区4</a></li><li class="divider"></li><li><a class="reset-area" id="5">园区5</a></li></ul></li><li class="dropdown dropup"><span class="editable-text-area">区域'+zone_id+'</span><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit fa-1x editable-button" ></i></a><ul class="dropdown-menu reset-area-zone-product"><li><a class="reset-zone" id="1">区域1</a></li><li class="divider"></li><li><a class="reset-zone" id="2">区域2</a></li><li class="divider"></li><li><a class="reset-zone" id="3">区域3</a></li><li class="divider"></li><li><a class="reset-zone" id="4">区域4</a></li><li class="divider"></li><li><a class="reset-zone" id="5">区域5</a></li></ul></li><li class="dropdown dropup"><span class="editable-text-area">生产线'+product_id+'</span><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit fa-1x editable-button" ></i></a><ul class="dropdown-menu reset-area-zone-product"><li><a class="reset-product" id="1">生产线1</a></li><li class="divider"></li><li><a class="reset-product" id="2">生产线2</a></li><li class="divider"></li><li><a class="reset-product" id="3">生产线3</a></li><li class="divider"></li><li><a class="reset-product" id="4">生产线4</a></li><li class="divider"></li><li><a class="reset-product" id="5">生产线5</a></li></ul></li></ul>').appendTo(bottom_row_view);
+	}
+
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	zone-product-equipment tag at 设备-列表区域, 设备-列表生产线, 设备-列表设备
@@ -4683,22 +4721,31 @@ var App = function () {
 	      	handleShebeiZPEList();
 	        handleXcharts();
 	        handlePopUp();
+	        handleAreaZoneProductView();
+	        handleAreaZoneProductReset();
+
 	      }
 	      if(App.isPage("shebei-diannengzhiliangcanshu")){
 	        handleXcharts();
 	        handlePopUp();
 	        handleShebeiZPEList();
+	        handleAreaZoneProductView();
+	        handleAreaZoneProductReset();
 	      }
 	      if(App.isPage("shebei-xitongshezhi")){
 	        handleXcharts();
 	         handlePopUp();
 	         handleShebeiZPEList();
+	         handleAreaZoneProductView();
+	         handleAreaZoneProductReset();
 	      }
 	      if(App.isPage("shebei-pqdifshezhi")){
 	        handleXcharts();
 	        handleDateColorpicker();
 	         handlePopUp();
 	         handleShebeiZPEList();
+	         handleAreaZoneProductView();
+	         handleAreaZoneProductReset();
 	        //handleDataTables();
 
 	      }

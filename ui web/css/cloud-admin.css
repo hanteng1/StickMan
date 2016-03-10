@@ -7385,6 +7385,19 @@ fieldset[disabled] .btn-yellow.active {
   /*cursor: pointer;*/
 }
 
+.row .clearfix.bottom-row > ul > li > ul.dropdown-menu {
+  border: 1px solid #111111;
+  left: none;
+  right: 0;
+
+  max-height: 200px;
+  overflow: auto;
+}
+.row .clearfix.bottom-row > ul > li > a {
+  text-decoration: none;
+  color: #898989;
+}
+
 
 @media (max-width: 1450px){
   #content .page-header {
