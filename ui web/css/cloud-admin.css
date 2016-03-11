@@ -4707,6 +4707,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   height: 78px;
   min-width: 78px;
 }
+
+.mbreadcrumb > li:last-child {
+  
+}
+
 .mbreadcrumb > li.back-button{
   text-align: center;
   padding-top: 25px;
@@ -4735,8 +4740,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-top: 8px;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.mbreadcrumb > li.event-buttons .btn-group > .btn.add-button {
 
 }
+
 .mbreadcrumb > li.event-buttons .btn-group > .btn:hover,
 .mbreadcrumb > li.event-buttons .btn-group > .btn:focus,
 .mbreadcrumb > li.event-buttons .btn-group > .btn:active,

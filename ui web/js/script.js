@@ -368,6 +368,19 @@ var App = function () {
       	//re-direct url to the equipment page
       	window.location = "设备-基础信息.html";
 
+      }else if(eq.parents(".sidebar-menu").hasClass("side-popup-menu"))
+      {
+
+        //switch check box status on popup list
+         if(eq.hasClass("open")){
+            //is checked 
+            //remove
+            eq.removeClass("open");
+        }else{
+            eq.addClass("open");
+        }
+
+
       }else {
       	//alert(eq.parents(".has-sub-sub").attr("id") + "   "  +  eq.parents(".has-sub-sub-sub").attr("id") + "    " + eq.attr("id"));
       	//zone_id = eq.parents(".has-sub-sub").attr("id");

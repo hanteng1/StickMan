@@ -541,13 +541,16 @@ button::-moz-focus-inner {
   display: inline-block;
 }
 
-.small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline{
+.small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline,
+.small-dialog-body .div-form-body .form-horizontal .form-group label.radio-inline
+{
    padding: 0;
    width: auto;
    margin-right: 10px;
    margin-bottom: 10px;
 }
-.small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline input {
+.small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline input,
+.small-dialog-body .div-form-body .form-horizontal .form-group label.radio-inline input {
   margin-top: 5px;
 }
 
@@ -857,7 +860,8 @@ p.div-form-radio {
     margin-bottom: 15px;
   }
 
-  .small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline{
+  .small-dialog-body .div-form-body .form-horizontal .form-group label.checkbox-inline,
+  .small-dialog-body .div-form-body .form-horizontal .form-group label.radio-inline{
      padding: 0;
      width: auto;
      margin-right: 5px;

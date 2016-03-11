@@ -581,7 +581,9 @@ input::-webkit-input-placeholder {
   color: #b6b6b4;
 }
 
-.sidebar-menu > ul > li > ul > li > ul > li > ul > li a.open .equip-check-marker:before {
+.sidebar-menu > ul > li > ul > li > ul > li > ul > li a.open .equip-check-marker:before,
+.sidebar-menu > ul > li > ul > li > ul > li a.open .equip-check-marker:before
+ {
   content: "\f046";
 }
 
