@@ -2875,6 +2875,24 @@ var App = function () {
     });
   }
 
+  /*-----
+    carousel on the user page
+  */
+  var handleCarousel = function()
+  {
+    $('.carousel').on('slid.bs.carousel', function () {
+        var carouselData = $(this).data('bs.carousel');
+        var currentIndex = carouselData.getActiveIndex();
+        var total = carouselData.$items.length;
+          
+        // Now display this wherever you want
+        var text = (currentIndex + 1) + " of " + total;
+        //$('#carousel-index').text(text);
+
+        $(this).next().text(text);
+      });
+  }
+
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	XCharts
@@ -4766,6 +4784,7 @@ var App = function () {
 
 	      if(App.isPage("yonghu")){
 	        handlePopUp();
+          handleCarousel();
 	      }
 	      if (App.isPage("shezhi")) {
 	        
