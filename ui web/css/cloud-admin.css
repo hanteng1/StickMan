@@ -4719,6 +4719,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .mbreadcrumb > li.event-buttons{
   padding-top: 17px;
 }
+
 .mbreadcrumb > li a {
   padding: 0;
 }
@@ -4743,7 +4744,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .mbreadcrumb > li.event-buttons .btn-group > .btn.add-button {
-
+  background-color: #20b2fa;
+  color: #ffffff;
 }
 
 .mbreadcrumb > li.event-buttons .btn-group > .btn:hover,
