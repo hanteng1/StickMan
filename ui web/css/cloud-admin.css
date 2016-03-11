@@ -10736,6 +10736,7 @@ ul.stats li small {
   text-align: center;
   color: #999999;
   background-color: #ffffff;
+  padding-bottom: 50px;
 }
 
 .contact-script.login-page {
