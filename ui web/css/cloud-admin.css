@@ -8238,6 +8238,14 @@ fieldset[disabled] .btn-yellow.active {
 .box.solid .box-body.big {
   padding: 30px;
 }
+.box.border .box-body.limited-width,
+.box.solid .box-body.limited-width {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+
 .box.border .box-title.big,
 .box.solid .box-title.big {
   padding: 15px 10px 7px;

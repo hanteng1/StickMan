@@ -1106,13 +1106,13 @@ var App = function () {
       for (var itra = 0; itra < list_data["areas"].length; itra++) {
         
         //area
-        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span><span class="redirecttag quyu">查看</span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
+        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span><span class="redirecttag quyu"></span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
 
         var sub_product = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub');
         for (var itrp = 0; itrp < list_data["areas"][itra]["products"].length; itrp++) {
             //product
             //list_data["areas"][itra]["products"][itrp].name
-            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'" id="'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span><span class="redirecttag shengchanxian">查看</span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
+            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'" id="'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span><span class="redirecttag shengchanxian"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
         
             var sub_equipment = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub').children('.product' + list_data["areas"][itra]["products"][itrp].name).children('.sub-sub-sub');
 
@@ -1674,6 +1674,52 @@ var App = function () {
 		
 	}
 
+
+  var handletimetype = function(){
+    $(":radio").click(function(){
+      if($(this).prop('checked') == true && $(this).attr("name") == "timechoice")
+      {
+        if($(this).attr("value") == "xiaoshi")
+        {
+          $(this).parents(".form-group").children(".meixiaoshi").removeClass("notvisible");
+          $(this).parents(".form-group").children(".meitian").addClass("notvisible");
+          $(this).parents(".form-group").children(".meizhou").addClass("notvisible");
+          $(this).parents(".form-group").children(".meiyue").addClass("notvisible");
+          $(this).parents(".div-form-body").children(".zidingyi").addClass("notvisible");
+        }else if($(this).attr("value") == "tian")
+        {
+
+          $(this).parents(".form-group").children(".meixiaoshi").addClass("notvisible");
+          $(this).parents(".form-group").children(".meitian").removeClass("notvisible");
+          $(this).parents(".form-group").children(".meizhou").addClass("notvisible");
+          $(this).parents(".form-group").children(".meiyue").addClass("notvisible");
+          $(this).parents(".div-form-body").children(".zidingyi").addClass("notvisible");
+        }else if($(this).attr("value") == "zhou")
+        {
+          $(this).parents(".form-group").children(".meixiaoshi").addClass("notvisible");
+          $(this).parents(".form-group").children(".meitian").addClass("notvisible");
+          $(this).parents(".form-group").children(".meizhou").removeClass("notvisible");
+          $(this).parents(".form-group").children(".meiyue").addClass("notvisible");
+          $(this).parents(".div-form-body").children(".zidingyi").addClass("notvisible");
+        }else if($(this).attr("value") == "yue")
+        {
+          $(this).parents(".form-group").children(".meixiaoshi").addClass("notvisible");
+          $(this).parents(".form-group").children(".meitian").addClass("notvisible");
+          $(this).parents(".form-group").children(".meizhou").addClass("notvisible");
+          $(this).parents(".form-group").children(".meiyue").removeClass("notvisible");
+          $(this).parents(".div-form-body").children(".zidingyi").addClass("notvisible");
+        }else if($(this).attr("value") == "zidingyi")
+        {
+          $(this).parents(".form-group").children(".meixiaoshi").addClass("notvisible");
+          $(this).parents(".form-group").children(".meitian").addClass("notvisible");
+          $(this).parents(".form-group").children(".meizhou").addClass("notvisible");
+          $(this).parents(".form-group").children(".meiyue").addClass("notvisible");
+          $(this).parents(".div-form-body").children(".zidingyi").removeClass("notvisible");
+        }
+
+      }
+    });
+  }
 
   /*-----------------------------------------------------------------------------------*/
   /*  Popup
@@ -4810,8 +4856,11 @@ var App = function () {
 	        handleRizhiTables();
 	      }
 	      if (App.isPage("fangan-baobiaofangan")) {
-        		handlePopUp();
-     	}
+        	 handlePopUp();
+              handleDateColorpicker();
+              handletimetype();
+
+     	  }
 
 			if (App.isPage("login")) {
 				handleUniform();	//Function to handle uniform inputs
