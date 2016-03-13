@@ -1106,13 +1106,13 @@ var App = function () {
       for (var itra = 0; itra < list_data["areas"].length; itra++) {
         
         //area
-        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span><span class="redirecttag quyu"></span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
+        $('<li class="has-sub-sub area'+ list_data["areas"][itra].name +'" id="'+list_data["areas"][itra].name+'"><a href="javascript:;" class=""><span class="sub-menu-text">区域 '+ list_data["areas"][itra].name +'</span><span class="arrow"></span><span class="redirecttag quyu">查看</span></a><ul class="sub-sub"></ul></li>').appendTo(sub_area);
 
         var sub_product = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub');
         for (var itrp = 0; itrp < list_data["areas"][itra]["products"].length; itrp++) {
             //product
             //list_data["areas"][itra]["products"][itrp].name
-            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'" id="'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span><span class="redirecttag shengchanxian"></span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
+            $('<li class="has-sub-sub-sub product'+list_data["areas"][itra]["products"][itrp].name+'" id="'+list_data["areas"][itra]["products"][itrp].name+'"><a class="" href="javascript:;"><span class="sub-sub-menu-text">生产线 '+list_data["areas"][itra]["products"][itrp].name+'</span><span class="arrow"></span><span class="redirecttag shengchanxian">查看</span></a><ul class="sub-sub-sub"></ul></li>').appendTo(sub_product);
         
             var sub_equipment = jQuery('.side-hidden-bar').children('.sidebar-menu').children('.zero-sub').children('.has-sub').children('.sub').children('.area' + list_data["areas"][itra].name).children('.sub-sub').children('.product' + list_data["areas"][itra]["products"][itrp].name).children('.sub-sub-sub');
 
@@ -2945,7 +2945,7 @@ var App = function () {
         var total = carouselData.$items.length;
           
         // Now display this wherever you want
-        var text = (currentIndex + 1) + " of " + total;
+        var text = (currentIndex + 1) + " / " + total;
         //$('#carousel-index').text(text);
 
         $(this).next().text(text);
