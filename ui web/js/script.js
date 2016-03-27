@@ -1180,14 +1180,14 @@ var App = function () {
   				//small size css
   				var cur_toggle_margin_left = jQuery('#side-hidden-bar-toggle').css("margin-left");
 
-  				if(cur_toggle_margin_left == "380px")
+  				if(cur_toggle_margin_left == "280px")
   				{
-  					jQuery('#side-hidden-bar-toggle').css("margin-left", "291px");
-  					jQuery('#main-content').css("margin-left", "310px");
-  				}else if(cur_toggle_margin_left == "100px")
+  					jQuery('#side-hidden-bar-toggle').css("margin-left", "215px");
+  					jQuery('#main-content').css("margin-left", "235px");
+  				}else if(cur_toggle_margin_left == "0px")
   				{
-					jQuery('#side-hidden-bar-toggle').css("margin-left", "76px");
-					jQuery('#main-content').css("margin-left", "95px");  //130
+					jQuery('#side-hidden-bar-toggle').css("margin-left", "1px");
+					jQuery('#main-content').css("margin-left", "20px");  //130
   				}
 
   				window_resized_small = true;
@@ -1196,14 +1196,14 @@ var App = function () {
   			{
   				var cur_toggle_margin_left = jQuery('#side-hidden-bar-toggle').css("margin-left");
 
-  				if(cur_toggle_margin_left == "291px")
+  				if(cur_toggle_margin_left == "215px")
   				{
-  					jQuery('#side-hidden-bar-toggle').css("margin-left", "380px");
-  					jQuery('#main-content').css("margin-left", "405px");
-  				}else if(cur_toggle_margin_left == "76px")
+  					jQuery('#side-hidden-bar-toggle').css("margin-left", "280px");
+  					jQuery('#main-content').css("margin-left", "305px");
+  				}else if(cur_toggle_margin_left == "1px")
   				{
-					jQuery('#side-hidden-bar-toggle').css("margin-left", "100px");
-					jQuery('#main-content').css("margin-left", "125px");
+					jQuery('#side-hidden-bar-toggle').css("margin-left", "0px");
+					jQuery('#main-content').css("margin-left", "25px");
   				}
 
   				window_resized_small = false;
@@ -1217,14 +1217,14 @@ var App = function () {
 
             	var cur_margin_left = jQuery(this).css("margin-left");
 
-            	if(cur_margin_left == "100px") {   //the number is important, see css file
-            		jQuery('#main-content').animate({marginLeft:"405px"});
-                	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
+            	if(cur_margin_left == "0px") {   //the number is important, see css file  100px
+            		jQuery('#main-content').animate({marginLeft:"305px"});   //405
+                	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"280px"});   //380
                 	$(".side-hidden-bar").fadeToggle(100, function (){
                 	});
             	}else{
-            		jQuery('#main-content').animate({marginLeft:"310px"});
-                	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"291px"});
+            		  jQuery('#main-content').animate({marginLeft:"235px"});  //310
+                	jQuery('#side-hidden-bar-toggle').animate({marginLeft:"215px"});  //291
                 	$(".side-hidden-bar").fadeToggle(100, function (){
                 	});
             	}
@@ -1239,13 +1239,13 @@ var App = function () {
             }
             else {  //the bar is open
             	var cur_margin_left = jQuery(this).css("margin-left");
-            	if(cur_margin_left == "380px")
+            	if(cur_margin_left == "280px")
             	{
-            		jQuery('#main-content').animate({marginLeft:"125px"}); //160
-               		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"100px"});
+            		jQuery('#main-content').animate({marginLeft:"25px"}); //160
+               		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"0px"});
             	}else{
-            		jQuery('#main-content').animate({marginLeft:"95px"});  //130
-               		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"76px"});
+            		jQuery('#main-content').animate({marginLeft:"20px"});  //130
+               		jQuery('#side-hidden-bar-toggle').animate({marginLeft:"1px"});
             	}
 
                if($(".side-hidden-bar").hasClass("chart-draw")){
@@ -1424,12 +1424,12 @@ var App = function () {
       if(side_bar_hidden) {  //the bar is hidden
 
 	      		var cur_margin_left = jQuery(".side-hidden-bar-toggle").css("margin-left");
-	      		if(cur_margin_left == "100px") { 
-	                jQuery('#main-content').animate({marginLeft:"405px"});
-	                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"380px"});
+	      		if(cur_margin_left == "0px") { 
+	                jQuery('#main-content').animate({marginLeft:"305px"});
+	                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"280px"});
 	            }else{
-	            	jQuery('#main-content').animate({marginLeft:"310px"});
-	                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"291px"});
+	            	jQuery('#main-content').animate({marginLeft:"235px"});
+	                jQuery('#side-hidden-bar-toggle').animate({marginLeft:"215px"});
 	            }
 
                 jQuery('#side-hidden-bar').addClass("chart-draw");

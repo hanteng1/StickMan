@@ -7219,7 +7219,7 @@ fieldset[disabled] .btn-yellow.active {
 }
 /* Content */
 #main-content {
-  margin-left: 125px;
+  margin-left: 25px;  /*125*/
   /* the min-width value is very important */
   min-width: 1100px;
   margin-top: -20px;
@@ -7227,7 +7227,7 @@ fieldset[disabled] .btn-yellow.active {
 
 @media (max-width: 1450px){
   #main-content {
-    margin-left: 95px;
+    margin-left: 20px;  /*95*/
     margin-top: -40px;
   }
 }

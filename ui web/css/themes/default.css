@@ -150,7 +150,48 @@ input::-webkit-input-placeholder {
 .navbar .nav .power .power-icon:hover {
   color: #cccccc;
 }
+
+
+
+.navbar .nav .head-menu
+{
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+}
+
+.navbar .nav li + li::before{
+    content: '';
+    border-right: 1px solid #c7c7c7;
+    opacity: 0.6;
+    position: absolute;
+    height: 50%;
+    left: 0;
+    top: 25%;
+}
+
+.navbar .nav .head-menu a{
+  margin: 0;
+  text-decoration: none;
+  color: #e7e7e7;
+}
+
+.navbar .nav li.head-menu.active{
+  background-color: #80a0c1;
+  border-bottom: 5px solid #e7e7e7; 
+}
+
+.navbar .nav > li.head-menu.active > a:hover,
+.navbar .nav > li.head-menu.active > a:focus {
+  background-color: #80a0c1 !important;
+}
+
 /* End Navbar */
+
+
+
+
 
 @media (max-width: 1450px){
   .navbar {
@@ -211,6 +252,20 @@ input::-webkit-input-placeholder {
     margin-top: 5px;
     font-size: 32px;
   }
+
+
+
+  .navbar .nav .head-menu
+  {
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 6px;
+  }
+
+  .navbar .nav li.head-menu.active{
+    border-bottom: 3px solid #e7e7e7; 
+  }
 }
 
 /* Start Sidebar */
@@ -235,7 +290,7 @@ input::-webkit-input-placeholder {
   background: none repeat scroll 0 0 #f5f5f5;
   padding: 0 !important;
   display: none;
-  margin-left: 100px;
+  margin-left: 0; /*100*/
   width: 280px;
   position: fixed;
   top: 80px;
@@ -257,7 +312,7 @@ input::-webkit-input-placeholder {
   .side-hidden-bar {
     top: 60px;
     width: 215px;
-    margin-left: 76px;
+    margin-left: 0;  /*76px*/
   }
 }
 
@@ -336,7 +391,7 @@ input::-webkit-input-placeholder {
   z-index: 1000;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-left: 100px;
+  margin-left: 0; /*100px*/
   width: 45px;
   height: 100px;
   border: 1px solid #e7e7e7;
@@ -371,7 +426,7 @@ input::-webkit-input-placeholder {
 
 @media (max-width: 1450px){
   .side-hidden-bar-toggle {
-    margin-left: 76px;
+    margin-left: 1px;  /*76*/
     top: 160px;
     font-size: 12px;
     width: 38px;
